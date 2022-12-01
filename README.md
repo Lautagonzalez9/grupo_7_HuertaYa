@@ -6,7 +6,6 @@ Lautaro Gonzalez: Tengo 19 años, vivo en mar del plata. Me gustan mucho los dep
 Me inicie en el curso de porgramacion ya que en un futuro quiero estudiar administracion y produccion agraria y relacionar el campo con la programacion, debido a que se combina
 la "principal" fuente de ingresos de nuestro pais con el furor de la programacion en estos ultimos años
 
-<<<<<<< HEAD
 Links:
 
 Links de referencia:
@@ -16,7 +15,10 @@ https://elclickbolsones.com/?gclid=Cj0KCQiAm5ycBhCXARIsAPldzoWO7-wrR37_RcSqBgsGs
 https://laorganicadelivery.com.ar/
 https://www.locosxelpicante.com/semillas/semillasnivel1/
 https://www.maxnic.com.ar/
-=======
 Julian Penna: Tengo 26 años, tengo algo de experiencia en diseño gráfico autodidacta, y también algo de experiencia programando también autodidacta. Me siento más cómodo con la lógica y el back-end. 
 Me gustan el rugby y el gaming. Aguanten los Pumas.
->>>>>>> 6cb931273c1386b09ce90c25f364847f0df66630
+
+
+
+Marco Savarino: Tengo 19 años, soy de Santa Fe, Santa Fe. Me encanta el csgo, el futbol y stremear cuando tengo tiempo :). Odio el verano y aguante la scaloneta.
+
