@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url(/img/logoCaja.png);
+    background-size: cover;
+    background-attachment: fixed;
+    border: 1px solid black;
+}
+
+.contenedorUser{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width:30%;
+    border: 1px solid black;
+    margin-left: 70%;
+
+}
+
+.user{
+    text-align: center;
+    font-size: 25px;
+}
+
+.contenedorInicio{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid black;
+}
+.inicio{
+    margin-right: 50%;
+    font-size: 25px;
+}
+
+.catcarrito{
+    font-size: 25px;
+}
