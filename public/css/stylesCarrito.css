@@ -8,7 +8,6 @@ header{
     background-image: url(/img/logoCaja.png);
     background-size: cover;
     background-attachment: fixed;
-    border: 1px solid black;
 }
 
 .contenedorUser{
@@ -21,7 +20,6 @@ header{
     width:30%;
     border: 1px solid black;
     margin-left: 70%;
-
 }
 
 .user{
@@ -33,14 +31,109 @@ header{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     border: 1px solid black;
 }
 .inicio{
-    margin-right: 50%;
-    font-size: 25px;
+    /* margin-right: 50%; */
+    font-size: 20px;
+    margin-left: 50%;
 }
 
 .catcarrito{
-    font-size: 25px;
+    font-size: 20px;
+    align-content: flex-start;
 }
+
+.contenedor1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedorPrincipal{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid purple
+}
+.contenedorSecundario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 40%;
+    margin-left: 5px;
+    background-image: url(/img/Imagen1.jpg);
+    background-size: cover;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.contenedorTerciario{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.contenedorImagen{
+    display: flex;
+    border: 1px solid black;
+    justify-content: flex-start;
+    width: 45%;
+    height: 90%;
+    background-color: white;
+}
+
+.contenedorProducto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content:flex-end;
+    align-items: flex-start;
+}
+
+.producto{
+    font-size: 100%;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+    background-color: azure;
+}
+
+.cantidad{
+    border: 1px solid black;
+    font-size: 100%;
+    margin-top: 5px;
+    padding: 3px;
+    background-color: azure;
+}
+
+.contenedorPrecio{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: azure;
+}
+
+.precio{
+    text-decoration: underline;
+    font-size: 100%;
+}
+
+.total{
+    font-size: 100%;
+}
+
+.contenedorCuaternario{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid red;
+}
+
