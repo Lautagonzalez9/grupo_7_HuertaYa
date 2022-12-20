@@ -11,3 +11,4 @@ app.listen (3500, ()=>{console.log('Servidor con puerto 3500 corriendo')});
 app.get('localhost:3500/',(req,res)=>{res.sendFile(path.join(__dirname,'./views/home.html'))});
 app.get('/',(req,res)=>{res.sendFile(path.join(__dirname,'./views/home.html'))});
 app.get('/carrito',(req,res)=>{res.sendFile(path.join(__dirname,'./views/carrito.html'))})
+app.get("/detalle-de-producto",(req,res)=>{res.sendFile(path.join(__dirname,"./views/detalle-del-producto.html"))});
