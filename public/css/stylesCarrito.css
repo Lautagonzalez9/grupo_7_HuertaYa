@@ -4,136 +4,130 @@
     box-sizing: border-box;
 }
 
-header{
-    background-image: url(/img/logoCaja.png);
-    background-size: cover;
-    background-attachment: fixed;
+.homeHeader{
+    border: 1px solid black;
 }
 
-.contenedorUser{
+.productNavbar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.category{
+    font-size: 25px;
+}
+
+.cart{
+    font-size: 25px;
+}
+
+.more{
+    font-size: 25px;
+}
+
+.article{
+    display: flex;
+    flex-wrap: wrap;
+    margin:10px 5px 10px 5px;
+    border: 0.5px solid grey;
+    width: 90%;
+}
+
+.img{
+    width: 40%;
+    height: auto;
+}
+
+.details{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left:15%;
+}
+
+.productTitle{
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.amount{
+    border: 1px solid black;
+    padding: 5%;
+    margin-left: 3%;
+    font-size: 20px;
+    margin-top: 30%;
+}
+
+.price{
+    font-size: 20px;
+    border: 1px solid black;
+    margin-left: 3px;
+    padding: 5%;
+    margin-top: 30%;
+}
+.trashButton{
+    margin-top: 10px;
+}
+
+.articleContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.offertContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.offertImg{
+    width: 80%;
+    justify-content: center;
+}
+
+.offertArticle{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    width: 30%;
+    margin-left: 10px;
+}
+
+.offertLabel{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    margin: 5px;
-    width:30%;
-    border: 1px solid black;
-    margin-left: 70%;
 }
 
-.user{
+.offertPrice{
+    font-size: 20px;
+}
+
+.offertTitle{
     text-align: center;
-    font-size: 25px;
-}
-
-.contenedorInicio{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    border: 1px solid black;
-}
-.inicio{
-    /* margin-right: 50%; */
     font-size: 20px;
-    margin-left: 50%;
+    margin-top: 30px;
 }
 
-.catcarrito{
-    font-size: 20px;
-    align-content: flex-start;
-}
-
-.contenedor1{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.contenedorPrincipal{
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid purple
-}
-.contenedorSecundario{
+.dataContainer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    border: 1px solid black;
+    height: 20%;
+}
+
+.data{
+    border: 1px solid gray;
+    padding: 5px;
+    font-size: 20px;
+    margin-top: 10px;
     width: 40%;
-    margin-left: 5px;
-    background-image: url(/img/Imagen1.jpg);
-    background-size: cover;
-    justify-content: flex-start;
-    align-items: flex-start;
-
 }
-
-.contenedorTerciario{
-    display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-    margin-left: 5px;
-    margin-top: 15px;
-}
-
-.contenedorImagen{
-    display: flex;
-    border: 1px solid black;
-    justify-content: flex-start;
-    width: 45%;
-    height: 90%;
-    background-color: white;
-}
-
-.contenedorProducto{
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    justify-content:flex-end;
-    align-items: flex-start;
-}
-
-.producto{
-    font-size: 100%;
-    font-weight: bolder;
-    text-decoration: underline;
-    color: rgb(0, 0, 0);
-    background-color: azure;
-}
-
-.cantidad{
-    border: 1px solid black;
-    font-size: 100%;
-    margin-top: 5px;
-    padding: 3px;
-    background-color: azure;
-}
-
-.contenedorPrecio{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
-    background-color: azure;
-}
-
-.precio{
-    text-decoration: underline;
-    font-size: 100%;
-}
-
-.total{
-    font-size: 100%;
-}
-
-.contenedorCuaternario{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border: 1px solid red;
-}
-
