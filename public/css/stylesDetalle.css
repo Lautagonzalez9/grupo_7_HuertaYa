@@ -28,11 +28,22 @@
 }
 
 .producto-a-detallar {
-    width: 40vw;
+    width: 50vw;
 }
 
-.producto-a-detallar article {
+.producto-a-detallar .producto {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.producto-detalle {
+    width: 60%;
+    margin: auto;
+}
+
+.product-interactions {
+    width: 30%;
 }
 
 h3 {
