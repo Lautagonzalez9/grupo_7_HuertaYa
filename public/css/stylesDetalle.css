@@ -31,6 +31,10 @@
     width: 40vw;
 }
 
+.producto-a-detallar article {
+    display: flex;
+}
+
 h3 {
 text-align: center;
 }
