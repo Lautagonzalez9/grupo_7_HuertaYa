@@ -4,82 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
     <link href="/css/stylesCarrito.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 rel="stylesheet" />
-    <title>Carrito de compras</title>
+    <title>Carrito</title>
 </head>
 <body>
     <header>
-        
-        <div class="contenedorUser">
-            <p>Lugar para poner foto User</p>
-            <p class="user">User</p>
+        <h1 class="homeHeader">HEADER DEL HOME</h1>
+    </header>
+    <main>
+        <!-- NavBar -->
+        <div class="productNavbar">
+            <a class="category" href="#">Categoria</a>
+            <p class="more">></p>
+            <a class="cart" href="#">Carrito <i class="fas fa-shopping-cart"></i></a>
         </div>
-
-        <div class="contenedor1">
-    <div class="contenedorInicio">
-        <p class="catcarrito">Categoria>Carrito<i class="fa-solid fa-cart-shopping"></i></p>
-    </div>
-    <div>
-        <p class="inicio">Inicio</p>
-    </div>
-</div>
-</header>
-<main>
-<div class="contenedorPrincipal">
-
-    <div class="contenedorSecundario">
-
-<div class="contenedorTerciario">
-    <div class="contenedorImagen">
-        <p>Imagen</p>
-    </div>
-    <div class="contenedorProducto">
-        <p class="producto">Producto</p>
-        <p class="cantidad">cantidad</p>
-        <div class="contenedorPrecio">
-        <p class="precio">precio:</p>
-        <p> Total</p>
+        <!-- Productos Carrito -->
+        <div class="articleContainer">
+            <article class="article">
+                <img class="img" src="/img/Imagen1.jpg" alt="">
+                <div class="details">
+                   <h3 class="productTitle">PRODUCTO</h3>
+                   <p class="amount">CANTIDAD</p>
+                   <div class="product-amount">
+                    <button><i class="fas fa-chevron-left"></i></button>
+                    <a>##</a>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+                   <p class="price">PRECIO</p> 
+                   <button class="trashButton"><i class="fas fa-trash"></i></button>
+                </div>
+            </article>
+            <article class="article">
+                <img class="img" src="/img/Imagen1.jpg" alt="">
+                <div class="details">
+                   <h3 class="productTitle">PRODUCTO</h3>
+                   <p class="amount">CANTIDAD</p>
+                   <div class="product-amount">
+                    <button><i class="fas fa-chevron-left"></i></button>
+                    <a>##</a>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+                   <p class="price">PRECIO</p> 
+                   <button class="trashButton"><i class="fas fa-trash"></i></button>
+                </div>
+            </article>
+            <article class="article">
+                <img class="img" src="/img/Imagen1.jpg" alt="">
+                <div class="details">
+                   <h3 class="productTitle">PRODUCTO</h3>
+                   <p class="amount">CANTIDAD</p>
+                   <div class="product-amount">
+                    <button><i class="fas fa-chevron-left"></i></button>
+                    <a>##</a>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+                   <p class="price">PRECIO</p> 
+                   <button class="trashButton"><i class="fas fa-trash"></i></button>
+                </div>
+            </article>
         </div>
-    </div>
-</div>
-
-<div class="contenedorTerciario">
-    <div class="contenedorImagen">
-        <p>Imagen</p>
-    </div>
-    <div class="contenedorProducto">
-        <p class="producto">Producto</p>
-        <p class="cantidad">cantidad</p>
-        <div class="contenedorPrecio">
-        <p class="precio">precio:</p>
-        <p> Total</p>
+        <!-- Ofertas -->
+        <h3 class="offertTitle">OFERTAS</h3>
+        <div class="offertContainer">
+            <article class="offertArticle">
+                <div class="offertLabel">
+                <img class="offertImg" src="/img/Imagen3.jpg" alt="">
+                <p class="productTitle">Titulo</p>
+                <p class="offertPrice">Precio</p>
+                <button><p>Agregar al carrito</p></button>
+                </div>
+            </article>
+            <article class="offertArticle">
+                <div class="offertLabel">
+                <img class="offertImg" src="/img/Imagen3.jpg" alt="">
+                <p class="productTitle">Titulo</p>
+                <p class="offertPrice">Precio</p>
+                <button><p>Agregar al carrito</p></button>
+                </div>
+            </article>
+            <article class="offertArticle">
+                <div class="offertLabel">
+                <img class="offertImg" src="/img/Imagen3.jpg" alt="">
+                <p class="productTitle">Titulo</p>
+                <p class="offertPrice">Precio</p>
+                <button><p>Agregar al carrito</p></button>
+                </div>
+            </article>
         </div>
-    </div>
-</div>
-
-<div class="contenedorTerciario">
-    <div class="contenedorImagen">
-        <p>Imagen</p>
-    </div>
-    <div class="contenedorProducto">
-        <p class="producto">Producto</p>
-        <p class="cantidad">cantidad</p>
-        <div class="contenedorPrecio">
-        <p class="precio">precio:</p>
-        <p class="total"> Total</p>
-        </div>
-    </div>
-</div>
-    </div>
-    <div class="contenedorCuaternario">
+        <!-- ENVIO -->
         <div>
-            <p>Datos de envio</p>
+        <h3 style="text-align: center;margin-top: 30px;">DATOS DE ENVIO</h3>
         </div>
-    </div>
-</div>
-</main>
+        <div class="dataContainer">
+            <p class="data">NOMBRE Y APELLIDO</p>
+            <p class="data">CALLE/AVENIDA</p>
+            <p class="data">PROVINCIA</p>
+            <p class="data">CIUDAD</p>
+            <p class="data">CODIGO POSTAL</p>
+            <p class="data" style="font-size: 100%;">PISO/DEPARTAMENTO</p>
+            <p class="data">NUMERO DE TELEFONO</p>
+            <div class="data">
+            <p>ESTA ES TU:</p>
+            <p>CASA<i class="far fa-circle"></i></p>
+            <p>TRABAJO<i class="far fa-circle"></i></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <button class="footerButton"><p>FINALIZAR COMPRA</p></button>
+            <button class="footerButton"><p>SEGUIR COMPRANDO</p></button>
+        </div>
+    </footer>
 </body>
 </html>
-

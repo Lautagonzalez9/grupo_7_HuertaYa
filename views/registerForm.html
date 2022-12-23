@@ -4,10 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/register.css">
     <title>Document</title>
 </head>
 <body>
-    hola
-</body>
+    <header>
+        <navbar>
+            <ul style="list-style: none;">
+                <li>Nosotros</li>
+                <li>Productos</li>
+                <li>Combos</li>
+                <li><img width="15%" heigth="15%" src="images/Marca Huerta Ya_Marca.png" alt=""></li>
+                <li>Login</li>
+                <li>Mi Carrito</li>
+                <li>Buscar</li>
+            </ul>            
+        </navbar>
+    </header>
+    <main>
+    <form action="/register" method="POST" class="formulario-registro">
+        
+        <label> Nombre</label>
+            <input type="text" name="Nombre" placeholder="Lionel"> 
+     
+     <label>Apellido </label>
+        <input type="text" name="Apellido" placeholder="Messi">
+     
+     <label>E-mail</label>
+         <input type="email" name="email" placeholder="usuario@gmail.com">
+     
+     <label>Contraseña</label>
+         <input type="password" name="contraseña" placeholder="Ingrese su contraseña">
+     
+     <label>Provincia</label>
+         <input type="text" name="Provincia" placeholder="Buenos Aires">
+     
+     <label> Localidad</label>
+        <input type="text" name="Localidad">
+     
+     <label>Numero de telefono</label>
+         <input type="number" name="Numero-de-telefono">
+     <button type="submit" class="button">Enviar</button>
+
+    </form>
+</main>
+</body> 
 </html>
