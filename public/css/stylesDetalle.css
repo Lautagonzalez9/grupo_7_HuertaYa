@@ -10,3 +10,37 @@
 .imagen-producto-ofertado {
     width: 5vw;
 }
+
+.product-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.product-navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.producto-a-detallar {
+    width: 40vw;
+}
+
+h3 {
+text-align: center;
+}
+
+.productos-relacionados {
+    display: flex;
+    justify-content: space-around;
+}
+
+.productos-en-oferta {
+    display: flex;
+    justify-content: space-around;
+}
