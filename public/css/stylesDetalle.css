@@ -19,9 +19,24 @@ h3 {
 text-align: center;
 }
 
+
 @media (max-width: 481px) {
     
-    
+    .container-2 {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    .imagen-reparto {
+        width: 90%;
+        position: absolute;
+        margin: auto;
+        z-index: -1;
+    }
     .imagen-producto {
         width: 60vw;
     }
@@ -35,21 +50,21 @@ text-align: center;
         font-size: 30px;
         right: 2vw;
         top: 5PX;
-        color: white;
+        color: black;
     }
     .producto-detalle .fa-chevron-right {
         position: absolute;
-        right: 1vw;
+        right: -5vw;
         bottom: 50%;
         font-size: 20px;
-        color: white;
+        color: black;
     }
     .producto-detalle .fa-chevron-left {
         position: absolute;
-        left: 1vw;
+        left: -5vw;
         bottom: 50%;
         font-size: 20px;
-        color: white;
+        color: black;
     }
     .producto-detalle {
         width: 90vw;
@@ -102,6 +117,70 @@ text-align: center;
 }
 .detalles-del-producto p {
     margin: 5px 0;
+}
+.productos-relacionados {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.productos-relacionados article img {
+    width: 80%;
+    margin: auto;
+}
+.productos-relacionados .fa-heart {
+    position: absolute;
+    right: 12%;
+    top: 2%;
+    font-size: 4vw;
+}
+.productos-relacionados article {
+    width: 40%;
+    text-align: center;
+    box-shadow: 10px;
+    position: relative;
+}
+.productos-relacionados .fa-chevron-left {
+    position: absolute;
+    left: 15px;
+    bottom: 50%;
+}
+.productos-relacionados .fa-chevron-right {
+    position: absolute;
+    right: 15px;
+    bottom: 50%;
+}
+.productos-en-oferta {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.productos-en-oferta article img {
+    width: 80%;
+    margin: auto;
+}
+.productos-en-oferta .fa-heart {
+    position: absolute;
+    right: 12%;
+    top: 2%;
+    font-size: 4vw;
+}
+.productos-en-oferta article {
+    width: 40%;
+    text-align: center;
+    box-shadow: 10px;
+    position: relative;
+}
+.productos-en-oferta .fa-chevron-left {
+    position: absolute;
+    left: 15px;
+    bottom: 50%;
+}
+.productos-en-oferta .fa-chevron-right {
+    position: absolute;
+    right: 15px;
+    bottom: 50%;
 }
 }
 
