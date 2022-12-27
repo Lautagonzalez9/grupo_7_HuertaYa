@@ -1,5 +1,37 @@
+.product-image {
+    position: relative;
+}
+
 .imagen-producto {
-    width: 20vw;
+    width: 60vw;
+}
+.fa-heart {
+    position: absolute;
+    left: 17vw;
+    top: 5PX;
+}
+.product-navbar {
+    display:flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+.product-navbar nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  
+}
+.page-title {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.product-navbar ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
 }
 .imagen-reparto {
     width: 20vw;
@@ -11,36 +43,11 @@
     width: 5vw;
 }
 
-.product-navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.product-navbar ul {
-    display: flex;
-    list-style: none;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.producto-a-detallar {
-    width: 50vw;
-}
-
-.producto-a-detallar .producto {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .producto-detalle {
     width: 60%;
     margin: auto;
 }
+
 
 .product-interactions {
     width: 30%;
@@ -50,12 +57,42 @@ h3 {
 text-align: center;
 }
 
-.productos-relacionados {
-    display: flex;
-    justify-content: space-around;
-}
 
-.productos-en-oferta {
-    display: flex;
-    justify-content: space-around;
+@media (min-width: 1200px) {
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .producto-a-detallar {
+        width: 50vw;
+    }
+    
+    .producto-a-detallar .producto {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .productos-relacionados {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .productos-en-oferta {
+        display: flex;
+        justify-content: space-around;
+    }
+    .product-navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .product-navbar ul {
+        display: flex;
+        list-style: none;
+    }
+    
 }
