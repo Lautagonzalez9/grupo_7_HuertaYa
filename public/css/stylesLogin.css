@@ -31,9 +31,10 @@ header{
     flex-wrap: wrap;
     align-items:center;
     margin: auto ;
-    height: 700px;
+    height: 350px;
     width: 700px;
-    background-color: aqua;
+    background-color:#F0F2F3 ;
+    justify-content: space-evenly;
 }
 .input-detalles input{
     border-radius: 30px;
