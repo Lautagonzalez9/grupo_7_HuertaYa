@@ -22,14 +22,17 @@
             </ul>            
         </navbar>
     </header>
-    <main>
+    <main class="cont-form">
+    <div>
+        <img src="/img/Imagen3.jpg" class="imagen-form">
+    </div>
     <form action="/register" method="POST" class="formulario-registro">
-        
+        <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
         <label> Nombre</label>
-            <input type="text" name="Nombre" placeholder="Lionel"> 
+            <input type="text" name="Nombre" placeholder="Lionel" class="nombre"> 
      
      <label>Apellido </label>
-        <input type="text" name="Apellido" placeholder="Messi">
+        <input type="text" name="Apellido" placeholder="Messi" class="nombre">
      
      <label>E-mail</label>
          <input type="email" name="email" placeholder="usuario@gmail.com">
@@ -41,14 +44,14 @@
          <input type="text" name="Provincia" placeholder="Buenos Aires">
      
      <label> Localidad</label>
-        <input type="text" name="Localidad">
+        <input type="text" name="Localidad" placeholder="Bahia Blanca">
      
      <label>Numero de telefono</label>
-         <input type="number" name="Numero-de-telefono">
+         <input type="tel" name="Numero-de-telefono" placeholder="+54 11 9930599">
      <button type="submit" class="button">Enviar</button>
      <!-- aca va el foot -->
-
     </form>
+
 </main>
 </body> 
 </html>
