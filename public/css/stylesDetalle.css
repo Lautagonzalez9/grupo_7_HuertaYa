@@ -20,7 +20,7 @@ text-align: center;
 }
 
 
-@media (max-width: 481px) {
+@media (max-width: 1199px) {
     
     .container-2 {
         margin: 20px auto;
@@ -30,9 +30,12 @@ text-align: center;
         align-items: center;
         text-align: center;
         color: white;
+        position: relative;
     }
     .imagen-reparto {
-        width: 90%;
+        width: fit-content;
+        max-width: 100%;
+        max-height: 100%;
         position: absolute;
         margin: auto;
         z-index: -1;
@@ -185,28 +188,24 @@ text-align: center;
 }
 
 @media (min-width: 1200px) {
-
+    .page-title {
+        width: 50%;
+        margin: 0px;
+        padding: 0px;
+    }
     .container {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
-    
     .producto-a-detallar {
         width: 50vw;
     }
-    
     .producto-a-detallar .producto {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
-    .productos-relacionados {
-        display: flex;
-        justify-content: space-around;
-    }
-
     .productos-en-oferta {
         display: flex;
         justify-content: space-around;
@@ -215,6 +214,7 @@ text-align: center;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        padding: 20px 0px;
     }
     .product-navbar ul {
         display: flex;
@@ -231,25 +231,44 @@ text-align: center;
     }
     .product-interactions {
         width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .interacciones {
+        height: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .precio {
+        text-align: center;
+    }
+    .container-2 {
+        width: 30vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     .imagen-producto {
         width: 20vw;
     }
     .imagen-reparto {
-        width: 20vw;
+        width: 30vw;
+        position: absolute;
+        z-index: -1;
+        margin-top: 15px;
     }
     .imagen-producto-relacionado {
-        width: 5vw;
+        width: 15vw;
     }
     .imagen-producto-ofertado {
-        width: 5vw;
+        width: 15vw;
     }
-    
-    .product-navbar {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+
     .product-navbar ul {
         display: flex;
         list-style: none;
@@ -270,27 +289,63 @@ text-align: center;
         justify-content: space-between;
         align-items: center;
     }
-    
     .producto-detalle {
         width: 60%;
         margin: auto;
     }
-    
-    .product-interactions {
-        width: 30%;
+    .product-image {
+        width: 90%;
+        height: 165px;
+        position: relative;
     }
-    
-    h3 {
-    text-align: center;
+    .product-image img {
+        width: 90%;
+        max-height: 100%;
+        margin-left: 2.8vw;
     }
-    
+    .producto-detalle .fa-chevron-right {
+        position: absolute;
+        right: -3vw;
+        bottom: 50%;
+        font-size: 20px;
+        color: black;
+    }
+    .producto-detalle .fa-chevron-left {
+        position: absolute;
+        left: -0.2vw;
+        bottom: 50%;
+        font-size: 20px;
+        color: black;
+    }
     .productos-relacionados {
         display: flex;
         justify-content: space-around;
+        text-align: center;
     }
-    
+    .productos-relacionados article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .productos-relacionados article .fa-heart {
+        position: absolute;
+        left: 80%;
+        top: 2%;
+        font-size: 2vw;
+    }
+    .productos-relacionados .fa-chevron-left {
+        position: absolute;
+        left: 15px;
+        bottom: 50%;
+    }
+    .productos-relacionados .fa-chevron-right {
+        position: absolute;
+        right: 15px;
+        bottom: 50%;
+    }
     .productos-en-oferta {
         display: flex;
         justify-content: space-around;
+        text-align: center;
     }
 }
