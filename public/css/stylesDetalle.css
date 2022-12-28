@@ -222,8 +222,9 @@ text-align: center;
     }
     .fa-heart {
         position: absolute;
-        left: 17vw;
-        top: 5PX;
+        font-size: 2vw;
+        right: 1vw;
+        top: 10PX;
     }
     .producto-detalle {
         width: 60%;
@@ -242,8 +243,13 @@ text-align: center;
         align-items: center;
         justify-content: space-around;
     }
-    .precio {
+    .detalles-del-producto {
         text-align: center;
+        margin-top: 15px;
+    }
+    .detalles-del-producto .descripcion {
+        text-align: left;
+        margin-top: 20px;
     }
     .container-2 {
         width: 30vw;
@@ -252,6 +258,7 @@ text-align: center;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        height: auto;
     }
     .imagen-producto {
         width: 20vw;
@@ -296,7 +303,6 @@ text-align: center;
     }
     .product-image {
         width: 90%;
-        height: 165px;
         position: relative;
     }
     .product-image img {
@@ -322,6 +328,7 @@ text-align: center;
         display: flex;
         justify-content: space-around;
         text-align: center;
+        position: relative;
     }
     .productos-relacionados article {
         position: relative;
@@ -348,5 +355,33 @@ text-align: center;
         display: flex;
         justify-content: space-around;
         text-align: center;
+        position: relative;
+    }
+    .productos-en-oferta article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .productos-en-oferta article .fa-heart {
+        position: absolute;
+        left: 80%;
+        top: 2%;
+        font-size: 2vw;
+    }
+    .productos-en-oferta .fa-chevron-left {
+        position: absolute;
+        left: 15px;
+        bottom: 50%;
+    }
+    .productos-en-oferta .fa-chevron-right {
+        position: absolute;
+        right: 15px;
+        bottom: 50%;
+    }
+    article p {
+        margin: 5px 00px;
+    }
+    article img {
+        margin-bottom: 10px;
     }
 }
