@@ -4,6 +4,7 @@
 /* mobile first */
 body {
     background-color: rgb(181, 141, 86);
+    font-family: 'Roboto', sans-serif;
 }
 .header-nav {
     background-color: rgb(255, 193, 105);
@@ -26,6 +27,7 @@ body {
     width: 50%;
     display: flex;
     margin: 0 auto;
+    
 }
 .main-nav {
     display: flex;
@@ -63,6 +65,7 @@ main{
 background-image: url(/img/Imagen3.jpg);
 background-size: cover;
 background-position: 45% 75%;
+background-attachment: fixed;
 
 }
 .ya-tenes-cuenta{
@@ -129,7 +132,7 @@ background-position: 45% 75%;
     }
 
     .logo-nav {
-        width: 10%;
+        width: 7%;
         display: flex;
         margin: auto auto;
 
