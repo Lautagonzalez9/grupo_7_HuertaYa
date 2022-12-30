@@ -76,7 +76,32 @@ body {
 h3 {
 text-align: center;
 }
-
+footer {
+    background-color: rgb(255, 193, 105);
+}
+.footer-logo {
+    margin: 0px 0px 0px 35vw;
+    width: 30vw;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+footer ul {
+    list-style: none;
+    padding: 0px;
+}
+.footer-reparto {
+    width: 40%;
+}
+footer h4 {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+.footer-redes {
+    margin: auto;
+    text-align: center;
+}
 /* checkpoint tablets */
 @media (min-width: 768px){
     .hamburguer-button{
@@ -476,5 +501,21 @@ text-align: center;
     }
     article img {
         margin-bottom: 10px;
+    }
+}
+@media (min-width: 1200px) {
+    main {
+        margin-bottom: 30px;
+    }
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-logo {
+        margin: 0px
+    }
+    footer nav {
+        width: 60vw;
+        margin-top: 30px;
     }
 }
