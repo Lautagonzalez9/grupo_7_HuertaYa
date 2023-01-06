@@ -8,6 +8,7 @@
 body{
     background-image:url(/img/carrusel_1.jpg);
     background-size:contain;
+    box-shadow: 3px 3px 8px #ccc;
 }
 
 
