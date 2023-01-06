@@ -3,15 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* mobile first */
 
-header{
-    background-color:gray ;
-}
-.enlaces{
+.header-nav {
+    background-color: rgb(255, 193, 105);
+    padding: 10px;
     display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
+ }
+ main{
+    background-color:#ebebeb ;
+ }
 .contenedor-formulario{
     position: relative;
     display: flex;
@@ -33,8 +34,9 @@ header{
     margin: auto ;
     height: 350px;
     width: 700px;
-    background-color:#F0F2F3 ;
+    background-color:rgb(181, 141, 86) ;
     justify-content: space-evenly;
+    border: none;
 }
 .input-detalles input{
     border-radius: 30px;
