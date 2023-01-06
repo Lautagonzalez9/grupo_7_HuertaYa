@@ -1,45 +1,227 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
     box-sizing: border-box;
 }
+
 /* mobile first */
+body {
+    background-color: rgb(181, 141, 86);
+}
 
 .header-nav {
     background-color: rgb(255, 193, 105);
     padding: 10px;
-    display: flex;
- }
- main{
-    background-color:#ebebeb ;
- }
-.contenedor-formulario{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 100px;
-    width: 100%;
 }
-.imagen-contenedor{
-    background-size: cover;
-    position: absolute;
+
+.buscador-header {
+    width: 50%;
+    border-radius: 10px;
     display: flex;
-  
+    margin: auto;
+    border: solid;
+    border-color: #635e58;
+    background-size: 24px;
+    margin-bottom: 10px;
+    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 7px;
+    ;
+    background-size: 30px;
+    padding: 10px 10px 10px 30px;
 }
-.input-detalles{
+
+.logo-nav {
+    width: 50%;
     display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+}
+
+.main-nav {
+    display: flex;
     flex-wrap: wrap;
-    align-items:center;
-    margin: auto ;
-    height: 350px;
-    width: 700px;
-    background-color:rgb(181, 141, 86) ;
-    justify-content: space-evenly;
-    border: none;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin: 10px;
+}
+
+.main-nav {
+    display: none;
+}
+
+.hamburguer-button {
+    background-color: #4c0303;
+    color: white;
+    display: block;
+    max-width: 60px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 28px;
+    margin: auto;
+}
+footer {
+    background-color: rgb(255, 193, 105);
+}
+.footer-logo {
+    margin: 0px 0px 0px 35vw;
+    width: 30vw;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+footer ul {
+    list-style: none;
+    padding: 0px;
+}
+.footer-reparto {
+    width: 40%;
+}
+footer h4 {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+.footer-redes {
+    margin: auto;
+    text-align: center;
+}
+@media (min-width:468px){
+    main{
+        margin: 0;
+        background-image: url(../img/Imagen2.jpg);
+        background-size: cover;
+        background-position: 45% 75%;
+    }
+}
+
+/* checkpoint tablets */
+@media (min-width: 768px) {
+    .hamburguer-button {
+        display: none;
+    }
+
+    .contenedor-search {
+        width: 50%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .buscador-header {
+        width: 50%;
+        margin: auto 0;
+    }
+
+    .logo-nav {
+        width: 10%;
+        display: flex;
+        margin: auto auto;
+
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .main-nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-nav li {
+        max-width: 0 5px;
+    }
+    .contenedor-formulario {
+        display: flex;
+        justify-content: center;
+    }
+    .imagen-formulario{
+        height: auto;
+    }
+    main{
+        margin: 0;
+        background-image: url(../img/Imagen2.jpg);
+        background-size: cover;
+        background-position: 45% 75%;
+    }
+    
+
+}
+
+.contenedor {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}
+
+.formulario {
+    padding: 50px;
+}
+
+.texto-formulario,
+input,
+label,
+a {
+    color: white;
+}
+.texto-formulario h2{
+    font-size: 50px;
+    text-align: center;
+}
+.texto-formulario p{
+    font-size: 22px;
+    text-align: center;
+}
+.input-detalles label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
 }
 .input-detalles input{
-    border-radius: 30px;
-    width: 200px;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: black;
+}
+.input-detalles button{
+    width: 30%;
+    font-size: 22px;
+    font-weight: bold;
+    /*background-color: white;*/
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    color: white;
+    background-color: #489032;
     
+}
+.recordarme{
+    padding: 15px 0;
+    font-size: 20px;
+    text-align: center;
+}
+.password-texto{
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+    ;
+}
+main{
+    margin: 0;
+    background-image: url(../img/Imagen2.jpg);
+    background-size: cover;
+    background-position: 45% 75%;
 }
