@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/stylesDetalle.css">
     <link rel="stylesheet" href="/css/register.css">
     <script src="https://kit.fontawesome.com/4d18b4db01.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4d18b4db01.js" crossorigin="anonymous"></script>
@@ -24,14 +25,14 @@
     </div>  
         <navbar class="main-nav">
             <ul class="left-nav">
-                <li>Nosotros</li>
-                <li>Productos</li>
-                <li>Combos</li>
+                <li><a href="/Nosotros">Nosotros</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Combos</a></li>
             </ul>
             <ul class="right-nav"> 
-                <li>Login</li>
-                <li>Mi Carrito</li>
-                <li>Buscar</li>
+                <li><a href="/login"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>
+                <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i>Mi Carrito</a></li>
+                <li><a href="/register">Crea tu Cuenta</a></li> 
             </ul>         
         </navbar>
     </header>
@@ -48,7 +49,7 @@
         <input type="text" name="Apellido" placeholder="Messi" class="nombre">
      
      <label>E-mail</label>
-         <input type="email" name="email" placeholder="usuario@gmail.com">
+         <input type="email" name="email" placeholder="LionelMessi10@gmail.com">
      
      <label>Contraseña</label>
          <input type="password" name="contraseña" placeholder="Ingrese su contraseña">
@@ -62,9 +63,51 @@
      <label>Numero de telefono</label>
          <input type="tel" name="Numero-de-telefono" placeholder="+54 11 9930599">
      <button type="submit" class="button">Enviar</button>
-     <!-- aca va el foot -->
+    
     </form>
-
+   
 </main>
+<footer>
+    <img class="footer-logo" width="15%" heigth="15%" src="img/Marca Huerta Ya_Marca.png" alt="">
+    <nav>
+        <div class="footer-container">
+            <div class="footer-informacion">
+                <h4>Información</h4>
+                <ul>
+                    <li>Tienda</li>
+                    <li>Promociones</li>
+                    <li>Combos</li>
+                    <li>Productores</li>
+                    <li>Ofertas</li>
+                    <br>
+                    <li>Contacto</li>
+                </ul>
+        </div>
+            <div class="footer-categorias">
+                <h4>Categorías</h4>
+                <ul>
+                    <li>Bolsones</li>
+                    <li>Verduras cortadas</li>
+                    <li>verduras en bolsa</li>
+                    <li>etc</li>
+                </ul>
+            </div>
+            <div class="footer-reparto">
+                <h4>Próximo reparto</h4>
+                <ul>
+                    <li><p class="footer-reparto-fecha">Fecha</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-redes">
+                <h4>Redes</h4>
+                <img src="" alt="facebook">
+                <img src="" alt="instagram">
+                <a><img src="" alt="Whatsapp"></a>
+        </div>
+        
+    </nav>
+</footer>
 </body> 
 </html>
+//
