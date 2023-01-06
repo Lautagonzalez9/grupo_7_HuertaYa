@@ -25,17 +25,40 @@
     color: white;
     font-family: Open Sans;
     text-align: center;
-    
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
 
-.intro .button-order {
-    background-color: #489032;
+.intro h1 {
+    padding: 0%;
+    margin: 0;
+    
+}
 
+.intro h2 {
+    padding-top: 15%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 0%;
+    margin: 0;
+}
+
+.button-order h3 {
+    padding: 5%;
+         
+    
+}
+
+.button-order {
+    background-color: #489032;
+    width: 40%;
+    border-radius: 10%;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    
 }
 
 .carrusel {
@@ -76,7 +99,6 @@
     color: white;
     font-family: Open Sans;
     text-align: center;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,18 +120,111 @@
     justify-content: space-around;
     margin: auto;
     text-align: center;
-    
+    font-family: open Sans;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
 
+.container div h4 {
+    padding: 3%;
+    align-items: center;
+}
+
+
+
+.camioneta {
+    margin: auto;
+}
+
 .start-order {
+    width: 70%;
     display: flex;
-    background-color: gray;
+    background-color: #DCDCDC;
+    padding: 1%;
+    margin: 5%;
+    border: solid  1px black ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.login-index {
+    display: flex;
+    background-color: #DCDCDC;
+    padding: 1%;
+    width: 70%;
+    margin: 5%;
     border: solid  1px black ;
     text-align: center;
     justify-content: center;
+}
 
+.repetir-pedido {
+    display: flex;
+    align-items: center;
+}
+
+.space-cp {
+    width: 55%;
+}
+
+.button-calcular {
+    display: flex;
+    background-color: #DCDCDC;
+    width: 40%;
+    padding: 1%;
+    margin: 5%;
+    border: solid  1px black ;
+    text-align: center;
+    justify-content: center;
+}
+
+/*footer*/
+
+footer {
+    background-color: rgb(255, 193, 105);
+}
+.footer-logo {
+    margin: 0px 0px 0px 35vw;
+    width: 30vw;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+footer ul {
+    list-style: none;
+    padding: 0px;
+}
+.footer-reparto {
+    width: 40%;
+}
+footer h4 {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+.footer-redes {
+    margin: auto;
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin-bottom: 30px;
+    }
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-logo {
+        margin: 0px
+    }
+    footer nav {
+        width: 60vw;
+        margin-top: 30px;
+    }
 }
