@@ -112,6 +112,19 @@ footer h4 {
     text-align: center;
     margin: 0px 0px 10px 0px;
 }
+footer h5 {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    font-size: 1.2em;
+}
+.button-order {
+    background-color: #489032;
+    width: 40%;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
 .footer-redes {
     margin: auto;
     text-align: center;
@@ -126,6 +139,131 @@ section article img {
 }
 section article p {
     margin: 5px 0;
+}
+/* Aca comienza el estilo del delivery en 3 pasos extraido del home*/
+.delivery {
+background-image: url("../img/repartidor con caja.jpg");
+background-repeat: no-repeat;
+background-size: 60%;
+background-color: white;
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
+}
+.container3 {
+    background-color: white;
+    width: 60%;
+    height: 100%;
+    border-color: black solid 1px;
+    text-align: center;
+    font-family: open Sans;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 90%;
+}
+.start-order {
+    width: 60%;
+    display: flex;
+    background-color: #DCDCDC;
+    padding: 1%;
+    margin: 5%;
+    border: solid 1px black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.repetir-pedido {
+    display: flex;
+    align-items: center;
+}
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.login-index {
+    display: flex;
+    background-color: #DCDCDC;
+    padding: 1%;
+    width: 70%;
+    margin: 5%;
+    border: solid 1px black;
+    text-align: center;
+    justify-content: center;
+    color: black;
+}
+.delivery h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.space-cp {
+    width: 55%;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+.delivery input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+.button-calcular {
+    background-color: #DCDCDC;
+    width: 40%;
+    padding: 1%;
+    margin: 5%;
+    border: solid 1px black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
 }
 /* checkpoint tablets */
 @media (min-width: 768px){

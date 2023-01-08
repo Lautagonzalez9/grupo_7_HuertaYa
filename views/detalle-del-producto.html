@@ -92,27 +92,31 @@ rel="stylesheet" />
             </article>
         </section>
         </div>
-        <section class="container-2">
-            <img class="imagen-reparto" src="/img/producto.jpg" alt="Repartos">
-            <div class="banner-repartos">
-                <h3>Proximos repartos:</h3>
-                <p>(fechas)</p>
-            </div>
-            <div class="banner-delivery">
-                <div class="pasos-delivey">
-                    <h4>DELIVERY EN SOLO 3 PASOS</h4>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <a>.....</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <a>.....</a>
-                    <i class="fa-solid fa-chevron-right"></i>
+        <section class="delivery">
+            <div class="container3">
+                <div class="tres-pasos"><h3>TENEMOS DELIVERY EN 3 PASOS</h3>
+                    <div class="camioneta">
+                        <img src="" alt="paso 1">
+                        <img src="" alt="paso 2">
+                        <img src="" alt="paso 3">
+                    </div>
+                    <a class="start-order"><h4>COMENZAR PEDIDO</h4></a>
                 </div>
-                <div class="calculo-envio">
-                    <h4>CALCULAR ENVIO</h4>
-                    <p>(repetir formato del home)</p>
+                <div class="repetir-pedido">
+                    <h5>¿Ya pediste y querés repetir el pedido?</h5>
+                    <a class="login-index"><h4>INICIÁ SESIÓN</h4></a>
+                </div>
+                <div class="envio"><h4>CALCULAR ENVÍO</h4>
+                    <form>
+                        <label for="codigo-postal"></label>
+                        <input class="space-cp" type="CP" name="codigo-postal" placeholder="Tu código postal">
+                    <button type="submit" class="button-calcular">CALCULAR</button>
+                    </form>
+                    <a><h6>No se mi código postal</h6></a>
                 </div>
             </div>
         </section>
+    
     </div>
         <section>
             <h3>Productos relacionados</h3>
@@ -221,7 +225,8 @@ rel="stylesheet" />
                 <div class="footer-reparto">
                     <h4>Próximo reparto</h4>
                     <ul>
-                        <li><p class="footer-reparto-fecha">Fecha</p></li>
+                        <h5>17/05/2023</h5>
+                        <a class="button-order"><h3>PEDIR AHORA</h3></a>
                     </ul>
                 </div>
             </div>
