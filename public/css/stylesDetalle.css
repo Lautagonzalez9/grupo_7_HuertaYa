@@ -3,7 +3,7 @@
 }
 /* mobile first */
 body {
-    background-color: rgb(181, 141, 86);
+    background-color: rgb(221, 163, 82);
 }
 .header-nav {
     background-color: rgb(255, 193, 105);
@@ -63,7 +63,9 @@ body {
     margin: auto;
     padding-bottom: 20px;
 }
-
+.product-navbar {
+    background-color: rgb(221, 163, 82);
+}
 .imagen-reparto {
     width: 20vw;
 }
@@ -75,13 +77,25 @@ body {
 }
 h3 {
 text-align: center;
+font-size: 2rem;
+}
+.product-share {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.product-share i{
+font-size: 1.3em;
 }
 footer {
     background-color: rgb(255, 193, 105);
+    padding-bottom: 30px;
 }
 .footer-logo {
     margin: 0px 0px 0px 35vw;
     width: 30vw;
+    max-width: 360px;
 }
 .footer-container {
     display: flex;
@@ -101,6 +115,17 @@ footer h4 {
 .footer-redes {
     margin: auto;
     text-align: center;
+}
+section article {
+    background-color:rgb(255, 193, 105);
+    padding: 15px 0;
+    margin: 15px 0;
+}
+section article img {
+    margin-top: 15px;
+}
+section article p {
+    margin: 5px 0;
 }
 /* checkpoint tablets */
 @media (min-width: 768px){
@@ -169,8 +194,8 @@ footer h4 {
     .producto .fa-heart {
         position: absolute;
         font-size: 30px;
-        right: 2vw;
-        top: 5PX;
+        right: -6vw;
+        top: 15PX;
         color: black;
     }
     .producto-detalle .fa-chevron-right {
@@ -193,7 +218,10 @@ footer h4 {
     }
     .descripcion-detallada {
         width: 90vw;
-        margin: auto;
+        margin: 10px auto;
+    }
+    .descripcion-detallada h3 {
+        display: none;
     }
     .product-navbar {
         display:flex;
@@ -213,11 +241,11 @@ footer h4 {
 }
 .interacciones {
     align-items: center;
-    width: 40%;
+    width: 30%;
 }
 .product-interactions{
     margin: auto;
-    width: 90vw;
+    width: 70vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -234,7 +262,8 @@ footer h4 {
     margin-bottom: 15px;
 }
 .detalles-del-producto {
-    width: 60%;
+    width: 70%;
+    text-align: center;
 }
 .detalles-del-producto p {
     margin: 5px 0;
@@ -248,17 +277,18 @@ footer h4 {
 .productos-relacionados article img {
     width: 80%;
     margin: auto;
+    margin-top: 15px;
 }
 .productos-relacionados .fa-heart {
     position: absolute;
-    right: 12%;
-    top: 2%;
-    font-size: 4vw;
+    right: 1%;
+    top: 30px;
+    font-size: 3vw;
 }
 .productos-relacionados article {
     width: 40%;
     text-align: center;
-    box-shadow: 10px;
+    box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%);
     position: relative;
 }
 .productos-relacionados .fa-chevron-left {
@@ -280,17 +310,18 @@ footer h4 {
 .productos-en-oferta article img {
     width: 80%;
     margin: auto;
+    margin-top: 15px;
 }
 .productos-en-oferta .fa-heart {
     position: absolute;
-    right: 12%;
-    top: 2%;
-    font-size: 4vw;
+    right: 1%;
+    top: 30px;
+    font-size: 3vw;
 }
 .productos-en-oferta article {
     width: 40%;
     text-align: center;
-    box-shadow: 10px;
+    box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%);
     position: relative;
 }
 .productos-en-oferta .fa-chevron-left {
@@ -338,11 +369,11 @@ footer h4 {
         display: flex;
         list-style: none;
     }
-    .fa-heart {
+    .producto-detalle .fa-heart {
         position: absolute;
         font-size: 2vw;
-        right: 1vw;
-        top: 10PX;
+        right: -10%;
+        top: 15PX;
     }
     .producto-detalle {
         width: 60%;
@@ -389,9 +420,11 @@ footer h4 {
         max-height: 100%;
     }
     .imagen-producto-relacionado {
+        margin: auto;
         width: 15vw;
     }
     .imagen-producto-ofertado {
+        margin: auto;
         width: 15vw;
     }
 
@@ -408,6 +441,8 @@ footer h4 {
     
     .producto-a-detallar {
         width: 50vw;
+        background-color: rgb(255, 193, 105);
+        box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%)
     }
     
     .producto-a-detallar .producto {
@@ -452,11 +487,13 @@ footer h4 {
         position: relative;
         display: flex;
         flex-direction: column;
+        width: 20vw;
+        box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%)
     }
     .productos-relacionados article .fa-heart {
         position: absolute;
-        left: 80%;
-        top: 2%;
+        left: 89%;
+        top: 4%;
         font-size: 2vw;
     }
     .productos-relacionados .fa-chevron-left {
@@ -479,11 +516,13 @@ footer h4 {
         position: relative;
         display: flex;
         flex-direction: column;
+        width: 20vw;
+        box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%)
     }
     .productos-en-oferta article .fa-heart {
         position: absolute;
-        left: 80%;
-        top: 2%;
+        left: 89%;
+        top: 4%;
         font-size: 2vw;
     }
     .productos-en-oferta .fa-chevron-left {
