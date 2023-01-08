@@ -3,7 +3,9 @@
 }
 /* mobile first */
 body {
+    font-family: 'Roboto', sans-serif;
     background-color: rgb(221, 163, 82);
+    background: linear-gradient(39deg, rgba(215,141,38,1) 29%, rgba(181,141,86,1) 87%);
 }
 .header-nav {
     background-color: rgb(255, 193, 105);
@@ -26,6 +28,12 @@ body {
     width: 50%;
     display: flex;
     margin: 0 auto;
+}
+main {
+    background-image: url(/img/Imagen3.jpg);
+    background-size: cover;
+    background-position: 45% 75%;
+    background-attachment: fixed;
 }
 .main-nav {
     display: flex;
@@ -66,6 +74,16 @@ body {
 .product-navbar {
     background-color: rgb(221, 163, 82);
 }
+.product-navbar ul {
+    padding: 0;
+}
+.carrito-desplegable {
+    margin-bottom: 15px;
+}
+.container {
+    background: #f8f8f8a7;
+    padding: 30px 0;
+}
 .imagen-reparto {
     width: 20vw;
 }
@@ -78,6 +96,8 @@ body {
 h3 {
 text-align: center;
 font-size: 2rem;
+margin: 0 auto;
+padding: 15px 0;
 }
 .product-share {
     margin: auto;
@@ -128,6 +148,9 @@ footer h5 {
 .footer-redes {
     margin: auto;
     text-align: center;
+}
+section {
+    background: #f8f8f8a7;
 }
 section article {
     background-color:rgb(255, 193, 105);
@@ -357,6 +380,7 @@ button, input, optgroup, select, textarea {
     .descripcion-detallada {
         width: 90vw;
         margin: 10px auto;
+        margin-bottom: 20px;
     }
     .descripcion-detallada h3 {
         display: none;
