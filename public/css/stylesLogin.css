@@ -5,6 +5,7 @@
 /* mobile first */
 body {
     background-color: rgb(181, 141, 86);
+    font-family: 'Roboto', sans-serif;
 }
 
 .header-nav {
@@ -66,32 +67,7 @@ body {
     font-size: 28px;
     margin: auto;
 }
-footer {
-    background-color: rgb(255, 193, 105);
-}
-.footer-logo {
-    margin: 0px 0px 0px 35vw;
-    width: 30vw;
-}
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-}
-footer ul {
-    list-style: none;
-    padding: 0px;
-}
-.footer-reparto {
-    width: 40%;
-}
-footer h4 {
-    text-align: center;
-    margin: 0px 0px 10px 0px;
-}
-.footer-redes {
-    margin: auto;
-    text-align: center;
-}
+
 @media (min-width:468px){
     main{
         margin: 0;
@@ -99,7 +75,13 @@ footer h4 {
         background-size: cover;
         background-position: 45% 75%;
     }
-}
+    /*.footer-container{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }*/
+}   
 
 /* checkpoint tablets */
 @media (min-width: 768px) {
@@ -129,12 +111,15 @@ footer h4 {
     .main-nav {
         display: flex;
         justify-content: space-between;
+        
     }
 
 
     .main-nav ul {
         display: flex;
         align-items: center;
+        list-style: none;
+       
     }
 
     .main-nav li {
@@ -199,7 +184,6 @@ a {
     width: 30%;
     font-size: 22px;
     font-weight: bold;
-    /*background-color: white;*/
     border: none;
     border-radius: 5px;
     display: block;
@@ -224,4 +208,49 @@ main{
     background-image: url(../img/Imagen2.jpg);
     background-size: cover;
     background-position: 45% 75%;
+}
+/*footer*/
+
+footer {
+    background-color: rgb(255, 193, 105);
+}
+.footer-logo {
+    margin: 0px 0px 0px 35vw;
+    width: 30vw;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+footer ul {
+    list-style: none;
+    padding: 0px;
+}
+.footer-reparto {
+    width: 40%;
+}
+footer h4 {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+.footer-redes {
+    margin: auto;
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin-bottom: 30px;
+    }
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-logo {
+        margin: 0px
+    }
+    footer nav {
+        width: 60vw;
+        margin-top: 30px;
+    }
 }
