@@ -6,34 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
     <link href="/css/stylesCarrito.css" rel="stylesheet">
+    <link href="/css/stylesDetalle.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 rel="stylesheet" />
     <title>Carrito</title>
 </head>
 <body>
-    <header>
-        <navbar>
-            <div style="display:flex;flex-wrap:wrap;justify-content:center">
-            <img src="/img/Marca Huerta Ya_Marca.png" alt="" style="width: 60%; height: auto;position: relative;">
-        </div>
-        <div class="navconteiner">
-            <div class="nav">
-            <a class="category" href="#">Categoria</a>
-            <a class="more"> / </a>
-            <a class="cart" href="/carrito">Carro de compras <i class="fas fa-shopping-cart"></i></a>
-        </div>
-        </div>
-        <a class="inicio" href="/"><button>inicio</button></a>
+    <header class="header-nav">
+        <div class="contenedor-bar"> 
+        <img src="/img/Marca Huerta Ya_marca.png" alt="logo" class="logo-nav">
+        <div class="contenedor-search"> 
+        <input type="search" placeholder="Buscar producto" class="buscador-header"></div>
+        
+        <a href="#" class="hamburguer-button">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </div>  
+        <navbar class="main-nav">
+            <ul class="left-nav">
+                <li><a href="/Nosotros">Nosotros</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Combos</a></li>
+            </ul>
+            <ul class="right-nav"> 
+                <li><a href="/login"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>
+                <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i>Mi Carrito</a></li>
+                <li><a href="/register">Crea tu Cuenta</a></li> 
+            </ul>         
         </navbar>
     </header>
     <main>
-        <!-- NavBar -->
-        <!-- <div class="productNavbar">
-            <a class="category" href="#">Categoria</a>
-            <p class="more">></p>
-            <a class="cart" href="#">Carrito <i class="fas fa-shopping-cart"></i></a>
-        </div> -->
-        <!-- Productos Carrito -->
         <div class="articleContainer">
             <article class="article">
                 <img class="img" src="/img/Imagen1.jpg" alt="">
@@ -130,6 +132,44 @@ rel="stylesheet" />
             <button class="footerButton"><p>FINALIZAR COMPRA</p></button>
             <button class="footerButton"><p>SEGUIR COMPRANDO</p></button>
         </div>
+        <nav>
+            <div class="footer-container">
+                <div class="footer-informacion">
+                    <h4>Información</h4>
+                    <ul>
+                        <li>Tienda</li>
+                        <li>Promociones</li>
+                        <li>Combos</li>
+                        <li>Productores</li>
+                        <li>Ofertas</li>
+                        <br>
+                        <li>Contacto</li>
+                    </ul>
+            </div>
+                <div class="footer-categorias">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li>Bolsones</li>
+                        <li>Verduras cortadas</li>
+                        <li>verduras en bolsa</li>
+                        <li>etc</li>
+                    </ul>
+                </div>
+                <div class="footer-reparto">
+                    <h4>Próximo reparto</h4>
+                    <ul>
+                        <li><p class="footer-reparto-fecha">Fecha</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-redes">
+                    <h4>Redes</h4>
+                    <img src="" alt="facebook">
+                    <img src="" alt="instagram">
+                    <a><img src="" alt="Whatsapp"></a>
+            </div>
+            
+        </nav>
     </footer>
 </body>
 </html>
