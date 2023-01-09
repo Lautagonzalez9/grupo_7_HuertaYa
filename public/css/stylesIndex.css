@@ -5,6 +5,10 @@
     
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .nav {
     display: flex;
     justify-content: space-around;
@@ -24,7 +28,6 @@
     background-size: 100%;
     height: 28vh;
     color: white;
-    font-family: Open Sans;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -48,7 +51,6 @@
 
 .button-order h3 {
     padding: 5%;
-         
     
 }
 
@@ -62,22 +64,16 @@
     
 }
 
-.carrusel {
-    margin-bottom: 1%;
-}
-
 .carrusel-1 {
     background-image: url("../img/carrusel_1.jpg");
     background-size: 100%;
     height: 26vh;
     color: white;
-    font-family: Open Sans;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     
-
 }
 
 .carrusel-2 {
@@ -85,8 +81,6 @@
     background-size: 100%;
     height: 26vh;
     color: white;
-    font-family: Open Sans;
-    text-align: center;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -98,7 +92,6 @@
     background-size: 100%;
     height: 26vh;
     color: white;
-    font-family: Open Sans;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -106,9 +99,10 @@
 }
 
 .delivery {
-    background-image: url("../img/repartidor con caja.jpg");
+    background-image: url("../img/repartidor con caja de verduras con logo en caja 2.png");
     background-repeat: no-repeat;
     background-size: 60%;
+    height: 26vh;
     background-color: white;
     display: flex;
     justify-content: flex-end;
@@ -116,25 +110,43 @@
    
 }
 
-.container {
+.tres-pasos {
     
-    background-color: white;
-    width: 60%;
-    height: 100%;
+    width: 55%;
+    height: 26vh;
     border-color: black solid 1px;
     text-align: center;
-    font-family: open Sans;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    opacity: 90%;
-    
+   
+}
 
+.tres-pasos h3 {
+   margin: 8px auto;
+   position: relative;
+   bottom: 15%;
+   left: 15%;
+}
+
+.camioneta-con-camino {
+    width: 60%;
+    position: relative;
+    bottom: 5%;
+    left: 10%;
 }
 
 .container div h4 {
     padding: 3%;
     align-items: center;
+}
+
+.delivery-marca {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    margin: 0 auto;
+   
 }
 
 
@@ -148,13 +160,14 @@
     display: flex;
     background-color: #DCDCDC;
     padding: 1%;
-    margin: 5%;
+    margin: 8px auto;
     border: solid  1px black ;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: black;
-    
+    position: relative;
+    left: 8%;
 
 }
 
@@ -170,20 +183,51 @@
     color: black;
 }
 
+
+
+.repetir-pedido-0 {
+    background-image: url("../img/logoCaja2.png");
+    background-repeat: repeat-x;
+    background-size: 30%;
+    background-position: top;
+    background-color: white;
+}
+
+.manzana {
+    background-color: white;
+    background-image: url("../img/media-manzana-logo.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% -20%;
+       
+
+}
+
 .repetir-pedido {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    background-image: url("../img/logoCaja2.png");
+    background-repeat: repeat-x;
+    background-size: 30%;
+    background-position: top;
+    padding: 5% 10% 5% 10%;
+}
+
+.repetir-pedido h5 {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
 }
 
 .space-cp {
     width: 55%;
+    
 }
 
 .button-calcular {
     background-color: #DCDCDC;
     width: 40%;
     padding: 1%;
-    margin: 5%;
     border: solid  1px black ;
     text-align: center;
     display: flex;
@@ -192,11 +236,21 @@
     color: black;
 }
 
+.form-codigo {
+    display: flex;
+}
+
 a h6 {
     color: black;
-    text-decoration: dashed;
+    text-decoration: dashed 1px black;
     margin-bottom: 3%;
+    margin-top: 1%;
 }
+
+.envio {
+    padding: 0 10% 5% 10%;
+}
+
 
 /*footer*/
 
