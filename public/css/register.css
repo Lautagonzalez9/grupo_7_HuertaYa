@@ -85,12 +85,13 @@ body {
     margin: auto; 
 }
 
-main{
+.cont-form{
     margin: 0;
     background-image: url(/img/Imagen3.jpg);
     background-size: cover;
     background-position: 45% 75%;
     background-attachment: fixed;
+    
 
 }
 .ya-tenes-cuenta{
@@ -221,7 +222,7 @@ main{
 
 /* checkpoint computadoras */
 @media (min-width: 1200px){
-    main{
+    .cont-form{
         background-position: 0% 10%;
     }
     
