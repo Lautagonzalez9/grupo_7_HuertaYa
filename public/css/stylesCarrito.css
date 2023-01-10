@@ -47,9 +47,9 @@ margin-left: 50%;
     display: flex;
     flex-wrap: wrap;
     margin:10px 5px 10px 5px;
-    border: 0.5px solid grey;
+    border: 0.5px solid rgb(197, 181, 181);
     width: 90%;
-    background-color: rgba(189, 184, 175,0.3)
+    background-color: rgba(189, 184, 175,0.7)
 }
 
 .img{
