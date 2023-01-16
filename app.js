@@ -16,7 +16,4 @@ app.set("view engine","ejs");
 
 //Rutas 
 app.use('/', rutaMain);
-app.use('/carrito', rutaMain);
-app.use('/register', rutaMain);
-app.use('/login', rutaMain);
-app.use('/producto', rutaMain);
+
