@@ -26,7 +26,10 @@ body {
     background-image: url("../img/imagen_principal.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 26vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     color: white;
     text-align: center;
     display: flex;
@@ -42,15 +45,12 @@ body {
 }
 
 .intro h2 {
-    padding-top: 15%;
-    padding-right: 5%;
-    padding-left: 5%;
-    padding-bottom: 0%;
+    padding: 15% 5% 0% 5%;    
     margin: 0;
 }
 
-.button-order h3 {
-    padding: 5%;
+.button-order h4 {
+    padding: 3%;
     
 }
 
@@ -58,51 +58,65 @@ body {
     background-color: #489032;
     width: 40%;
     border-radius: 5px;
-    
     margin: auto;
-    
+    margin-bottom: 20%;
 }
 
 .carrusel-1 {
     background-image: url("../img/carrusel_1.jpg");
     background-size: 100%;
-    height: 26vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     color: white;
     font-size: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 15% 5% 15% 5%;
     
 }
 
 .carrusel-2 {
     background-image: url("../img/carrusel_4.jpg");
     background-size: 100%;
-    height: 26vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 15% 5% 8% 5%;
 }
 
 .carrusel-3 {
     background-image: url("../img/carrusel_3.jpg");
     background-size: 100%;
-    height: 26vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 15% 5% 15% 5%;
 }
 
 .delivery {
     background-image: url("../img/repartidor con caja de verduras con logo en caja 2.png");
     background-repeat: no-repeat;
     background-size: 60%;
-    height: 24vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     background-color: white;
     display: flex;
     justify-content: flex-end;
@@ -111,9 +125,9 @@ body {
 }
 
 .tres-pasos {
-    
-    width: 55%;
-    height: 26vh;
+    width: 30vw;
+    max-width: 1400px;
+    min-width: 320px;
     border-color: black solid 1px;
     text-align: center;
     display: flex;
@@ -143,9 +157,9 @@ body {
 
 .delivery-marca {
     display: flex;
-    width: 60%;
-    align-items: center;
-    margin: 0 auto;
+    width: 30vw;
+    align-items: flex-end;
+    margin: auto;
    
 }
 
@@ -156,11 +170,11 @@ body {
 }
 
 .start-order {
-    width: 60%;
+    width: 40%;
     display: flex;
     background-color: #DCDCDC;
     padding: 1%;
-    margin: 8px auto;
+    margin: 8px 2% 20px 2%;
     border: solid  1px black ;
     flex-direction: column;
     align-items: center;
@@ -189,7 +203,7 @@ body {
     background-image: url("../img/media-manzana-logo.png");
     background-size: 50%;
     background-repeat: no-repeat;
-    background-position: 50% -20%;
+    background-position: 50% -95%;
        
 
 }
@@ -239,7 +253,7 @@ a h6 {
 }
 
 .envio {
-    padding: 0 10% 5% 10%;
+    padding: 0 10% 2% 10%;
 }
 
 
@@ -278,10 +292,7 @@ footer h4 {
         margin-bottom: 30px;
     }
 
-    .intro {
-        height: 40vh;    
-    }
-
+   
     .intro h1 {
         font-size: 45px;
         
@@ -292,7 +303,7 @@ footer h4 {
         padding-top: 20%;
     }
 
-    .button-order h3 {
+    .button-order h4 {
         font-size: 30px;
         
     }   
@@ -302,7 +313,6 @@ footer h4 {
     }
 
     .carrusel-1 {
-        height: 40vh;
         background-position: center;
         font-size: 20px;
                                 
@@ -313,7 +323,6 @@ footer h4 {
     }
     
     .carrusel-2 {
-        height: 40vh;
         background-position: center;
         font-size: 20px;                      
     }
@@ -323,7 +332,6 @@ footer h4 {
     }
 
     .carrusel-3 {
-        height: 40vh;
         background-position: center;
         font-size: 20px;
                                 
@@ -413,10 +421,7 @@ footer h4 {
         margin-bottom: 30px;
     }
 
-    .intro {
-        height: 40vh;    
-    }
-
+    
     .intro h1 {
         font-size: 50px;
         
@@ -427,7 +432,7 @@ footer h4 {
         padding-top: 20%;
     }
 
-    .button-order h3 {
+    .button-order h4 {
         font-size: 36px;
         
     }   
@@ -437,7 +442,6 @@ footer h4 {
     }
 
     .carrusel-1 {
-        height: 40vh;
         background-position: center;
         font-size: 20px;
                                 
@@ -448,7 +452,6 @@ footer h4 {
     }
     
     .carrusel-2 {
-        height: 40vh;
         background-position: center;
         font-size: 20px;                      
     }
@@ -458,7 +461,6 @@ footer h4 {
     }
 
     .carrusel-3 {
-        height: 40vh;
         background-position: center;
         font-size: 20px;
                                 
