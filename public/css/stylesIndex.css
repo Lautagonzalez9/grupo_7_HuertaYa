@@ -26,7 +26,10 @@ body {
     background-image: url("../img/imagen_principal.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 28vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     color: white;
     text-align: center;
     display: flex;
@@ -42,15 +45,12 @@ body {
 }
 
 .intro h2 {
-    padding-top: 15%;
-    padding-right: 5%;
-    padding-left: 5%;
-    padding-bottom: 0%;
+    padding: 15% 5% 0% 5%;    
     margin: 0;
 }
 
-.button-order h3 {
-    padding: 5%;
+.button-order h4 {
+    padding: 3%;
     
 }
 
@@ -58,51 +58,65 @@ body {
     background-color: #489032;
     width: 40%;
     border-radius: 5px;
-    flex-direction: column;
-    justify-content: center;
     margin: auto;
-    
+    margin-bottom: 20%;
 }
 
 .carrusel-1 {
     background-image: url("../img/carrusel_1.jpg");
     background-size: 100%;
-    height: 26vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     color: white;
+    font-size: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 15% 5% 15% 5%;
     
 }
 
 .carrusel-2 {
     background-image: url("../img/carrusel_4.jpg");
     background-size: 100%;
-    height: 26vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 15% 5% 8% 5%;
 }
 
 .carrusel-3 {
     background-image: url("../img/carrusel_3.jpg");
     background-size: 100%;
-    height: 26vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 15% 5% 15% 5%;
 }
 
 .delivery {
     background-image: url("../img/repartidor con caja de verduras con logo en caja 2.png");
     background-repeat: no-repeat;
     background-size: 60%;
-    height: 26vh;
+    width: 100vw;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: auto;
     background-color: white;
     display: flex;
     justify-content: flex-end;
@@ -111,9 +125,9 @@ body {
 }
 
 .tres-pasos {
-    
-    width: 55%;
-    height: 26vh;
+    width: 30vw;
+    max-width: 1400px;
+    min-width: 320px;
     border-color: black solid 1px;
     text-align: center;
     display: flex;
@@ -143,9 +157,9 @@ body {
 
 .delivery-marca {
     display: flex;
-    width: 60%;
-    align-items: center;
-    margin: 0 auto;
+    width: 30vw;
+    align-items: flex-end;
+    margin: auto;
    
 }
 
@@ -156,11 +170,11 @@ body {
 }
 
 .start-order {
-    width: 60%;
+    width: 40%;
     display: flex;
     background-color: #DCDCDC;
     padding: 1%;
-    margin: 8px auto;
+    margin: 8px 2% 20px 2%;
     border: solid  1px black ;
     flex-direction: column;
     align-items: center;
@@ -184,21 +198,12 @@ body {
 }
 
 
-
-.repetir-pedido-0 {
-    background-image: url("../img/logoCaja2.png");
-    background-repeat: repeat-x;
-    background-size: 30%;
-    background-position: top;
-    background-color: white;
-}
-
 .manzana {
     background-color: white;
     background-image: url("../img/media-manzana-logo.png");
     background-size: 50%;
     background-repeat: no-repeat;
-    background-position: 50% -20%;
+    background-position: 50% -95%;
        
 
 }
@@ -248,7 +253,7 @@ a h6 {
 }
 
 .envio {
-    padding: 0 10% 5% 10%;
+    padding: 0 10% 2% 10%;
 }
 
 
@@ -281,10 +286,252 @@ footer h4 {
     text-align: center;
 }
 
+
+@media (min-width: 769px) {
+    main {
+        margin-bottom: 30px;
+    }
+
+   
+    .intro h1 {
+        font-size: 45px;
+        
+    }
+    
+    .intro h2 {
+        font-size: 35px;
+        padding-top: 20%;
+    }
+
+    .button-order h4 {
+        font-size: 30px;
+        
+    }   
+
+    .button-order {
+        margin-top: 5%;
+    }
+
+    .carrusel-1 {
+        background-position: center;
+        font-size: 20px;
+                                
+    }
+
+    .carrusel-1 p {
+        padding: 3%;
+    }
+    
+    .carrusel-2 {
+        background-position: center;
+        font-size: 20px;                      
+    }
+    
+    .carrusel-2 p {
+        padding: 3%;
+    }
+
+    .carrusel-3 {
+        background-position: center;
+        font-size: 20px;
+                                
+    }
+
+    .carrusel-3 p {
+        padding: 3%;
+    }
+
+    .delivery {
+        height: 40vh;
+               
+    }
+
+    .tres-pasos {
+        height: 40vh;
+        
+       
+    }
+    
+    .tres-pasos h3 {
+       font-size: 30px;
+    }
+    
+    
+    .start-order {
+        margin-bottom: 3%;
+    }
+
+    .camioneta {
+        margin: 3%;
+        position: relative;
+        bottom: 33%;
+    }
+
+    .repetir-pedido {
+        background-size: 50%;
+        padding-top: 5%;
+        justify-content: flex-start;
+
+        
+        
+    }
+
+    .manzana {
+        height: 25vh;
+        background-size: 40%;
+        background-position: 90% -45%;
+    }
+
+    .repetir-pedido h5 {
+        font-size: 15px;
+        width: 24%;
+        margin: 5%;
+        margin-left: 0;
+        margin-right: 0;
+        
+
+    
+    }
+
+    .login-index {
+        width: 18%;
+        margin-left: 0;
+    }
+
+    .envio {
+        width: 55%;
+    }
+
+   
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-logo {
+        margin: 0px
+    }
+    footer nav {
+        width: 60vw;
+        margin-top: 30px;
+    }
+}
+
 @media (min-width: 1200px) {
     main {
         margin-bottom: 30px;
     }
+
+    
+    .intro h1 {
+        font-size: 50px;
+        
+    }
+    
+    .intro h2 {
+        font-size: 40px;
+        padding-top: 20%;
+    }
+
+    .button-order h4 {
+        font-size: 36px;
+        
+    }   
+
+    .button-order {
+        margin-top: 5%;
+    }
+
+    .carrusel-1 {
+        background-position: center;
+        font-size: 20px;
+                                
+    }
+
+    .carrusel-1 p {
+        padding: 3%;
+    }
+    
+    .carrusel-2 {
+        background-position: center;
+        font-size: 20px;                      
+    }
+    
+    .carrusel-2 p {
+        padding: 3%;
+    }
+
+    .carrusel-3 {
+        background-position: center;
+        font-size: 20px;
+                                
+    }
+
+    .carrusel-3 p {
+        padding: 3%;
+    }
+
+    .delivery {
+        height: 40vh;
+               
+    }
+
+    .tres-pasos {
+        height: 40vh;
+        
+       
+    }
+    
+    .tres-pasos h3 {
+       font-size: 30px;
+    }
+    
+    
+    .start-order {
+        margin-bottom: 3%;
+    }
+
+    .camioneta {
+        margin: 3%;
+        position: relative;
+        bottom: 33%;
+    }
+
+    .repetir-pedido {
+        background-size: 50%;
+        padding-top: 10%;
+        justify-content: flex-start;
+
+        
+        
+    }
+
+    .manzana {
+        height: 40vh;
+        background-size: 40%;
+        background-position: 90% -40%;
+    }
+
+    .repetir-pedido h5 {
+        font-size: 20px;
+        width: 24%;
+        margin: 5%;
+        margin-left: 0;
+        margin-right: 0;
+        
+
+    
+    }
+
+    .login-index {
+        width: 18%;
+        margin-left: 0;
+    }
+
+    .envio {
+        width: 55%;
+    }
+
+   
     footer {
         display: flex;
         justify-content: space-around;

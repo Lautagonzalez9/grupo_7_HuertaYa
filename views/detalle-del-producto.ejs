@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="/css/stylesDetalle.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/register.css">
+   <%- include("./partials/head.ejs")%>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
 rel="stylesheet" />
     <title>Detalle del producto</title>
@@ -201,46 +194,5 @@ rel="stylesheet" />
             </div>
         </section>
     </main>
-    <footer>
-        <img class="footer-logo" width="15%" heigth="15%" src="img/Marca Huerta Ya_Marca.png" alt="">
-        <nav>
-            <div class="footer-container">
-                <div class="footer-informacion">
-                    <h4>Información</h4>
-                    <ul>
-                        <li>Tienda</li>
-                        <li>Promociones</li>
-                        <li>Combos</li>
-                        <li>Productores</li>
-                        <li>Ofertas</li>
-                        <br>
-                        <li>Contacto</li>
-                    </ul>
-            </div>
-                <div class="footer-categorias">
-                    <h4>Categorías</h4>
-                    <ul>
-                        <li>Bolsones</li>
-                        <li>Verduras cortadas</li>
-                        <li>verduras en bolsa</li>
-                        <li>etc</li>
-                    </ul>
-                </div>
-                <div class="footer-reparto">
-                    <h4>Próximo reparto</h4>
-                    <ul>
-                        <h5>17/05/2023</h5>
-                        <a class="button-order"><h3>PEDIR AHORA</h3></a>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-redes">
-                    <h4>Redes</h4>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            
-        </nav>
-    </footer>
+    <%- include("./partials/footer")%>
 </body>
