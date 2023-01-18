@@ -172,6 +172,13 @@ background-color: white;
 display: flex;
 justify-content: flex-end;
 align-items: flex-end;
+flex-direction: column;
+}
+.no-se-mi-codigo{
+    margin: auto;
+}
+.no-se-mi-codigo h6{
+    margin: 20px 0px;
 }
 .container3 {
     background-color: white;
@@ -196,6 +203,8 @@ align-items: flex-end;
     align-items: center;
     justify-content: center;
     color: black;
+    margin:auto;
+    margin-top: 15px;
 }
 .repetir-pedido {
     display: flex;
@@ -275,6 +284,8 @@ button, input, optgroup, select, textarea {
     justify-content: center;
     align-items: center;
     color: black;
+    margin: auto;
+    margin-top: 10px;
 }
 button, select {
     text-transform: none;
