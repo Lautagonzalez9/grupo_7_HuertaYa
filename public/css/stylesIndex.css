@@ -2,24 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+        
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-}
+        }
 
-.nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
 
-.nav li {
-    display: flex;
-    justify-content: space-around;
-    margin: 1%;
+.header-nav {
+    max-width: 1400px;
+    margin: auto;
+
 }
 
 .intro {
@@ -91,7 +85,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 15% 5% 8% 5%;
+    padding: 10% 5% 10% 5%;
 }
 
 .carrusel-3 {
@@ -109,81 +103,76 @@ body {
     padding: 15% 5% 15% 5%;
 }
 
-.delivery {
-    background-image: url("../img/repartidor con caja de verduras con logo en caja 2.png");
-    background-repeat: no-repeat;
-    background-size: 60%;
-    width: 100vw;
-    max-width: 1400px;
-    min-width: 320px;
-    margin: auto;
-    background-color: white;
+/*Section delivery */
+
+.delivery2 {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    width: 100%;
    
 }
 
-.tres-pasos {
-    width: 30vw;
-    max-width: 1400px;
-    min-width: 320px;
-    border-color: black solid 1px;
-    text-align: center;
+.container2 {
+    display: flex;
+    background-color: white;
+    width: auto;
+    justify-content: space-around;
+}
+
+.img-repartidor {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.repartidor {
+    width: 100%;
+}
+
+.delivery-3pasos {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.delivery-titulo {
+    font-size: 2rem;
+    text-align: center;
    
-}
+  }
 
-.tres-pasos h3 {
-   margin: 8px auto;
-   position: relative;
-   bottom: 15%;
-   left: 15%;
-}
-
-.camioneta-con-camino {
-    width: 60%;
-    position: relative;
-    bottom: 5%;
-    left: 10%;
-}
-
-.container div h4 {
-    padding: 3%;
+.delivery-camioneta {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.delivery-marca {
-    display: flex;
-    width: 30vw;
-    align-items: flex-end;
-    margin: auto;
-   
+.img-camioneta {
+    width: 100%;
+    
 }
 
-
-
-.camioneta {
-    margin: auto;
-}
-
-.start-order {
-    width: 40%;
-    display: flex;
+.start-order-2 {
     background-color: #DCDCDC;
     padding: 1%;
-    margin: 8px 2% 20px 2%;
     border: solid  1px black ;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     color: black;
-    position: relative;
-    left: 8%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 
 }
+
+.start-order-2 h4 {
+    margin: auto;
+    
+}
+
+
+/*Section login*/
 
 .login-index {
     display: flex;
@@ -199,11 +188,15 @@ body {
 
 
 .manzana {
+    margin: auto;
     background-color: white;
     background-image: url("../img/media-manzana-logo.png");
     background-size: 50%;
     background-repeat: no-repeat;
-    background-position: 50% -95%;
+    background-position: 50% -800%;
+    display: flex;
+    flex-direction: column;
+    
        
 
 }
@@ -226,6 +219,8 @@ body {
 
 .space-cp {
     width: 55%;
+    margin: auto;
+    padding: 1%;
     
 }
 
@@ -261,6 +256,8 @@ a h6 {
 
 footer {
     background-color: rgb(255, 193, 105);
+    max-width: 1400px;
+    margin: auto;
 }
 .footer-logo {
     margin: 0px 0px 0px 35vw;
@@ -334,38 +331,48 @@ footer h4 {
     .carrusel-3 {
         background-position: center;
         font-size: 20px;
-                                
     }
 
     .carrusel-3 p {
         padding: 3%;
     }
 
-    .delivery {
-        height: 40vh;
-               
+    .sectionIndex {
+        max-width: 1400px;
+        justify-content: center;
     }
+  
+    .delivery2 {
+        max-width: 1400px;
+    }  
+    
+    .delivery-3pasos {
+        font-size: 180%;
+           
+    }
+      
 
-    .tres-pasos {
-        height: 40vh;
-        
+    .delivery-camioneta {
+        width: 40vw;
        
     }
-    
-    .tres-pasos h3 {
-       font-size: 30px;
-    }
-    
-    
-    .start-order {
-        margin-bottom: 3%;
-    }
 
-    .camioneta {
-        margin: 3%;
-        position: relative;
-        bottom: 33%;
+    .start-order-2 {
+        background-color: #DCDCDC;
+        padding: 1%;
+        border: solid  1px black ;
+        color: black;
+        justify-self: center;
+        text-align: center;
+    
     }
+    
+    .start-order-2 h4 {
+        margin: 0, 2%;
+        
+        
+    }
+    
 
     .repetir-pedido {
         background-size: 50%;
@@ -377,7 +384,8 @@ footer h4 {
     }
 
     .manzana {
-        height: 25vh;
+        max-width: 1400px;
+        height: auto;
         background-size: 40%;
         background-position: 90% -45%;
     }
@@ -416,7 +424,8 @@ footer h4 {
     }
 }
 
-@media (min-width: 1200px) {
+/*falta terminar*/
+@media (min-width: 1400px) {
     main {
         margin-bottom: 30px;
     }
@@ -470,31 +479,27 @@ footer h4 {
         padding: 3%;
     }
 
-    .delivery {
-        height: 40vh;
-               
-    }
-
-    .tres-pasos {
-        height: 40vh;
-        
        
-    }
     
-    .tres-pasos h3 {
-       font-size: 30px;
-    }
-    
-    
-    .start-order {
-        margin-bottom: 3%;
-    }
 
-    .camioneta {
-        margin: 3%;
-        position: relative;
-        bottom: 33%;
+    .start-order-2 {
+        width: 60%;
+        background-color: #DCDCDC;
+        padding: 1%;
+        border: solid  1px black ;
+        color: black;
+        justify-self: center;
+        text-align: center;
+    
     }
+    
+    .start-order-2 h4 {
+        margin: 0, 2%;
+        font-size: 140%;
+        
+        
+    }
+    
 
     .repetir-pedido {
         background-size: 50%;
@@ -506,9 +511,10 @@ footer h4 {
     }
 
     .manzana {
-        height: 40vh;
+        height: 33vh;
         background-size: 40%;
         background-position: 90% -40%;
+        justify-content: center;
     }
 
     .repetir-pedido h5 {
@@ -529,9 +535,11 @@ footer h4 {
 
     .envio {
         width: 55%;
+        justify-content: center;
     }
 
-   
+    
+
     footer {
         display: flex;
         justify-content: space-around;
