@@ -6,19 +6,19 @@ const mainController = {
        
     },
     carrito: function(req,res){
-        res.render('carrito')
+        res.render('./products/carrito')
         
     },
     register: function(req,res){
-        res.render('registerForm');
+        res.render('./users/registerForm');
 
     },
     login: function(req,res){
-        res.render('login')
+        res.render('./users/login')
        
     },
     detalleDeProducto: function(req,res){
-        res.render('detalle-del-producto')
+        res.render('./products/detalle-del-producto')
     }
 }
 
