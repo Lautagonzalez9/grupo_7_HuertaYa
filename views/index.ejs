@@ -1,40 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/stylesLogin.css">
+
+    <%- include("./partials/head.ejs")%>
+
     <link rel="stylesheet" href="/css/stylesIndex.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    rel="stylesheet" />
     <title>Home_Huerta_Ya</title>
 </head>
+
 <body>
-    <header class="header-nav">
-        <div class="contenedor-bar">
-            <img src="/img/Marca Huerta Ya_Marca.png" alt="logo" class="logo-nav">
-            <div class="contenedor-search">
-                <input type="text" placeholder="buscar producto" class="buscador-header">
-            </div>
 
-            <a href="#" class="hamburguer-button">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-
-        </div>
-        <nav class="main-nav">
-            <ul class="left-nav">
-                <li>Nosotros</li>
-                <li>Productos</li>
-                <li>Combos</li>
-            </ul>
-            <ul class="right-nav">
-                <li>Login</li>
-                <li>Mi Carrito</li>
-                <li>Buscar</li>
-            </ul>
-        </nav>
-    </header>
+    <%- include("./partials/header.ejs")%>
 
     <section class="intro">
         <h2>PRÓXIMA ENTREGA</h2>
@@ -66,20 +43,28 @@
         </div>
     </section>
 
-    <section class="delivery">
-        
-            <div class="tres-pasos">
-                
-                <div class="camioneta">
-                    <img class="delivery-marca" src="../img/Delivery.png" alt="">
-                    <h3>EN 3 PASOS</h3>
-                    <img class="camioneta-con-camino" src="../img/camioneta con camino.png" alt="">
+    <section class ="sectionIndex">     
+                          
+        <div class="delivery2"> 
+                <div class="container2">
+                        <div class="img-repartidor">               
+                        <img class="repartidor" src="../img/repartidor con caja de verduras con logo en caja 2.png" alt="">
+                        </div>
+                        <div class="delivery-3pasos">   
+                            <p class="delivery-titulo">NUESTRO REPARTO</p> 
+                            <div class="delivery-camioneta">
+                                <img class="img-camioneta" src="../img/Camioneta ploteada.jpg" alt="">
+                            </div>               
+                            <div class="start-order-2">
+                            <button><h4>COMENZAR PEDIDO</h4></button>
+                            </div>
+                        </div>
+
                 </div>
-               
-                <button class="start-order"><h4>COMENZAR PEDIDO</h4></button>
-            </div>
+        </div>
         
     </section>
+
     <section class="manzana">
             <div class="repetir-pedido">
                     <h5>¿Ya pediste y querés repetir el pedido?</h5>
