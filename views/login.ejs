@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <!--meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="/css/normalize.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +10,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
 rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <title>Login-HuertasYa</title>
+    <title>Login-HuertasYa</title> -->
+    <%- include('./partials/head') %>
 </head>
 
 <body>
-    <header class="header-nav">
+    <header>
+   <!-- <header class="header-nav">
         <div class="contenedor-bar">
             <img src="/img/Marca Huerta Ya_marca.png" alt="logo" class="logo-nav">
             <div class="contenedor-search">
@@ -37,8 +39,10 @@ rel="stylesheet" />
                 <li><i class="fa-solid fa-cart-shopping"></i>Mi Carrito</li>
                 <li>Crea tu Cuenta</li>
             </ul>
-        </nav>
+        </nav>-->
+      <%- include('./partials/header')%>
     </header>
+
     <main>
         <div class="contenedor-formulario contenedor">
             <div class="imagen-formulario">
@@ -74,6 +78,8 @@ rel="stylesheet" />
         </div>
     </main>
     <footer>
+        <%- include("./partials/footer")%>
+        <!--
         <img class="footer-logo" width="15%" heigth="15%" src="img/Marca Huerta Ya_Marca.png" alt="">
         <nav>
             <div class="footer-container">
@@ -111,7 +117,7 @@ rel="stylesheet" />
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-whatsapp"></i>
             </div>
-        </nav>
+        </nav>-->
     </footer>
 </body>
 
