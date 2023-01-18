@@ -5,7 +5,8 @@ const path = require('path');
 const publicPath = path.join(__dirname, '/public');
 const rutaMain = require('./routes/main')
 
-
+//Carpeta de views
+app.set("views",path.join(__dirname,"./src/views"))
 //uso estatico
 app.use(express.static(publicPath));
 //levantar servidor
