@@ -9,16 +9,16 @@ const mainController = {
         res.render('carrito')
         
     },
-    register: function(req,res){
+   register: function(req,res){
         res.render('registerForm');
 
     },
-    login: function(req,res){
-        res.render('login')
+   login: function(req,res){
+       res.render('login')
        
     },
     detalleDeProducto: function(req,res){
-        res.render('detalle-del-producto')
+     res.render('detalle-del-producto')
     }
 }
 
