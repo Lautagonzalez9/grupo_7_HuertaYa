@@ -7,7 +7,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-        }
+    
+
+}
 
 
 .header-nav {
@@ -105,17 +107,26 @@ body {
 
 /*Section delivery */
 
+.sectionIndex {
+    margin: auto;
+    max-width: 1400px;
+    width: 100vw;
+}
+
 .delivery2 {
     display: flex;
     width: 100%;
-   
+    max-width: 1400px;
+       
 }
 
 .container2 {
     display: flex;
     background-color: white;
-    width: auto;
+    width: 100vw;
     justify-content: space-around;
+    margin: auto;
+    max-width: 1400px;
 }
 
 .img-repartidor {
@@ -196,10 +207,15 @@ body {
     background-position: 50% -800%;
     display: flex;
     flex-direction: column;
-    
-       
+    max-width: 1400px;   
 
 }
+/* media querie solo de clase "manzana"*/
+@media (min-width: 340px) {    
+.manzana { 
+    background-position: 50% -60%;} }
+
+/**/
 
 .repetir-pedido {
     display: flex;
@@ -219,12 +235,11 @@ body {
 
 .space-cp {
     width: 55%;
-    margin: auto;
     padding: 1%;
     
 }
 
-.button-calcular {
+.button-calcular-2 {
     background-color: #DCDCDC;
     width: 40%;
     padding: 1%;
@@ -251,39 +266,7 @@ a h6 {
     padding: 0 10% 2% 10%;
 }
 
-
-/*footer*/
-
-footer {
-    background-color: rgb(255, 193, 105);
-    max-width: 1400px;
-    margin: auto;
-}
-.footer-logo {
-    margin: 0px 0px 0px 35vw;
-    width: 30vw;
-}
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-}
-footer ul {
-    list-style: none;
-    padding: 0px;
-}
-.footer-reparto {
-    width: 40%;
-}
-footer h4 {
-    text-align: center;
-    margin: 0px 0px 10px 0px;
-}
-.footer-redes {
-    margin: auto;
-    text-align: center;
-}
-
-
+/* checkpoint tablets */
 @media (min-width: 769px) {
     main {
         margin-bottom: 30px;
@@ -345,6 +328,11 @@ footer h4 {
     .delivery2 {
         max-width: 1400px;
     }  
+
+    .container2 {
+        max-width: 1400px;
+        
+    }
     
     .delivery-3pasos {
         font-size: 180%;
@@ -369,8 +357,7 @@ footer h4 {
     
     .start-order-2 h4 {
         margin: 0, 2%;
-        
-        
+            
     }
     
 
@@ -379,8 +366,6 @@ footer h4 {
         padding-top: 5%;
         justify-content: flex-start;
 
-        
-        
     }
 
     .manzana {
@@ -396,9 +381,7 @@ footer h4 {
         margin: 5%;
         margin-left: 0;
         margin-right: 0;
-        
-
-    
+            
     }
 
     .login-index {
@@ -410,22 +393,21 @@ footer h4 {
         width: 55%;
     }
 
-   
     footer {
-        display: flex;
-        justify-content: space-around;
+        max-width: 1400px;
+        margin: auto;
     }
-    .footer-logo {
-        margin: 0px
-    }
-    footer nav {
-        width: 60vw;
-        margin-top: 30px;
-    }
-}
 
-/*falta terminar*/
+} 
+    
+
+/* checkpoint computadoras */
 @media (min-width: 1400px) {
+
+    body {
+        background-color: beige;
+    }
+
     main {
         margin-bottom: 30px;
     }
@@ -479,14 +461,17 @@ footer h4 {
         padding: 3%;
     }
 
-       
+    .sectionIndex {
+        max-width: 1400px;
+    }   
     
+    .delivery-2 {
+        font-size: 280%;
+           
+    }
 
     .start-order-2 {
         width: 60%;
-        background-color: #DCDCDC;
-        padding: 1%;
-        border: solid  1px black ;
         color: black;
         justify-self: center;
         text-align: center;
@@ -511,7 +496,7 @@ footer h4 {
     }
 
     .manzana {
-        height: 33vh;
+        max-width: 1400px;
         background-size: 40%;
         background-position: 90% -40%;
         justify-content: center;
@@ -523,9 +508,7 @@ footer h4 {
         margin: 5%;
         margin-left: 0;
         margin-right: 0;
-        
-
-    
+            
     }
 
     .login-index {
@@ -538,17 +521,4 @@ footer h4 {
         justify-content: center;
     }
 
-    
-
-    footer {
-        display: flex;
-        justify-content: space-around;
-    }
-    .footer-logo {
-        margin: 0px
-    }
-    footer nav {
-        width: 60vw;
-        margin-top: 30px;
-    }
 }
