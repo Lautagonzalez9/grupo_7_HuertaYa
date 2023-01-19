@@ -10,4 +10,4 @@ router.get('/login', mainController.login);
 router.get('/producto', mainController.detalleDeProducto);
 
 
-module.exports = router;   
+module.exports = router;
