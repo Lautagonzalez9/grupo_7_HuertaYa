@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%- include('../partials/head') %>
+    <title>Document</title>
+ </head> 
+<body>
+    <%- include('../partials/header') %>
+    <main class="cont-form">
+    <form action="/register" method="POST" class="formulario-registro">
+        <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
+        <label> Nombre</label>
+            <input type="text" name="Nombre" placeholder="Lionel" class="nombre"> 
+     
+     <label>Apellido </label>
+        <input type="text" name="Apellido" placeholder="Messi" class="nombre">
+     
+     <label>E-mail</label>
+         <input type="email" name="email" placeholder="LionelMessi10@gmail.com">
+     
+     <label>Contraseña</label>
+         <input type="password" name="contraseña" placeholder="Ingrese su contraseña">
+     
+     <label>Provincia</label>
+         <input type="text" name="Provincia" placeholder="Buenos Aires">
+     
+     <label> Localidad</label>
+        <input type="text" name="Localidad" placeholder="Bahia Blanca">
+     
+     <label>Numero de telefono</label>
+         <input type="tel" name="Numero-de-telefono" placeholder="+54 11 9930599">
+     <button type="submit" class="button">Enviar</button>
+    
+    </form>
+   
+</main>
+<%- include('../partials/footer') %>
+</body> 
+</html>
