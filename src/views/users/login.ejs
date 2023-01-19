@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<<<<<<< HEAD:views/login.ejs
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/stylesLogin.css">
+=======
+    <%- include('../partials/head') %>
+>>>>>>> 600634f914d5a391352fc53604b9c664be5bb082:src/views/users/login.ejs
+</head>
+
+<body>
+    <header>
+      <%- include('../partials/header')%>
+    </header>
+
+    <main>
+        <div class="contenedor-formulario contenedor">
+            <div class="imagen-formulario">
+
+            </div>
+            <form class="formulario">
+                <div class="texto-formulario">
+                    <h2> ¡Bienvenido de nuevo!</h2>
+                    <p> Inicia seccion con tu cuenta</p>
+                </div>
+                <div class="input-detalles">
+                    <label for="email">Usuario</label>
+                    <input type="email" placeholder="Correo Electronico">
+                </div>
+                <div class="input-detalles">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="recordarme">
+                    <label for="text">Recordarme</label>
+                    <input type="checkbox" name="Recordarme">
+                </div>
+                <div class="input-detalles">
+                    <button type="submit">LOGIN</button>
+                </div>
+
+                <div class="password-texto">
+                    <a href="#">¿Ólvido su passaword?</a>
+                </div>
+
+
+            </form>
+        </div>
+    </main>
+    <footer>
+        <%- include("../partials/footer")%>
+    </footer>
+</body>
+
+</html>
