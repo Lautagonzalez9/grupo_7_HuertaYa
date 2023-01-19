@@ -9,18 +9,6 @@ const mainController = {
         res.render('./products/carrito')
         
     },
-<<<<<<< HEAD
-   register: function(req,res){
-        res.render('registerForm');
-
-    },
-   login: function(req,res){
-       res.render('login')
-       
-    },
-    detalleDeProducto: function(req,res){
-     res.render('detalle-del-producto')
-=======
     register: function(req,res){
         res.render('./users/registerForm');
 
@@ -31,7 +19,6 @@ const mainController = {
     },
     detalleDeProducto: function(req,res){
         res.render('./products/detalle-del-producto')
->>>>>>> 600634f914d5a391352fc53604b9c664be5bb082
     }
 }
 
