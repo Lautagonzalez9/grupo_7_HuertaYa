@@ -29,6 +29,9 @@ body {
     display: flex;
     margin: 0 auto;
 }
+.logo-link-header {
+    all: revert;
+}
 main {
     background-image: url(/img/Imagen3.jpg);
     background-size: cover;

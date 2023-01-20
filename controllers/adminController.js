@@ -1,12 +1,10 @@
-// controladores utilizados para el perfil de administrador de la pagina (creacion y edicion de productos).
-const path=require('path');
+const path = require('path');
 
-administradorController={
-    // creacion productos:function(req,res){
-        //res.render('')
-   // }
-    
-   // edicion productos: function(req,res){
-    // res.render('')
-  // }
+
+const adminController = {
+    create: function(req,res){
+        res.render('products/adminCreate')
+    }
 }
+
+module.exports = adminController;
