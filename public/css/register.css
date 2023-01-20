@@ -121,7 +121,7 @@ body {
     
 }
 
-.formulario-registro input {
+.formulario-registro input, textarea, select {
     margin: 8px;
     border: 1px solid rgb(163, 151, 151);
     height: 45px;

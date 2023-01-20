@@ -5,29 +5,33 @@
  </head> 
 <body>
     <%- include('../partials/header') %>
-    <main class="cont-form">
+<main class="cont-form">
     <form action="/register" method="POST" class="formulario-registro">
-        <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
-        <label> Nombre</label>
-            <input type="text" name="Nombre" placeholder="Lionel" class="nombre"> 
-           
+
      <label>Nombre del producto</label>
-        <input type="text" name="Apellido" placeholder="Messi" class="nombre">
+        <input type="text" name="Nombre-del-producto" placeholder="Nombre del producto" class="nombre">
      
-     <label>Descripción</label>
-         <input type="email" name="email" placeholder="LionelMessi10@gmail.com">
-     
+     <label for="comentario">Descripción</label>
+        <textarea name="comentario" id="comentario" placeholder="Ingrese la descripción del producto"></textarea>
      <label>Categoría</label>
-         <input type="password" name="contraseña" placeholder="Ingrese su contraseña">
+         <select name="categoria" placeholder="Seleccione una categoria">
+            <option value="frutas">Frutas</option>
+            <option value="verduras">Verduras</option>
+            <option value="verduras-cortadas">Verduras cortadas</option>
+            <option value="bolsones">Bolsones</option>
+            <option value="organico">Productos orgánicos</option>
+         </select>
      
-     <label>Peso</label>
-         <input type="text" name="Provincia" placeholder="Buenos Aires">
+     <label>Presentación</label>
+         <input type="text" name="unidad" placeholder="Ingrese el tipo de presentación del producto, ej: kg, bolsa, atado...">
      
-     <label>Precio</label>
-        <input type="text" name="Localidad" placeholder="Bahia Blanca">
+     <label>Precio unitario</label>
+        <input type="text" name="precio" placeholder="Ingrese el precio unitario del producto">
      
+     <label>Imágen del producto</label>
+        <input type="file" name="imagen" accept=".jpg, .png" multiple>   
      <label>Id</label>
-         <input type="tel" name="Numero-de-telefono" placeholder="+54 11 9930599">
+         <input type="number" name="id" placeholder="#">
      <button type="submit" class="button">Enviar</button>
 
     </form>
