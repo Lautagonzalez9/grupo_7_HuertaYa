@@ -308,7 +308,7 @@ button, select {
 button, input {
     overflow: visible;
 }
-button, input, optgroup, select, textarea {
+button, optgroup, select, textarea {
     width: 35%;
     border: none;
     border-radius: 5px;
