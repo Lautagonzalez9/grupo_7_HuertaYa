@@ -166,21 +166,19 @@ body {
     
 }
 
-.start-order-2 {
-    background-color: #DCDCDC;
+.start-order-2 button {
+    background-color: #489032;
+    width: 70%;
     padding: 1%;
-    border: solid  1px black ;
-    color: black;
+    color: white;
     display: flex;
     justify-content: center;
     text-align: center;
-
-}
-
-.start-order-2 h4 {
     margin: auto;
-    
+
 }
+
+
 
 
 /*Section login*/
@@ -345,15 +343,13 @@ a h6 {
        
     }
 
-    .start-order-2 {
-        background-color: #DCDCDC;
-        padding: 1%;
-        border: solid  1px black ;
-        color: black;
+    .start-order-2 button{
+        width: 100%;
+        padding: 3%;
         justify-self: center;
         text-align: center;
-    
-    }
+        
+        }
     
     .start-order-2 h4 {
         margin: 0, 2%;
