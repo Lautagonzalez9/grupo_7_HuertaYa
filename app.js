@@ -5,6 +5,15 @@ const path = require('path');
 const publicPath = path.join(__dirname, '/public');
 const rutaMain = require('./routes/main')
 const rutaAdmin = require('./routes/admin')
+const methodOverride =  require('method-override');
+
+
+
+
+
+app.use(methodOverride('_method')); 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
 
 //Carpeta de views
 app.set("views",path.join(__dirname,"./src/views"))
