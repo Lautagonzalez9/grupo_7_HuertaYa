@@ -95,59 +95,39 @@ rel="stylesheet" />
         <section>
             <h3>Productos relacionados</h3>
             <div class="productos-relacionados">
-                <i class="fa-solid fa-chevron-left"></i>
-                <% productos.forEach(product => { %>
+                <% productos.forEach(producto => { %>
+                   <% if(producto.category == product.category){ %>
                 <article>
-                    <img class="imagen-producto-relacionado" src="/img/<%= product.image %>" alt="Imagen del producto">
+                    <img class="imagen-producto-relacionado" src="/img/<%= producto.image %>" alt="Imagen del producto">
                     <i class="fa-regular fa-heart"></i>
-                    <p><%= product.name %></p>
-                    <p>$<%= product.price %></p>
+                    <p><%= producto.name %></p>
+                    <p>$<%= producto.price %></p>
                     <p><button>agregar</button></p>
                     <p><button>mas info</button></p>
                 </article>
-
+            <% } %>
                  <% }) %>
-                <i class="fa-solid fa-chevron-right"></i>
             </div>
         </section>
         <section>
+            <% if(productos.filter(producto => producto.discount > 0) >0){ %>
             <h3>Ofertas</h3>
             <div class="productos-en-oferta">
-                <i class="fa-solid fa-chevron-left"></i>
+
+                <% productos.forEach(producto => { %>
+                    <% if(producto.discount > 0) { %>
                 <article>
-                    <img class="imagen-producto-ofertado" src="/img/frutos_rojos.jpg" alt="Imagen del producto">
+                    <img class="imagen-producto-ofertado" src="/img/<%= producto.image %>" alt="Imagen del producto">
                     <i class="fa-regular fa-heart"></i>
-                    <p>Frutos rojos</p>
-                    <p>$###</p>
+                    <p><%= producto.name %></p>
+                    <p>$<%= producto.price %></p>
                     <p><button>agregar</button></p>
                     <p><button>mas info</button></p>
                 </article>
-                <article>
-                    <img class="imagen-producto-ofertado" src="/img/lechuga.jpg" alt="Imagen del producto">
-                    <i class="fa-regular fa-heart"></i>
-                    <p>Lechuga</p>
-                    <p>$###</p>
-                    <p><button>agregar</button></p>
-                    <p><button>mas info</button></p>
-                </article>
-                <article>
-                    <img class="imagen-producto-ofertado" src="/img/morron.jpg" alt="Imagen del producto">
-                    <i class="fa-regular fa-heart"></i>
-                    <p>Morrón</p>
-                    <p>$###</p>
-                    <p><button>agregar</button></p>
-                    <p><button>mas info</button></p>
-                </article>
-                <article>
-                    <img class="imagen-producto-ofertado" src="/img/papas.jpg" alt="Imagen del producto">
-                    <i class="fa-regular fa-heart"></i>
-                    <p>Papas</p>
-                    <p>$###</p>
-                    <p><button>agregar</button></p>
-                    <p><button>mas info</button></p>
-                </article>
-                <i class="fa-solid fa-chevron-right"></i>
+            <% } %>
+            <% }) %>
             </div>
+        <% } %>
         </section>
     </main>
     <%- include("../partials/footer")%>

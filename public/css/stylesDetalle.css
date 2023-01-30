@@ -681,7 +681,7 @@ button,optgroup {
     }
     .productos-relacionados {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         flex-wrap: wrap;
         text-align: center;
         position: relative;
@@ -692,7 +692,7 @@ button,optgroup {
         flex-direction: column;
         width: 20vw;
         box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%);
-        margin: 1vw;
+        margin: 2.35vw;
     }
     .productos-relacionados article .fa-heart {
         position: absolute;
