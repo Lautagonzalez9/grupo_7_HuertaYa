@@ -6,13 +6,13 @@
 <body>
     <%- include('../partials/header') %>
 <main class="cont-form">
-    <form action="/register" method="POST" class="formulario-registro">
+    <form action="/admin/create" method="POST" class="formulario-registro" enctype="multipart/form-data">
 
      <label>Nombre del producto</label>
-        <input type="text" name="Nombre-del-producto" placeholder="Nombre del producto" class="nombre">
+        <input type="text" name="Name" placeholder="Nombre del producto" class="nombre">
      
      <label for="comentario">Descripción</label>
-        <textarea name="comentario" id="comentario" placeholder="Ingrese la descripción del producto"></textarea>
+        <textarea name="descripcion" id="comentario" placeholder="Ingrese la descripción del producto"></textarea>
      <label>Categoría</label>
          <select name="categoria" placeholder="Seleccione una categoria">
             <option value="frutas">Frutas</option>
@@ -30,8 +30,7 @@
      
      <label>Imágen del producto</label>
         <input type="file" name="imagen" accept=".jpg, .png" multiple>   
-     <label>Id</label>
-         <input type="number" name="id" placeholder="#">
+    
      <button type="submit" class="button">Agregar Producto</button>
 
     </form>
