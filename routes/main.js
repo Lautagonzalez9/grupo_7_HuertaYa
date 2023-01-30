@@ -10,7 +10,7 @@ router.get('/register', mainController.register);
 router.get('/login', mainController.login);
 //router.get('/producto/crear', productController.crearProducto);
 //router.get('/producto/editar', productController.editarProducto);
-router.get('/producto', productController.detalleDeProducto);
+router.get('/producto/:id', productController.detalleDeProducto);
 
 
 module.exports = router;

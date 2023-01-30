@@ -26,16 +26,16 @@ rel="stylesheet" />
                 <article>
                     <div class="producto">
                     <div class="producto-detalle">
-                    <h3>Titulo del producto</h3>
+                    <h3><%= product.name %></h3>
                     <div class="product-image">
-                        <img class="imagen-producto" src="/img/producto.jpg" alt="Imagen del producto">
+                        <img class="imagen-producto" src="/img/<%= product.image %>" alt="Imagen del producto">
                         <i class="fa-regular fa-heart"></i>
                         <i class="fa-solid fa-chevron-left"></i>
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div class="descripcion-detallada">
                             <h3>Descripcion detallada</h3>
-                            <p>Esta es la descripcion detallada del producto, y puede estar o no estar, estara en los casos en los que el producto sea bolson o combo, o se pueda brindar contexto adicional acerca del producto como fecha especifica de cosecha, zona, productor, o metodos de produccion especificos</p>
+                            <p><%= product.detailedDescription %></p>
                     </div>
                     </div>
                     <div class="product-interactions">
@@ -55,10 +55,10 @@ rel="stylesheet" />
                             </div>
                         </div>
                             <div class="detalles-del-producto">
-                                <p class="precio">$###</p>
-                                <p class="presentacion">Presentacion: Kg en bolsa</p>
+                                <p class="precio">$<%= product.price %></p>
+                                <p class="presentacion">Presentacion: <%= product.presentation %></p>
                                 <p class="stock">En stock</p>
-                                <p class="descripcion">Esta es la descripcion resumida del producto, sirve para todos los productos</p>
+                                <p class="descripcion"><%= product.description %></p>
                             </div>
                         </div>
                     </div>
