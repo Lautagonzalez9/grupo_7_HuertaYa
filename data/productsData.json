@@ -1,0 +1,81 @@
+[{
+    "id":1,
+    "name":"Calabaza Anco",
+    "presentation":"Unidad",
+    "category":"Verduras",
+    "price": 200,
+    "image":null
+},
+{
+    "id":2,
+    "name":"Alcaucil",
+    "presentation":"Kg.",
+    "category":"Verduras",
+    "price": 350,
+    "image":null
+},
+{
+    "id":3,
+    "name":"Choclos",
+    "presentation":"Unidad",
+    "category":"Verduras",
+    "price": 100,
+    "image":null
+},
+{
+    "id":4,
+    "name":"Tomates Redondos",
+    "presentation":"Kg.",
+    "category":"Verduras",
+    "price": 350,
+    "image":null
+},
+{
+    "id":5,
+    "name":"Papa Negra",
+    "presentation":"Kg.",
+    "category":"Verduras",
+    "price": 300,
+    "image":null
+},
+{
+    "id":6,
+    "name":"Lechuga criolla",
+    "presentation":"Unidad",
+    "category":"Verduras orgánicas",
+    "price": 450,
+    "image":null
+},
+{
+    "id":7,
+    "name":"Morron Colorado",
+    "presentation":"Kg.",
+    "category":"Verduras orgánicas",
+    "price": 600,
+    "image":null
+},
+{
+    "id":8,
+    "name":"Manzana colorada",
+    "presentation":"Kg.",
+    "category":"Frutas",
+    "price": 550,
+    "image":null
+},
+{
+    "id":9,
+    "name":"Banana",
+    "presentation":"Kg.",
+    "category":"Frutas",
+    "price": 250,
+    "image":null
+},
+{
+    "id":10,
+    "name":"Naranja",
+    "presentation":"Kg.",
+    "category":"Frutas",
+    "price": 300,
+    "image":null
+}
+]
