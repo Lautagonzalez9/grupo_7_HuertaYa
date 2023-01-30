@@ -96,38 +96,17 @@ rel="stylesheet" />
             <h3>Productos relacionados</h3>
             <div class="productos-relacionados">
                 <i class="fa-solid fa-chevron-left"></i>
+                <% productos.forEach(product => { %>
                 <article>
-                    <img class="imagen-producto-relacionado" src="/img/ajíes.jpg" alt="Imagen del producto">
+                    <img class="imagen-producto-relacionado" src="/img/<%= product.image %>" alt="Imagen del producto">
                     <i class="fa-regular fa-heart"></i>
-                    <p>Ajíes</p>
-                    <p>$###</p>
+                    <p><%= product.name %></p>
+                    <p>$<%= product.price %></p>
                     <p><button>agregar</button></p>
                     <p><button>mas info</button></p>
                 </article>
-                <article>
-                    <img class="imagen-producto-relacionado" src="/img/alcaucil.jpg" alt="Imagen del producto">
-                    <i class="fa-regular fa-heart"></i>
-                    <p>Alcaucil</p>
-                    <p>$###</p>
-                    <p><button>agregar</button></p>
-                    <p><button>mas info</button></p>
-                </article>
-                <article>
-                    <img class="imagen-producto-relacionado" src="/img/calabaza.jpg" alt="Imagen del producto">
-                    <i class="fa-regular fa-heart"></i>
-                    <p>Calabaza</p>
-                    <p>$###</p>
-                    <p><button>agregar</button></p>
-                    <p><button>mas info</button></p>
-                </article>
-                <article>
-                    <img class="imagen-producto-relacionado" src="/img/remolachas.jpg" alt="Imagen del producto">
-                    <i class="fa-regular fa-heart"></i>
-                    <p>Remolacha</p>
-                    <p>$###</p>
-                    <p><button>agregar</button></p>
-                    <p><button>mas info</button></p>
-                </article>
+
+                 <% }) %>
                 <i class="fa-solid fa-chevron-right"></i>
             </div>
         </section>
