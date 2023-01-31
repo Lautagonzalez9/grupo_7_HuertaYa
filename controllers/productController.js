@@ -12,6 +12,11 @@ const productController = {
 		const product = productos.find(product => product.id == id);
 		
         return res.render('./products/detalle-del-producto', {product, productos});
+   },
+   listaDeProductos: function (req,res){
+
+        return res.render('./products/listadoProductos',{productos});
+
    }
 }
 
