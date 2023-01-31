@@ -27,12 +27,10 @@ body {
     border-color:#635e58 ;
     background-size: 24px;
     margin-bottom: 10px;
+    margin-top: 20px;
     background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 7px; ;
     background-size: 30px;
     padding: 10px 10px 10px 30px;
-    margin-right: 200px ;
-
-    
 }
 .logo-nav{
     width: 50%;
@@ -148,7 +146,17 @@ body {
     color: #fff;
     border-radius: 10px;
 }
-
+.search-form {
+    display: flex;
+    width: 80%;
+}
+.search-form_button{
+    width: 43px;
+    height: 43px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
 /* checkpoint tablets */
 @media (min-width: 768px){
     .hamburguer-button{
@@ -157,6 +165,7 @@ body {
     .contenedor-search{
         width: 50%;
         display: flex;
+        flex-wrap: nowrap;
         margin: 0 auto;
         justify-content: center;
         padding-left: 20px;

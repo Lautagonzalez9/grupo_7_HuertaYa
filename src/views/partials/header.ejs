@@ -3,7 +3,11 @@
     <div class="contenedor-bar"> 
         <img src="/img/Marca Huerta Ya_marca.png" alt="logo" class="logo-nav">
     <div class="contenedor-search"> 
-    <input type="search" placeholder="Buscar producto" class="buscador-header"></div>
+				<form action="/search" method="GET" class="search-form">
+					<input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="buscador-header">
+					<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+				</form>
+	</div> 
     
     <a href="#" class="hamburguer-button">
         <i class="fa-solid fa-bars"></i>
@@ -12,7 +16,7 @@
     <navbar class="main-nav">
         <ul class="left-nav">
             <li><a href="/Nosotros">Nosotros</a></li>
-            <li><a href="/producto">Productos</a></li>
+            <li><a href="/productos">Productos</a></li>
             <li><a href="#">Combos</a></li>
         </ul>
         <ul class="right-nav"> 
