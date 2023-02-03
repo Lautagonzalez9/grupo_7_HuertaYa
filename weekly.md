@@ -33,3 +33,23 @@ Participantes: Manuel, Julián, Vanesa.
 No se presentaron inconvenientes hasta el momento.
 
 Fin del meet ---
+
+3/02/2023
+
+Revisión de actividades pendientes Sprint 4 a entregar el 8/02:
+Realizar ruta get y put para edición de producto (Vanesa)
+Resolver comentarios del carrito sprint 3 (Julian)
+Realizar ruta delete (Manuel)
+Configurar multer (Marco)
+Verificar el funcionamiento del buscador que realizó Julián ya que no presenta dificultades a la hora de buscar determinado producto (Marco)
+Actividades realizadas al momento:
+Marco realizó la ruta de creación de producto.
+Vanesa realizó JSON de productos.
+Manuel realizó JSON de usuarios.
+Julián realizó listado de productos (vista y rutas).
+Participantes: Manuel, Julián, Vanesa, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 7/02.
+Link Trello: https://trello.com/b/w2OIZtu6/sprint-4-json-y-metodos
+
+Fin del meet ---
