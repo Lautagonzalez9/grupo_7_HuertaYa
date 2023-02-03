@@ -5,6 +5,7 @@ const productController = require('../controllers/productController')
 
 
 router.get('/', mainController.index);
+router.get('/search', mainController.search);
 router.get('/carrito', mainController.carrito);
 router.get('/register', mainController.register);
 router.get('/login', mainController.login);

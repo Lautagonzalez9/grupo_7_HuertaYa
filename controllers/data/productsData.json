@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Calabaza Anco",
+    "presentation": "Unidad",
+    "description": "",
+    "category": "Verduras",
+    "price": 200,
+    "image": "calabaza.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Alcaucil",
+    "presentation": "Kg.",
+    "description": "",
+    "category": "Verduras",
+    "price": 350,
+    "image": "alcaucil.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Choclos",
+    "presentation": "Unidad",
+    "description": "",
+    "category": "Verduras",
+    "price": 100,
+    "image": "choclos.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Tomates Redondos",
+    "presentation": "Kg.",
+    "description": "",
+    "category": "Verduras",
+    "price": 350,
+    "image": "tomates.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Papa Negra",
+    "presentation": "Kg.",
+    "description": "",
+    "category": "Verduras",
+    "price": 300,
+    "image": "papas.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Lechuga criolla",
+    "presentation": "Unidad",
+    "description": "",
+    "category": "Verduras orgánicas",
+    "price": 450,
+    "image": "lechuga.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Morron Colorado",
+    "presentation": "Kg.",
+    "description": "",
+    "category": "Verduras orgánicas",
+    "price": 600,
+    "image": "morron.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Manzana colorada",
+    "presentation": "Kg.",
+    "description": "",
+    "category": "Frutas",
+    "price": 550,
+    "image": "default-image.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Banana",
+    "presentation": "Kg.",
+    "description": "",
+    "category": "Frutas",
+    "price": 250,
+    "image": "default-image.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Naranja",
+    "presentation": "Kg.",
+    "description": "",
+    "category": "Frutas",
+    "price": 300,
+    "image": "default-image.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Prueba subida de imagen",
+    "descripcion": "Prueba subida de imagen",
+    "categoria": "frutas",
+    "presentacion": "Prueba subida de imagen",
+    "price": "300",
+    "image": "imagen-1675463540794-857885317.jpg"
+  }
+]
