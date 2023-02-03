@@ -12,6 +12,7 @@ router.post('/create', adminController.creado)
 
 
 router.get('/editar', adminController.edit)
+router.put('/editar', adminController.editado)
 
 
 module.exports = router;

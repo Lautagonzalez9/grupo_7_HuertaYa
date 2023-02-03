@@ -40,6 +40,9 @@ const adminController = {
 
     edit: function(req,res){
         res.render('products/editarProducto')
+    },
+    editado: function(req,res){
+        
     }
 }
 
