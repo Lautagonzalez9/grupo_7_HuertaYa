@@ -14,7 +14,7 @@
     "description":"",
     "category":"Verduras",
     "price": 350,
-    "image": "default-image.jpg"
+    "image": "alcaucil.jpg"
 },
 {
     "id":3,
@@ -23,7 +23,7 @@
     "description":"",
     "category":"Verduras",
     "price": 100,
-    "image": "default-image.jpg"
+    "image": "choclos.jpg"
 },
 {
     "id":4,
@@ -32,7 +32,7 @@
     "description":"",
     "category":"Verduras",
     "price": 350,
-    "image":"default-image.jpg"
+    "image":"tomates.jpg"
 },
 {
     "id":5,
@@ -41,7 +41,7 @@
     "description":"",
     "category":"Verduras",
     "price": 300,
-    "image":"default-image.jpg"
+    "image":"papas.jpg"
 },
 {
     "id":6,
@@ -50,7 +50,7 @@
     "description":"",
     "category":"Verduras orgánicas",
     "price": 450,
-    "image":"default-image.jpg"
+    "image":"lechuga.jpg"
 },
 {
     "id":7,
@@ -59,7 +59,7 @@
     "description":"",
     "category":"Verduras orgánicas",
     "price": 600,
-    "image":"default-image.jpg"
+    "image":"morron.jpg"
 },
 {
     "id":8,
