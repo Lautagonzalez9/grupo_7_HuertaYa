@@ -12,9 +12,38 @@ body{
 }
 
 article{
-    width: 100%;
+    width: 70vw;
 }
 
+.carrito-precio{
+margin-left: 33vw;
+margin-right: 5vw;
+}
+
+.translucid{
+    background-color: rgba(189, 184, 175,0.7);
+}
+
+article button {
+    width: 50%;
+}
+
+article p {
+    margin: 0px 10px;
+}
+
+.titulos-carrito{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    margin-left: 8.5vw;
+}
+
+.product-carrito{
+    display: flex;
+    flex-direction: column;
+    margin-left: -7vw;
+}
 
 .navconteiner{
     display: flex;
@@ -47,25 +76,88 @@ margin-left: 50%;
     color: red;
 }
 
-.article{
+.article-1{
     display: flex;
     flex-wrap: wrap;
-    margin:10px 5px 10px 5px;
-    border: 0.5px solid rgb(197, 181, 181);
+    margin:0px 5px;
     width: auto;
+    justify-content: flex-start;
+}
+.article-2{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0px 5px;
+    width: auto;
+    justify-content: flex-start;
     background-color: rgba(189, 184, 175,0.7);
-    justify-content: space-around;
+}
+
+.subtotal-carrito{
+    display: flex;
+    border-top: 2px lightgrey solid;
+    border-bottom: 2px lightgrey solid;
+    padding: 10px 0px;
+    padding-left: 45px;
+}
+
+.total-carrito{
+    display: flex;
+    padding: 10px 0px;
+    padding-left: 45px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.botones-carrito{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3px 3px 3px 45px;
+    border-bottom: 2px lightgrey solid;
+}
+
+.boton-terminar-compra{
+    margin-left: 41vw;
+}
+
+#finalizar-compra {
+    padding: 2px 0px;
+    width: 70%;
+    margin: none;
+}
+
+.calculo-envio{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 45px;
+    border-bottom: 2px lightgrey solid;
+}
+
+form{
+    display: flex;
+    margin: 10px 0px;
+}
+
+.subtotal-carrito-num{
+    margin-left: 36.5vw;
+}
+
+.total-carrito-num{
+    margin-left: 56vw;
 }
 
 .img{
-    width: 100%;
+    width: 90%;
+    padding: 10px 0px;
 }
 
 .img-article{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 50%;
+    width: 35%;
+    margin-right: 42px;
 }
 
 .details{
@@ -77,7 +169,9 @@ margin-left: 50%;
 
 .productTitle{
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 15px;
+    padding: 15px;
+    padding-top: 25px;
 }
 
 .amount{
