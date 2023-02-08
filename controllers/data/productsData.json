@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Calabaza Anco",
     "presentation": "Unidad",
-    "description": "",
+    "description": "HOLA ",
     "category": "Verduras",
     "price": 200,
     "image": "calabaza.jpg"
@@ -12,7 +12,7 @@
     "id": 2,
     "name": "Alcaucil",
     "presentation": "Kg.",
-    "description": "",
+    "description": "HOLA",
     "category": "Verduras",
     "price": 350,
     "image": "alcaucil.jpg"
