@@ -46,7 +46,7 @@ const adminController = {
         res.render('products/editarProducto', {productos})
     },
     editado: function(req,res){
-        
+        res.send('hola')
     }
 }
 
