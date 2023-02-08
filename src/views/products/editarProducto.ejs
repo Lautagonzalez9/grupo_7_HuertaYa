@@ -6,7 +6,7 @@
 <body>
     <%- include('../partials/header') %>
 <main class="cont-form">
-    <form action="/register" method="POST" class="formulario-registro">
+    <form action="/admin/edit" method="POST" class="formulario-registro">
 
      <label>Nombre del producto</label>
         <input type="text" name="Nombre-del-producto" placeholder="Nombre del producto" class="nombre">
@@ -32,6 +32,11 @@
         <input type="file" name="imagen" accept=".jpg, .png" multiple>   
      
      <button type="submit" class="button">Guardar Cambios</button>
+     <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST">
+      <button type="submit" class="button">ELIMINAR</button>
+     </form> 
+   
+     
 
     </form>
    

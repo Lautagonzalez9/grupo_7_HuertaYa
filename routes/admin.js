@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router()
 const adminController = require('../controllers/adminController')
 const multer = require('multer');
-const path = require('path')
+const path = require('path');
+const productController = require('../controllers/productController');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -25,5 +26,7 @@ router.post('/create', upload.single('imagen') ,adminController.creado)
 router.get('/editar', adminController.edit)
 router.put('/editar', adminController.editado)
 
+// borrar un producto
+router.delete('/delete/:id',adminController.removed)
 
 module.exports = router;

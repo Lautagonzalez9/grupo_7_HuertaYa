@@ -44,7 +44,12 @@ const adminController = {
     },
     editado: function(req,res){
         
+    },
+    //delete
+    removed :(req,res)=>{
+       return res.send("Producto Eliminado")
     }
+
 }
 
 
