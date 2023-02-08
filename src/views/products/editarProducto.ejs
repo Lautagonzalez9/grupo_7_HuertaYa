@@ -6,7 +6,7 @@
 <body>
     <%- include('../partials/header') %>
 <main class="cont-form">
-    <form action="/register" method="POST" class="formulario-registro">
+    <form action="/admin/editar/:id/editar?_method=PUT" method="POST" class="formulario-registro">
 
      <label>Nombre del producto</label>
         <input type="text" name="Nombre-del-producto" placeholder="Nombre del producto" class="nombre" value="<%= locals.productos?.name %> ">
@@ -15,11 +15,11 @@
         <textarea name="comentario" id="comentario" placeholder="Ingrese la descripción del producto" value="<%= locals.productos?.descripcion %> " ></textarea>
      <label>Categoría</label>
          <select name="categoria" placeholder="Seleccione una categoria">
-            <option value="frutas">Frutas</option>
-            <option value="verduras">Verduras</option>
-            <option value="verduras-cortadas">Verduras cortadas</option>
-            <option value="bolsones">Bolsones</option>
-            <option value="organico">Productos orgánicos</option>
+            <option value="frutas" selected="<%= locals.productos.category == 'frutas' ? true : null %> ">Frutas</option>
+            <option value="verduras" selected="<%= locals.productos.category == 'verduras' ? true : null %> ">Verduras</option>
+            <option value="verduras-cortadas" selected="<%= locals.productos.category == 'verduras-cortadas' ? true : null %> ">Verduras cortadas</option>
+            <option value="bolsones" selected="<%= locals.productos.category == 'bolsones' ? true : null %> ">Bolsones</option>
+            <option value="organico" selected="<%= locals.productos.category == 'organico' ? true : null %> ">Productos orgánicos</option>
          </select>
      
      <label>Presentación</label>
