@@ -12,7 +12,12 @@ const mainController = {
     search: (req, res) => {
 		const search = req.query.keywords;
 		const product = [];
-        product.push(productos.find(product => product.name.toLowerCase().indexOf(search.toLowerCase()) >= 0));
+        
+        productos.forEach(producto => {
+            if(producto.name.toLowerCase().indexOf(search.toLowerCase()) >= 0){
+            product.push(producto)
+            }
+        })
 		return res.render("./products/searchResult", { productos: product })
 	},
     carrito: function(req,res){

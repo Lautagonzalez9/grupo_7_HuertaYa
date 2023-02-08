@@ -36,18 +36,39 @@ const adminController = {
 
         res.redirect('/');
        },
-
-
-
-    edit: function(req,res){
+    
+       dataProducts: function(){
+           return JSON.parse(fs.readFileSync(this.fileProducts,'utf-8'));
+       },
+          
+       findAllProducts: function (){
+           return this.dataProducts();
+       },
+   
+       findProductsId: function(id){
+           let allProducts = this.findAllProducts();
+           let idFound = allProducts.find(oneProduct => oneProduct.id === id);
+           return idFound
+       },
+       
+       edit: function(req,res){
         const id = req.params.id;
 		const productos = products.find(product => product.id == id);
 		
         res.render('products/editarProducto', {productos})
-    },
-    editado: function(req,res){
-        res.send('hola')
-    }
+        },
+   
+       edited: function(req,res){
+           return res.render("Producto editado");
+       },
+   
+       delete: function(req,res){
+           let id = req.params.id
+            let allProducts = this.findAllProducts();
+           let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
+           fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, 2));
+           return res.redirect("/productos");
+       }
 }
 
 

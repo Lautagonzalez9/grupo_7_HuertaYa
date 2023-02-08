@@ -8,9 +8,17 @@
 
 <% if(typeof products != "undefined"){%>       
 <main class="cont-form">
+<<<<<<< HEAD
     <form action="/admin/editar/:id/editar?_method=PUT" m method="POST" class="formulario-registro">
+=======
+<<<<<<< HEAD
+    <form action="/admin/edit" method="POST" class="formulario-registro">
+=======
+    <form action="/edit/:id?_method=PUT" method="POST" class="formulario-registro">
+>>>>>>> 2c436b88a3e5ef3ad2ad7358a3d45602d27d9619
 
       <h3>Estas editando: <i><%= products.name %></i></h3>
+>>>>>>> 2c5e30d0f53bb678a3534eb4ea728a66184b7fd3
 
      <label>Nombre del producto</label>
         <input type="text" name="Nombre-del-producto" placeholder="Nombre del producto" class="nombre" value="<%= locals.product?.name %> ">
@@ -35,7 +43,16 @@
      <label>Imagen del producto</label>
         <input type="file" name="imagen" accept=".jpg, .png" multiple>   
      
+<<<<<<< HEAD
+     <button type="submit" class="button">Guardar Cambios</button>
+     <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST">
+      <button type="submit" class="button">ELIMINAR</button>
+     </form> 
+   
+     
+=======
      <button type="submit" class="button">Guardar cambios</button>
+>>>>>>> 2c5e30d0f53bb678a3534eb4ea728a66184b7fd3
 
     </form>
    
