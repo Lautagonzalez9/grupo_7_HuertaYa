@@ -23,8 +23,8 @@ router.get('/create', adminController.create)
 router.post('/create', upload.single('imagen') ,adminController.creado)
 
 
-router.get('/editar', adminController.edit)
-router.put('/editar', adminController.editado)
+router.get('/edit/:id', adminController.edit);
+router.put('/edit/:id', adminController.edited);
 
 // borrar un producto
 router.delete('/delete/:id',adminController.removed)
