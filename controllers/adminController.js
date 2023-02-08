@@ -37,8 +37,6 @@ const adminController = {
 
         res.redirect('/');
        },
-
-       fileProducts: './data/productsData.json',
     
        dataProducts: function(){
            return JSON.parse(fs.readFileSync(this.fileProducts,'utf-8'));
@@ -68,8 +66,8 @@ const adminController = {
        delete: function(id){
            let allProducts = this.findAllProducts();
            let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
-           fs.writeFileSync(this.fileProducts, JSON.stringify(finalProducts, null, 2));
-           return true
+           fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, 2));
+           return res.redirect("/productos");
        }
 }
 

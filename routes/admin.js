@@ -27,6 +27,6 @@ router.get('/edit/:id', adminController.edit);
 router.put('/edit/:id', adminController.edited);
 
 // borrar un producto
-router.delete('/delete/:id',adminController.removed)
+router.delete('/delete/:id',adminController.delete);
 
 module.exports = router;
