@@ -16,9 +16,9 @@ const adminController = {
         const product ={
             id: products.length > 0 ? products[products.length -1].id + 1 : 1,
             name: req.body.Name,
-            descripcion: req.body.descripcion,
-            categoria: req.body.categoria,
-            presentacion: req.body.unidad,
+            description: req.body.descripcion,
+            category: req.body.categoria,
+            presentation: req.body.unidad,
             price: Number(req.body.precio),
             image: req.file?.filename ? req.file.filename : "default-image.png"
         };
@@ -40,7 +40,10 @@ const adminController = {
 
 
     edit: function(req,res){
-        res.render('products/editarProducto')
+        const id = req.params.id;
+		const productos = products.find(product => product.id == id);
+		
+        res.render('products/editarProducto', {productos})
     },
     editado: function(req,res){
         

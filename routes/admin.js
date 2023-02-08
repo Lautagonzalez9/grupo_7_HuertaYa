@@ -22,7 +22,7 @@ router.get('/create', adminController.create)
 router.post('/create', upload.single('imagen') ,adminController.creado)
 
 
-router.get('/editar', adminController.edit)
+router.get('/editar/:id', adminController.edit)
 router.put('/editar', adminController.editado)
 
 
