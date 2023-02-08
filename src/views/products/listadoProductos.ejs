@@ -32,6 +32,7 @@ rel="stylesheet" />
                     <p><button><a style="text-decoration: none; color: white;" href="/admin/edit/<%=producto.id %>">Editar</a></button></p>
                     <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
                     <button type="submit" class="action-button delete">Eliminar</button>
+                    </form>
                     <p><button><a style="text-decoration: none; color: white;" href="/producto/<%= producto.id %>">Más info</a></button></p>
                 </article>
                  <% }) %>
