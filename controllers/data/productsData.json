@@ -88,14 +88,5 @@
     "category": "Frutas",
     "price": 300,
     "image": "default-image.jpg"
-  },
-  {
-    "id": 11,
-    "name": "Prueba subida de imagen",
-    "descripcion": "Prueba subida de imagen",
-    "categoria": "frutas",
-    "presentacion": "Prueba subida de imagen",
-    "price": "300",
-    "image": "imagen-1675463540794-857885317.jpg"
   }
 ]

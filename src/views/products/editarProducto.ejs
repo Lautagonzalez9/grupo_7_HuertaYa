@@ -6,58 +6,48 @@
 <body>
     <%- include('../partials/header') %>
 
-<% if(typeof products != "undefined"){%>       
-<main class="cont-form">
-<<<<<<< HEAD
-    <form action="/admin/editar/:id/editar?_method=PUT" m method="POST" class="formulario-registro">
-=======
-<<<<<<< HEAD
-    <form action="/admin/edit" method="POST" class="formulario-registro">
-=======
-    <form action="/edit/:id?_method=PUT" method="POST" class="formulario-registro">
->>>>>>> 2c436b88a3e5ef3ad2ad7358a3d45602d27d9619
 
-      <h3>Estas editando: <i><%= products.name %></i></h3>
->>>>>>> 2c5e30d0f53bb678a3534eb4ea728a66184b7fd3
+<main class="cont-form">
+
+    <form action="/admin/edit/<%= productos.id %>?_method=PUT" m method="POST" class="formulario-registro">
+
+      <h3>Estas editando: <i><%= locals.productos?.name %></i></h3>
+
 
      <label>Nombre del producto</label>
-        <input type="text" name="Nombre-del-producto" placeholder="Nombre del producto" class="nombre" value="<%= locals.product?.name %> ">
+        <input type="text" name="Nombre-del-producto" placeholder="Nombre del producto" class="nombre" value="<%= locals.productos?.name %> ">
      
      <label for="comentario">Descripción</label>
-        <textarea name="comentario" id="comentario" placeholder="Ingrese la descripción del producto" value="<%= locals.product?.descripcion %> " ></textarea>
+        <textarea name="comentario" id="comentario" placeholder="Ingrese la descripción del producto" value="<%= locals.productos?.descripcion %> " ></textarea>
      <label>Categoría</label>
          <select name="category" placeholder="Seleccione una categoria">
-            <option value="Frutas" selected="<%= product.category == 'Frutas' ? true : null %>">Frutas</option>
-            <option value="Verduras" selected="<%= product.category == 'Verduras' ? true : null %>">Verduras</option>
-            <option value="Verduras cortadas" selected="<%= product.category == 'Verduras cortadas' ? true : null %>">Verduras cortadas</option>
-            <option value="Bolsones" selected="<%= product.category == 'Bolsones' ? true : null %>">Bolsones</option>
-            <option value="Productos orgánicos" selected="<%= product.category == 'Productos orgánicos' ? true : null %>">Productos orgánicos</option>
+            <option value="Frutas" selected="<%= productos.category == 'Frutas' ? true : null %>">Frutas</option>
+            <option value="Verduras" selected="<%= productos.category == 'Verduras' ? true : null %>">Verduras</option>
+            <option value="Verduras cortadas" selected="<%= productos.category == 'Verduras cortadas' ? true : null %>">Verduras cortadas</option>
+            <option value="Bolsones" selected="<%= productos.category == 'Bolsones' ? true : null %>">Bolsones</option>
+            <option value="Productos orgánicos" selected="<%= productos.category == 'Productos orgánicos' ? true : null %>">Productos orgánicos</option>
          </select>
      
      <label>Presentación</label>
-         <input type="text" name="unidad" placeholder="Ingrese el tipo de presentación del producto, ej: kg, bolsa, atado..." value="<%= locals.product?.presentation%> ">
+         <input type="text" name="unidad" placeholder="Ingrese el tipo de presentación del producto, ej: kg, bolsa, atado..." value="<%= locals.productos?.presentation%> ">
      
      <label>Precio unitario</label>
-        <input type="text" name="precio" placeholder="Ingrese el precio unitario del producto" value="<%= locals.product?.price%> ">
+        <input type="text" name="precio" placeholder="Ingrese el precio unitario del producto" value="<%= locals.productos?.price%> ">
      
      <label>Imagen del producto</label>
         <input type="file" name="imagen" accept=".jpg, .png" multiple>   
      
-<<<<<<< HEAD
      <button type="submit" class="button">Guardar Cambios</button>
-     <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST">
+     <form action="/admin/delete/<%= productos.id %>?_method=DELETE" method="POST">
       <button type="submit" class="button">ELIMINAR</button>
      </form> 
    
      
-=======
-     <button type="submit" class="button">Guardar cambios</button>
->>>>>>> 2c5e30d0f53bb678a3534eb4ea728a66184b7fd3
 
     </form>
    
 </main>
-<%}%>
+
 <%- include('../partials/footer') %>
 </body> 
 </html>

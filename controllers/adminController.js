@@ -63,10 +63,13 @@ const adminController = {
        },
    
        delete: function(req,res){
-           let id = req.params.id
-            let allProducts = this.findAllProducts();
-           let finalProducts = allProducts.filter(oneProduct => oneProduct.id !== id);
-           fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, 2));
+            let id = req.params.id
+            let product = products;
+
+            product = product.filter(oneProduct => oneProduct.id != id);
+            
+           fs.writeFileSync(path.join(__dirname, './data/productsData.json'), JSON.stringify(product, null, 2));
+           
            return res.redirect("/productos");
        }
 }
