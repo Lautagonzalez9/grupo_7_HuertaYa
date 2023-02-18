@@ -9,6 +9,7 @@
     <%- include('../partials/header') %>
     <main>
         <div class="translucid">
+        <div class="general-container">
         <div class="articleContainer">
                 <div class="carrito-productos"><h3>Productos</h3></div>
                 <div class="carrito-precio"><h3>Precio</h3></div>
@@ -30,6 +31,7 @@
                 </div>
                 <div class="product-price">
                         <p class="productTitle">PRECIO</p> 
+                        <div id="espaciador"></div>
                 </div>
                 <div class="product-subtotal">
                     <p class="productTitle">SUBTOTAL</p>
@@ -52,6 +54,53 @@
                 </div>
                 <div class="product-price">
                         <p class="productTitle">PRECIO</p> 
+                        <div id="espaciador"></div>
+                </div>
+                <div class="product-subtotal">
+                    <p class="productTitle">SUBTOTAL</p>
+                    <button class="trashButton"><i class="fas fa-trash"></i></button>
+                </div>
+            </article>
+            <article class="article-1">
+                <div class="img-article">
+                <img class="img" src="/img/Imagen1.jpg" alt="">
+                </div>
+                <div class="product-carrito">
+                    <div>
+                   <p class="productTitle">PRODUCTO</p>
+                    </div>
+                    <div class="product-amount" style="margin-top: 0px;">
+                        <button><i class="fas fa-chevron-left"></i></button>
+                        <p>#</p>
+                        <button><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-price">
+                        <p class="productTitle">PRECIO</p>
+                        <div id="espaciador"></div> 
+                </div>
+                <div class="product-subtotal">
+                    <p class="productTitle">SUBTOTAL</p>
+                    <button class="trashButton"><i class="fas fa-trash"></i></button>
+                </div>
+            </article>
+            <article class="article-2">
+                <div class="img-article">
+                <img class="img" src="/img/Imagen1.jpg" alt="">
+                </div>
+                <div class="product-carrito">
+                    <div>
+                   <p class="productTitle">PRODUCTO</p>
+                    </div>
+                    <div class="product-amount" style="margin-top: 0px;">
+                        <button><i class="fas fa-chevron-left"></i></button>
+                        <p>#</p>
+                        <button><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-price">
+                        <p class="productTitle">PRECIO</p> 
+                        <div id="espaciador"></div>
                 </div>
                 <div class="product-subtotal">
                     <p class="productTitle">SUBTOTAL</p>
@@ -74,6 +123,7 @@
                 </div>
                 <div class="product-price">
                         <p class="productTitle">PRECIO</p> 
+                        <div id="espaciador"></div>
                 </div>
                 <div class="product-subtotal">
                     <p class="productTitle">SUBTOTAL</p>
@@ -95,51 +145,8 @@
                     </div>
                 </div>
                 <div class="product-price">
-                        <p class="productTitle">PRECIO</p> 
-                </div>
-                <div class="product-subtotal">
-                    <p class="productTitle">SUBTOTAL</p>
-                    <button class="trashButton"><i class="fas fa-trash"></i></button>
-                </div>
-            </article>
-            <article class="article-1">
-                <div class="img-article">
-                <img class="img" src="/img/Imagen1.jpg" alt="">
-                </div>
-                <div class="product-carrito">
-                    <div>
-                   <p class="productTitle">PRODUCTO</p>
-                    </div>
-                    <div class="product-amount" style="margin-top: 0px;">
-                        <button><i class="fas fa-chevron-left"></i></button>
-                        <p>#</p>
-                        <button><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="product-price">
-                        <p class="productTitle">PRECIO</p> 
-                </div>
-                <div class="product-subtotal">
-                    <p class="productTitle">SUBTOTAL</p>
-                    <button class="trashButton"><i class="fas fa-trash"></i></button>
-                </div>
-            </article>
-            <article class="article-2">
-                <div class="img-article">
-                <img class="img" src="/img/Imagen1.jpg" alt="">
-                </div>
-                <div class="product-carrito">
-                    <div>
-                   <p class="productTitle">PRODUCTO</p>
-                    </div>
-                    <div class="product-amount" style="margin-top: 0px;">
-                        <button><i class="fas fa-chevron-left"></i></button>
-                        <p>#</p>
-                        <button><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-                <div class="product-price">
-                        <p class="productTitle">PRECIO</p> 
+                        <p class="productTitle">PRECIO</p>
+                        <div id="espaciador"></div> 
                 </div>
                 <div class="product-subtotal">
                     <p class="productTitle">SUBTOTAL</p>
@@ -151,15 +158,17 @@
                 <p class="subtotal-carrito-num">$###</p>
             </div>
             <div class="calculo-envio">
-                <p><i class="fa-solid fa-truck"></i> Calculo de envio</p>
-                <form action="">
-                    <input type="text" placeholder="Codigo postal">
-                    <button><input type="submit"></button>
+                <div id="calculo-envio-texto">
+                    <p><i class="fa-solid fa-truck"></i> Calculo de envio</p>
+                </div>
+                <form action="" id="formulario-envio">
+                    <input type="text" name="codigo-postal" placeholder="Codigo postal" id="input-codigo">
                 </form>
-                <a href="https://www.correoargentino.com.ar/formularios/cpa"  target=”_blank”>No se mi codigo postal</a>
+                    <button id="boton-enviar-codigo"><input type="submit" for="codigo-postal"></button>
+                <a id="no-se-mi-codigo" href="https://www.correoargentino.com.ar/formularios/cpa"  target=”_blank”>No se mi codigo postal</a>
             </div>
             <div class="total-carrito">
-                <p>Total:</p>
+                <p id="total">Total:</p>
                 <p class="total-carrito-num">$###</p>
             </div>
             <div class="botones-carrito">
@@ -195,6 +204,7 @@
             </article>
         </div>
         <!-- ENVIO -->
+    </div>
     </div>
     </main>
     <%- include('../partials/footer') %>

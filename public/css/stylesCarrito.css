@@ -5,6 +5,10 @@
     box-shadow: rgba(189, 184, 175,0.3);
 }
 
+.general-container{
+    max-width: 1000px;
+}
+
 body{
     background-image:url(/img/carrusel_1.jpg);
     background-size:contain;
@@ -84,6 +88,7 @@ margin-left: 50%;
     width: 95%;
     text-align: center;
     margin: auto;
+    align-items: center;
 }
 .article-2{
     display: grid;
@@ -92,30 +97,48 @@ margin-left: 50%;
     text-align: center;
     margin: auto;
     background-color: rgba(189, 184, 175,0.7);
+    align-items: center;
 }
 
-h3 {
-    padding-left: 7px;
+#espaciador{
+    height: 35px;
 }
+
+/* h3 {
+    padding-left: 15px;
+} */
 
 .subtotal-carrito{
-    display: flex;
+    width: 95%;
+    display: grid;
     border-top: 2px lightgrey solid;
     border-bottom: 2px lightgrey solid;
+    grid-template-columns: 30% 50% 20%;
     padding: 10px 0px;
-    padding-left: 45px;
+    margin: auto;
+    text-align: center;
 }
 
 .total-carrito{
-    display: flex;
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
     padding: 10px 0px;
     padding-left: 45px;
     font-size: 2em;
     font-weight: bold;
 }
 
+#total{
+    grid-column-start: 1;
+}
+
 .botones-carrito{
-    display: flex;
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
@@ -124,33 +147,64 @@ h3 {
 }
 
 .boton-terminar-compra{
-    margin-left: 41vw;
+    grid-column-start: 3;
+    text-align: center;
 }
 
 #finalizar-compra {
     padding: 2px 0px;
     width: 70%;
     margin: none;
+    grid-column-start: 3;
+    text-align: center;
 }
 
 .calculo-envio{
+    width: 95%;
+    margin: auto;
     margin-top: 10px;
     padding-bottom: 10px;
     padding-left: 45px;
     border-bottom: 2px lightgrey solid;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: 50% 50%;
+}
+
+#calculo-envio-costos{
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+#no-se-mi-codigo{
+    grid-row-start: 2;
+}
+
+#input-codigo{
+    grid-column-start: 2;
+}
+
+#boton-enviar-codigo{
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+#formulario-envio{
+    grid-row-start: 2;
+    grid-column-start: 2;
 }
 
 form{
     display: flex;
-    margin: 10px 0px;
 }
 
 .subtotal-carrito-num{
-    margin-left: 36.5vw;
+    grid-column-start: 3;
 }
 
 .total-carrito-num{
-    margin-left: 56vw;
+    grid-column-start: 3;
+    text-align: center;
 }
 
 .img{
@@ -315,9 +369,9 @@ footer h4 {
     grid-column-start: 1;
 }
 
-.product-carrito, .product-price, .product-subtotal{
+/* .product-carrito, .product-price, .product-subtotal{
     width: 20vw;
-}
+} */
 
     /* .titulos-carrito{
         margin-left: 10vw;
