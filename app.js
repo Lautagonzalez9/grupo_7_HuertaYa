@@ -7,6 +7,13 @@ const rutaMain = require('./routes/main')
 const rutaAdmin = require('./routes/admin')
 const methodOverride =  require('method-override');
 
+//Cookies y session
+const cookieParser = require('cookie-parser');
+app.use(cookieParser('HuertaYa'));
+
+//Middlewares de autenticacion
+const autoLoginMiddleware = require('./Middlewares/loginMiddleware');
+app.use(autoLoginMiddleware);
 
 app.use(methodOverride('_method')); 
 app.use(express.urlencoded({ extended: false }));

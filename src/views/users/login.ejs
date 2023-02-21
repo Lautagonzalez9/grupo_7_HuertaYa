@@ -10,22 +10,22 @@
             <div class="imagen-formulario">
 
             </div>
-            <form class="formulario">
+            <form class="formulario" action="/login" method="POST">
                 <div class="texto-formulario">
                     <h2> ¡Bienvenido de nuevo!</h2>
                     <p> Inicia seccion con tu cuenta</p>
                 </div>
                 <div class="input-detalles">
                     <label for="email">Usuario</label>
-                    <input type="email" placeholder="Correo Electronico">
+                    <input type="email" placeholder="Correo Electronico" name="email">
                 </div>
                 <div class="input-detalles">
                     <label for="password">Password</label>
                     <input type="password" name="password" placeholder="Password">
                 </div>
                 <div class="recordarme">
-                    <label for="text">Recordarme</label>
-                    <input type="checkbox" name="Recordarme">
+                    <label for="recordarme">Recordarme</label>
+                    <input type="checkbox" name="recordarme" id="recordarme">
                 </div>
                 <div class="input-detalles">
                     <button type="submit">LOGIN</button>
