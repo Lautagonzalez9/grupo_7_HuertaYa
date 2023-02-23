@@ -1,5 +1,6 @@
 // Controladores utilizados para el manejo de rutas del login , register .
 const path=require('path');
+const User = require('../models/User')
 
 const usuariosController={
     register:function(req,res){
@@ -9,6 +10,20 @@ const usuariosController={
         res.render('login')
     },
     validateLogin:function(req,res){
+        let userToLogin = User.findByField("Email", req.body.email);
+        
+        if(userToLogin){
+
+        }
+
+        return res.render('login',{
+            errors: {
+                email: {
+                    msg: 'El mail no se encuentra registrado'
+                }
+            }
+        });
+
         let usuarioIngresado = req.body.email;
         let passwordIngresada = req.body.password;
 
