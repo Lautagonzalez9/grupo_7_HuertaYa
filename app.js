@@ -12,7 +12,9 @@ const cookieParser = require('cookie-parser');
 app.use(cookieParser('HuertaYa'));
 
 //Middlewares de autenticacion
+const bcryptjs = require("bcryptjs");
 const autoLoginMiddleware = require('./Middlewares/loginMiddleware');
+
 app.use(autoLoginMiddleware);
 
 app.use(methodOverride('_method')); 

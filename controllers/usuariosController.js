@@ -1,6 +1,7 @@
 // Controladores utilizados para el manejo de rutas del login , register .
 const path=require('path');
 const User = require('../models/User')
+const bcryptjs = require("bcryptjs");
 
 const usuariosController={
     register:function(req,res){
@@ -13,7 +14,16 @@ const usuariosController={
         let userToLogin = User.findByField("Email", req.body.email);
         
         if(userToLogin){
-
+            if(bcryptjs.compareSync(req.body.password, userToLogin.Contraseña)){
+                return res.send("adentro");
+            }
+            return res.render('login',{
+                errors: {
+                    contraseña: {
+                        msg: 'La contraseña es incorrecta'
+                    }
+                }
+            });
         }
 
         return res.render('login',{
