@@ -45,7 +45,7 @@
      <label>Numero de telefono</label>
          <input type="tel" name="numeroDeTelefono" placeholder="+54 11 9930599" value= <%= locals.old && old.numeroDeTelefono ? old.numeroDeTelefono : '' %>>
             <% if(locals.errors && errors.numeroDeTelefono){  %> 
-             <label style="color:red"><%= errors.numeroDeTelefono.msg %> </label>
+             <label style="color:red"><%= errors.numeroDeTelefono.msg  %> </label>
             <% } %> 
          <label>Foto de perfil</label>
          <input type="file" name="imgPerfil">
