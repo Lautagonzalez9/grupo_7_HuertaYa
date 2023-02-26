@@ -6,28 +6,49 @@
 <body>
     <%- include('../partials/header') %>
     <main class="cont-form">
-    <form action="/register" method="POST" class="formulario-registro">
+    <form action="/register" method="POST" class="formulario-registro" enctype="multipart/form-data">
         <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
         <label> Nombre</label>
-            <input type="text" name="Nombre" placeholder="Lionel" class="nombre"> 
-           
+            <input type="text" name="Nombre" placeholder="Lionel" class="nombre" value= <%= locals.old && old.Nombre ? old.Nombre : '' %> > 
+            <% if(locals.errors && errors.Nombre){  %> 
+                <label style="color:red"><%= errors.Nombre.msg %> </label>
+                <% } %> 
+                
      <label>Apellido </label>
-        <input type="text" name="Apellido" placeholder="Messi" class="nombre">
-     
+        <input type="text" name="Apellido" placeholder="Messi" class="nombre" value= <%= locals.old && old.Apellido ? old.Apellido : '' %> >
+            <% if(locals.errors && errors.Apellido){  %> 
+                <label style="color:red"><%= errors.Apellido.msg %> </label>
+            <% } %> 
+            
      <label>E-mail</label>
-         <input type="email" name="email" placeholder="LionelMessi10@gmail.com">
-     
+         <input type="email" name="email" placeholder="LionelMessi10@gmail.com" value= <%= locals.old && old.email ? old.email : '' %>>
+             <% if(locals.errors && errors.email){  %> 
+            <label style="color:red"><%= errors.email.msg %> </label>
+            <% } %> 
+            
      <label>Contraseña</label>
-         <input type="password" name="contraseña" placeholder="Ingrese su contraseña">
-     
-     <label>Provincia</label>
-         <input type="text" name="Provincia" placeholder="Buenos Aires">
-     
-     <label> Localidad</label>
-        <input type="text" name="Localidad" placeholder="Bahia Blanca">
-     
+         <input type="password" name="contrasenia" placeholder="Ingrese su contraseña" >
+            <% if(locals.errors && errors.contrasenia){  %> 
+            <label style="color:red"><%= errors.contrasenia.msg %> </label>
+            <% } %> 
+             
+     <label>Codigo Postal</label>
+         <input type="text" name="codigoPostal" placeholder="Buenos Aires" value= <%= locals.old && old.codigoPostal ? old.codigoPostal : '' %>>
+         <% if(locals.errors && errors.contrasenia){  %> 
+            <label style="color:red"><%= errors.contrasenia.msg %> </label>
+            <% } %> 
+     <label>Localidad</label>
+        <input type="text" name="Localidad" placeholder="Bahia Blanca" value= <%= locals.old && old.Localidad ? old.Localidad : '' %>>
+        <% if(locals.errors && errors.Localidad){  %> 
+            <label style="color:red"><%= errors.Localidad.msg %> </label>
+            <% } %> 
      <label>Numero de telefono</label>
-         <input type="tel" name="Numero-de-telefono" placeholder="+54 11 9930599">
+         <input type="tel" name="numeroDeTelefono" placeholder="+54 11 9930599" value= <%= locals.old && old.numeroDeTelefono ? old.numeroDeTelefono : '' %>>
+            <% if(locals.errors && errors.numeroDeTelefono){  %> 
+             <label style="color:red"><%= errors.numeroDeTelefono.msg %> </label>
+            <% } %> 
+         <label>Foto de perfil</label>
+         <input type="file" name="imgPerfil">
      <button type="submit" class="button">Enviar</button>
     
     </form>

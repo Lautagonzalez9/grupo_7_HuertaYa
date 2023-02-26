@@ -1,106 +1,82 @@
 [
-    {
-        
-        "id":1,
-        "Nombre":"Maria",
-        "Apellido":"Castro",
-        "Email":"Mariadc94@gmail.com",
-        "Contraseña":"$2a$10$9mLY7eIFhJNNg6DCu9f8NuRLZa9i54KHZxEAAfndXLT5K4d9KRxeK",
-        "Codigo postal":1870,
-        "Localidad":"Avellaneda",
-        "Numero de telefono":91133205615
-
-
-    },
-    {
-      
-        "id":2,
-        "Nombre":"Dora",
-        "Apellido":"Guzman",
-        "Email":"dorag133@gamil.com",
-        "Contraseña":7401243,
-        "Codigo postal":1643,
-        "Provincia":"Beccar",
-        "Numero de telefono":91154889613
-
-
-    },
-    {
-       
-        "id":3,
-        "Nombre":"Claudio",
-        "Apellido":"Gonzalez",
-        "Email":"claudioG@gmail.com",
-        "Contraseña":25925413,
-        "Codigo postal":"Haedo",
-        "Provincia":"1706",
-        "Numero de telefono":91149480887
-
-
-    },
-    {
-        
-        "id":4,
-        "Nombre":"Wendy",
-        "Apellido":"Hernandez",
-        "Email":"WendyH@gmail.com",
-        "Contraseña":15895413,
-        "Codigo postal":1605,
-        "Provincia":"Munro",
-        "Numero de telefono":91189563214
-
-    },
-    {
-        
-        "id":5,
-        "Nombre":"Andres",
-        "Apellido":"Bracho",
-        "Email":"brachoAndres@gmail.com",
-        "Contraseña":45869613,
-        "Codigo postal":1629,
-        "Provincia":"Pilar",
-        "Numero de telefono":91154789312
-
-
-    },
-    {
-        
-        "id":6,
-        "Nombre":"Emilia",
-        "Apellido":"Marchan",
-        "Email":"drEmiliaM@gmail.com",
-        "Contraseña":86465213,
-        "Codigo postal":1603,
-        "Provincia":"Villa Martelli",
-        "Numero de telefono":91178451236
-
-
-    },
-    {
-       
-        "id":7,
-        "Nombre":"Mercedes",
-        "Apellido":"Urquiza",
-        "Email":"mercedesU@gmail.com",
-        "Contraseña":23547896,
-        "Codigo postal":1428,
-        "Provincia":"Belgrano",
-        "Numero de telefono":91178964512
-
-
-    },
-    {
-       
-        "id":8,
-        "Nombre":"Romina",
-        "Apellido":"Cubria",
-        "Email":"Rcubria@gmail.com",
-        "Contraseña":56851412,
-        "Codigo postal":"Caballito",
-        "Provincia":1424,
-        "Numero de telefono":91157561234
-
-
-    }
-    
+  {
+    "id": 1,
+    "Nombre": "Maria",
+    "Apellido": "Castro",
+    "Email": "Mariadc94@gmail.com",
+    "Contraseña": "$2a$10$9mLY7eIFhJNNg6DCu9f8NuRLZa9i54KHZxEAAfndXLT5K4d9KRxeK",
+    "codigoPostal": 1870,
+    "Localidad": "Avellaneda",
+    "numeroDeTelefono": 91133205615
+  },
+  {
+    "id": 2,
+    "Nombre": "Dora",
+    "Apellido": "Guzman",
+    "Email": "dorag133@gamil.com",
+    "Contraseña": 7401243,
+    "codigoPostal": 1643,
+    "Provincia": "Beccar",
+    "numeroDeTelefono": 91154889613
+  },
+  {
+    "id": 3,
+    "Nombre": "Claudio",
+    "Apellido": "Gonzalez",
+    "Email": "claudioG@gmail.com",
+    "Contraseña": 25925413,
+    "codigoPostal": "Haedo",
+    "Provincia": "1706",
+    "numeroDeTelefono": 91149480887
+  },
+  {
+    "id": 4,
+    "Nombre": "Wendy",
+    "Apellido": "Hernandez",
+    "Email": "WendyH@gmail.com",
+    "Contraseña": 15895413,
+    "codigoPostal": 1605,
+    "Provincia": "Munro",
+    "numeroDeTelefono": 91189563214
+  },
+  {
+    "id": 5,
+    "Nombre": "Andres",
+    "Apellido": "Bracho",
+    "Email": "brachoAndres@gmail.com",
+    "Contraseña": 45869613,
+    "codigoPostal": 1629,
+    "Provincia": "Pilar",
+    "numeroDeTelefono": 91154789312
+  },
+  {
+    "id": 6,
+    "Nombre": "Emilia",
+    "Apellido": "Marchan",
+    "Email": "drEmiliaM@gmail.com",
+    "Contraseña": 86465213,
+    "codigoPostal": 1603,
+    "Provincia": "Villa Martelli",
+    "numeroDeTelefono": 91178451236
+  },
+  {
+    "id": 7,
+    "Nombre": "Mercedes",
+    "Apellido": "Urquiza",
+    "Email": "mercedesU@gmail.com",
+    "Contraseña": 23547896,
+    "codigoPostal": 1428,
+    "Provincia": "Belgrano",
+    "numeroDeTelefono": 91178964512
+  },
+  {
+    "id": 8,
+    "Nombre": "Romina",
+    "Apellido": "Cubria",
+    "Email": "Rcubria@gmail.com",
+    "Contraseña": 56851412,
+    "codigoPostal": "Caballito",
+    "Provincia": 1424,
+    "numeroDeTelefono": 91157561234
+  }
 ]
