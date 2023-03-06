@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, './data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const { validationResult } = require('express-validator')
 
 
 const adminController = {
@@ -22,7 +22,10 @@ const adminController = {
             price: Number(req.body.precio),
             image: req.file?.filename ? req.file.filename : "default-image.png"
         };
+        
         let prod;
+        let errors = validationResult(req)
+        if(errors.isEmpty()){ 
         if(data == ''){
             prod = [];
         }else{
@@ -35,6 +38,9 @@ const adminController = {
         fs.writeFileSync(path.join(__dirname, './data/productsData.json'), prodJson);
 
         res.redirect('/');
+    }else{
+        res.render('products/adminCreate',{ errors : errors.mapped(), old: req.body})
+    }
        },
     
        dataProducts: function(){

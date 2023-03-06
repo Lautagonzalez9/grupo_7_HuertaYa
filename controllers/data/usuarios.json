@@ -78,5 +78,27 @@
     "codigoPostal": "Caballito",
     "Provincia": 1424,
     "numeroDeTelefono": 91157561234
+  },
+  {
+    "id": 9,
+    "Nombre": "AAAAAA",
+    "Apellido": "aaaa",
+    "email": "aaaaa@gmail.com",
+    "contrasenia": "$2a$10$kIYDdl8btXMQFuVIqyPIH.BfFUO65MnHzxwLrZ7xug3CoBWRpFTfC",
+    "codigoPostal": "122313",
+    "Localidad": "dou",
+    "numeroDeTelefono": "13131313",
+    "imagen": "default-image.png"
+  },
+  {
+    "id": 10,
+    "Nombre": "aaaa",
+    "Apellido": "aaa",
+    "email": "aaa@gmail.com",
+    "contrasenia": "$2a$10$KpLsJv4VVQtPoR0M57b4GeAhNsxbXTIyPRRVgrBK1/WfY391Fgm5a",
+    "codigoPostal": "aaaa",
+    "Localidad": "aaa",
+    "numeroDeTelefono": "12121212111",
+    "imagen": "default-image.png"
   }
 ]

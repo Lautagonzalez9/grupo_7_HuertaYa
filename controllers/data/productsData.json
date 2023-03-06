@@ -63,30 +63,12 @@
     "image": "morron.jpg"
   },
   {
-    "id": 8,
-    "name": "Manzana colorada",
-    "presentation": "Kg.",
-    "description": "",
-    "category": "Frutas",
-    "price": 550,
-    "image": "default-image.jpg"
-  },
-  {
     "id": 9,
     "name": "Banana",
     "presentation": "Kg.",
     "description": "",
     "category": "Frutas",
     "price": 250,
-    "image": "default-image.jpg"
-  },
-  {
-    "id": 10,
-    "name": "Naranja",
-    "presentation": "Kg.",
-    "description": "",
-    "category": "Frutas",
-    "price": 300,
     "image": "default-image.jpg"
   }
 ]
