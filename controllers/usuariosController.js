@@ -61,28 +61,40 @@ const usuariosController={
         res.render('login')
     },
     validateLogin:function(req,res){
+      //prueba
+       // return res.send(req.body)
         let userToLogin = User.findByField("Email", req.body.email);
-        
-        if(userToLogin){
-            if(bcryptjs.compareSync(req.body.password, userToLogin.Contraseña)){
-                return res.send("adentro");
-            }
+        return res.send(userToLogin);
+       if(userToLogin){
+            //para guardar al usuario en session
+           // req.session.userLogged=userToLogin
+            //prueba
+            //let isOkPassword=bcryptjs.compareSync(req.body.password, userToLogin.Contraseña;
+            // if(isOkPassword){
+                // return res.send('ok puedes ingresar);
+            // }
+           if(bcryptjs.compareSync(req.body.password, userToLogin.Contraseña)){
+              req.session.userLogged=userToLogin;
+               return res.send('Adentro')
+              
+            } 
             return res.render('login',{
-                errors: {
-                    contraseña: {
-                        msg: 'La contraseña es incorrecta'
+             errors: {
+                   contraseña: {
+                    msg: 'La contraseña es incorrecta'
                     }
-                }
-            });
-        }
-
-        return res.render('login',{
-            errors: {
+              }
+           });
+         }
+         
+       return res.render('login',{
+          errors: {
                 email: {
-                    msg: 'El mail no se encuentra registrado'
-                }
-            }
-        });
+                 msg: 'El mail no se encuentra registrado'
+              }
+           }
+       });
+       
 
         let usuarioIngresado = req.body.email;
         let passwordIngresada = req.body.password;
@@ -92,8 +104,10 @@ const usuariosController={
             res.cookie("recordarUsuario", req.body, {maxAge: 3600000})
             }
         res.redirect('/')
+    },
+    profile :(req,res)=>{
+        return res.render('profileIndex')
     }
-    
 }
 
 module.exports = usuariosController;

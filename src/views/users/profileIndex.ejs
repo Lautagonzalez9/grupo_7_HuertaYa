@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head.ejs")%>
+
+    <link rel="stylesheet" href="/css/stylesIndex.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    rel="stylesheet" />
+    <title>Home_Huerta_Ya</title>
+</head>
+
+<body>
+
+    <%- include("./partials/header.ejs")%>
+
+    <section class="intro">
+        <h2>PRÓXIMA ENTREGA</h2>
+        <h1>17/05/2023</h1>
+        <a class="button-order"><h4>PEDIR AHORA</h4></a>
+    </section>
+
+    <section class="carrusel">
+        <div class="carrusel-1">
+            <h2>COMPROMISO SUSTENTABLE</h2>
+            <P>Guardá tu caja cuando recibas nuestro pedido 
+                para  reutilizarla y así reducir los residuos
+                generados.</P>
+        </div>
+        <div class="carrusel-2">
+            <h2>MISION</h2>
+            <P>Fomentar el consumo de frutas y verduras
+                orgánicas, libre de fertilizantes, cuidando los
+                recursos naturales y residuos generados, 
+                desde la comodidad del hogar de nuestros
+                clientes. </P>
+        </div>
+        <div class="carrusel-3">
+            <h2>COMO COMPRAR</h2>
+            <p>Seleccioná los productos y/o combos y añadilos
+                a tu carrito. Elegí la fecha de entrega, aboná 
+                tu pedido con el método pago que prefieras... 
+                y listo! </p>
+        </div>
+    </section>
+
+    <section class ="sectionIndex">     
+                          
+        <div class="delivery-2"> 
+                <div class="container2">
+                        <div class="img-repartidor">               
+                        <img class="repartidor" src="../img/repartidor con caja de verduras con logo en caja 2.png" alt="">
+                        </div>
+                        <div class="delivery-3pasos">   
+                            <p class="delivery-titulo">NUESTRO REPARTO</p> 
+                            <div class="delivery-camioneta">
+                                <img class="img-camioneta" src="../img/Camioneta ploteada.jpg" alt="">
+                            </div>               
+                            <div class="start-order-2">
+                            <button class="start-order-2"><h4>COMENZAR PEDIDO</h4></button>
+                            </div>
+                        </div>
+
+                </div>
+        </div>
+        
+    </section>
+
+    <section class="manzana">
+            <div class="repetir-pedido">
+                    <h5>¿Ya pediste y querés repetir el pedido?</h5>
+                    <a class="login-index"><h4>INICIÁ SESIÓN</h4></a>
+                </div>
+            <div class="envio"><h4>CALCULAR ENVÍO</h4>
+                    <form class="form-codigo">
+                        <label for="codigo-postal"></label>
+                        <input class="space-cp" type="CP" name="codigo-postal" placeholder="Tu código postal">
+                    <button type="submit" class="button-calcular-2">CALCULAR</button>
+                    </form>
+                    <a><h6>No se mi código postal</h6></a>
+            </div>
+    </section>     
+    
+
+    <footer>
+        <%- include("./partials/footer")%>
+    </footer>
+</body>
+</html>

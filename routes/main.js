@@ -5,7 +5,8 @@ const multer = require('multer');
 const mainController = require('../controllers/mainController');
 const productController = require('../controllers/productController');
 const usuariosController = require('../controllers/usuariosController');
-const authMid = require('../Middlewares/authMiddleware')
+const authMid = require('../Middlewares/authMiddleware');
+//const validacionMiddleware = require('../Middlewares/validacionMiddleware');
 // const { body } = require('express-validator');
 
 // set multer 
@@ -36,6 +37,9 @@ router.post('/register', authMid.registerAuth, upload.single('imgPerfil'), usuar
 //login
 router.get('/login', mainController.login);
 router.post('/login', usuariosController.validateLogin);
+
+//profile
+//router.get('/profile',usuariosController.profile)
 
 //productos
 router.get('/producto/:id', productController.detalleDeProducto);

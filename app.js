@@ -6,6 +6,7 @@ const publicPath = path.join(__dirname, '/public');
 const rutaMain = require('./routes/main')
 const rutaAdmin = require('./routes/admin')
 const methodOverride =  require('method-override');
+const session = require('express-session');
 
 //Cookies y session
 const cookieParser = require('cookie-parser');
@@ -20,6 +21,12 @@ app.use(autoLoginMiddleware);
 app.use(methodOverride('_method')); 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
+// session
+app.use(session({
+    secret: 'es un secreto',
+    resave:false,
+    saveUninitialized:false,
+}));
 
 //Carpeta de views
 app.set("views",path.join(__dirname,"./src/views"))

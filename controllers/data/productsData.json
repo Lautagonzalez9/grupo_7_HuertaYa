@@ -9,15 +9,6 @@
     "image": "calabaza.jpg"
   },
   {
-    "id": 2,
-    "name": "Alcaucil",
-    "presentation": "Kg.",
-    "description": "HOLA",
-    "category": "Verduras",
-    "price": 350,
-    "image": "alcaucil.jpg"
-  },
-  {
     "id": 3,
     "name": "Choclos",
     "presentation": "Unidad",
