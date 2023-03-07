@@ -5,6 +5,7 @@ const multer = require('multer');
 const path = require('path');
 const productController = require('../controllers/productController');
 const authMid = require('../Middlewares/authMiddleware')
+const guestRedirectMiddleware = require('../Middlewares/guestRedirectMiddleware')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -20,14 +21,14 @@ const storage = multer.diskStorage({
 
 
 //rutas para crear
-router.get('/create', adminController.create)
+router.get('/create', guestRedirectMiddleware, adminController.create)
 router.post('/create', upload.single('imagen'), authMid.productCreate ,adminController.creado)
 
 
-router.get('/edit/:id', adminController.edit);
+router.get('/edit/:id', guestRedirectMiddleware, adminController.edit);
 router.post('/edit', adminController.edited);
 
 // borrar un producto
-router.delete('/delete/:id',adminController.delete);
+router.delete('/delete/:id', guestRedirectMiddleware, adminController.delete); //No estoy seguro de que este middleware vaya aca
 
 module.exports = router;

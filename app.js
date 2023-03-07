@@ -24,8 +24,8 @@ app.use(express.json())
 // session
 app.use(session({
     secret: 'es un secreto',
-    resave:false,
-    saveUninitialized:false,
+    resave: false,
+    saveUninitialized:false
 }));
 
 //Carpeta de views

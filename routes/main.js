@@ -7,6 +7,8 @@ const productController = require('../controllers/productController');
 const usuariosController = require('../controllers/usuariosController');
 const authMid = require('../Middlewares/authMiddleware')
 const { body } = require('express-validator');
+const guestRedirectMiddleware = require('../Middlewares/guestRedirectMiddleware')
+const userRedirectMiddleware = require('../Middlewares/userRedirectMiddleware')
 
 // set multer 
 const storage = multer.diskStorage({
@@ -34,20 +36,23 @@ router.get('/search', mainController.search);
 router.get('/carrito', mainController.carrito);
 
 //registro
-router.get('/register', mainController.register);
+router.get('/register', userRedirectMiddleware, mainController.register);
 router.post('/register', upload.single('imgPerfil'), authMid.registerAuth,usuariosController.registrado)
 
 
 //login
-router.get('/login', mainController.login);
+router.get('/login', userRedirectMiddleware, mainController.login);
 router.post('/login', usuariosController.validateLogin);
 
 //profile
-//router.get('/profile',usuariosController.profile)
+router.get('/profile', guestRedirectMiddleware, usuariosController.profile)
 
 //productos
 router.get('/producto/:id', productController.detalleDeProducto);
 router.get('/productos', productController.listaDeProductos);
+
+//Log out
+router.get('/logout', guestRedirectMiddleware, usuariosController.logout);
 
 
 module.exports = router;

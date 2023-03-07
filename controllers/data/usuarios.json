@@ -100,5 +100,16 @@
     "Localidad": "aaa",
     "numeroDeTelefono": "12121212111",
     "imagen": "default-image.png"
+  },
+  {
+    "id": 11,
+    "Nombre": "Julian",
+    "Apellido": "Penna",
+    "email": "julian__p@hotmail.com",
+    "contrasenia": "$2a$10$0dabzgISt/M43s/Wm2fi1O/zFPXqU5IYy9bshKex3VPrc0YwFbv4y",
+    "codigoPostal": "666",
+    "Localidad": "El quinto subsuelo del infiernon",
+    "numeroDeTelefono": "+549666",
+    "imagen": "default-image.png"
   }
 ]
