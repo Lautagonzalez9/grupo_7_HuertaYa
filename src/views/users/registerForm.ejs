@@ -34,8 +34,8 @@
              
      <label>Codigo Postal</label>
          <input type="text" name="codigoPostal" placeholder="Buenos Aires" value= <%= locals.old && old.codigoPostal ? old.codigoPostal : '' %>>
-         <% if(locals.errors && errors.contrasenia){  %> 
-            <label style="color:red"><%= errors.contrasenia.msg %> </label>
+         <% if(locals.errors && errors.codigoPostal){  %> 
+            <label style="color:red"><%= errors.codigoPostal.msg %> </label>
             <% } %> 
      <label>Localidad</label>
         <input type="text" name="Localidad" placeholder="Bahia Blanca" value= <%= locals.old && old.Localidad ? old.Localidad : '' %>>

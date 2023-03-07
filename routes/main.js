@@ -5,9 +5,8 @@ const multer = require('multer');
 const mainController = require('../controllers/mainController');
 const productController = require('../controllers/productController');
 const usuariosController = require('../controllers/usuariosController');
-const authMid = require('../Middlewares/authMiddleware');
-//const validacionMiddleware = require('../Middlewares/validacionMiddleware');
-// const { body } = require('express-validator');
+const authMid = require('../Middlewares/authMiddleware')
+const { body } = require('express-validator');
 
 // set multer 
 const storage = multer.diskStorage({
@@ -22,6 +21,11 @@ const storage = multer.diskStorage({
   
   const upload = multer({ storage: storage })
 
+
+
+
+
+
 //inicio
 router.get('/', mainController.index);
 //search
@@ -31,7 +35,7 @@ router.get('/carrito', mainController.carrito);
 
 //registro
 router.get('/register', mainController.register);
-router.post('/register', authMid.registerAuth, upload.single('imgPerfil'), usuariosController.registrado)
+router.post('/register', upload.single('imgPerfil'), authMid.registerAuth,usuariosController.registrado)
 
 
 //login

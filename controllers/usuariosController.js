@@ -38,7 +38,6 @@ const usuariosController={
             pushingUser = JSON.parse(dataUser);
           }
         pushingUser.push(usuarioForm);
-        
 
         usuarioJson = JSON.stringify(pushingUser, null, 2);
 
@@ -46,7 +45,7 @@ const usuariosController={
 
         res.redirect('/login')
         }else{
-            res.render('users/registerForm', { errors : errors.mapped(), old: req.body})
+            res.render( 'users/registerform', { errors : errors.mapped(), old: req.body})   
         }
 
         
