@@ -77,7 +77,7 @@ const usuariosController={
                     req.session.usuario = userToLogin;
 
                     //nos aseguramos de guardar las session antes de continuar
-                    req.session.save();
+                    //req.session.save();
                     res.redirect('/');
                     
                 
@@ -113,6 +113,7 @@ const usuariosController={
         return res.render('./users/profileIndex')
     },
     logout: (req,res)=>{
+        req.session.destroy();
         res.cookie('recordarUsuario', '', {maxAge: 0});
         res.redirect('/');
     }

@@ -16,7 +16,6 @@ app.use(cookieParser('HuertaYa'));
 const bcryptjs = require("bcryptjs");
 const autoLoginMiddleware = require('./Middlewares/loginMiddleware');
 
-app.use(autoLoginMiddleware);
 
 app.use(methodOverride('_method')); 
 app.use(express.urlencoded({ extended: false }));
@@ -25,8 +24,12 @@ app.use(express.json())
 app.use(session({
     secret: 'es un secreto',
     resave: false,
-    saveUninitialized:false
+    saveUninitialized:false,
+    cookie: { maxAge: 1000*60*60*24 }
 }));
+
+//Login middleware
+app.use(autoLoginMiddleware);
 
 //Carpeta de views
 app.set("views",path.join(__dirname,"./src/views"))
