@@ -100,5 +100,16 @@
     "Localidad": "aaa",
     "numeroDeTelefono": "12121212111",
     "imagen": "default-image.png"
+  },
+  {
+    "id": 11,
+    "Nombre": "manuel",
+    "Apellido": "chirino",
+    "email": "manuelchg.92@gmail.com",
+    "contraseña": "$2a$10$psIFbpor34f6zs2T01FL0OraXtbOxsePT07wvOC9xg2/iKgfHYTYq",
+    "codigoPostal": "2010",
+    "Localidad": "buenos",
+    "numeroDeTelefono": "91154889613",
+    "imagen": "default-image.png"
   }
 ]

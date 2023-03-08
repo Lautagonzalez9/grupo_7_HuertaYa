@@ -43,7 +43,7 @@ router.get('/login', mainController.login);
 router.post('/login', usuariosController.validateLogin);
 
 //profile
-//router.get('/profile',usuariosController.profile)
+router.get('/profile',usuariosController.profile)
 
 //productos
 router.get('/producto/:id', productController.detalleDeProducto);

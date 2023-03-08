@@ -6,7 +6,8 @@ const usuariosPathFile =  path.join(__dirname, './data/usuarios.json');
 const usuariosDB = JSON.parse(fs.readFileSync(usuariosPathFile, 'utf-8'));
 const User = require('../models/User')
 const bcryptjs = require("bcryptjs");
-const { validationResult } = require('express-validator')
+const { validationResult } = require('express-validator');
+const { Console } = require('console');
 
 
 
@@ -62,22 +63,16 @@ const usuariosController={
     validateLogin:function(req,res){
       //prueba
        // return res.send(req.body)
-        let userToLogin = User.findByField("Email", req.body.email);
-        return res.send(userToLogin);
+        let userToLogin = User.findByField("email", req.body.email);
        if(userToLogin){
             //para guardar al usuario en session
            // req.session.userLogged=userToLogin
-            //prueba
-            //let isOkPassword=bcryptjs.compareSync(req.body.password, userToLogin.Contraseña;
-            // if(isOkPassword){
-                // return res.send('ok puedes ingresar);
-            // }
-           if(bcryptjs.compareSync(req.body.password, userToLogin.Contraseña)){
+           if(bcryptjs.compareSync(req.body.password, userToLogin.contraseña)){
               req.session.userLogged=userToLogin;
-               return res.send('Adentro')
+               return res.redirect('/')
               
             } 
-            return res.render('login',{
+            return res.render('users/login',{
              errors: {
                    contraseña: {
                     msg: 'La contraseña es incorrecta'
@@ -86,7 +81,7 @@ const usuariosController={
            });
          }
          
-       return res.render('login',{
+       return res.render('users/login',{
           errors: {
                 email: {
                  msg: 'El mail no se encuentra registrado'
@@ -105,7 +100,9 @@ const usuariosController={
         res.redirect('/')
     },
     profile :(req,res)=>{
-        return res.render('profileIndex')
+        console.log('ESTAS EN PROFILE')
+        console.log(req.session)
+        return res.render('/')
     }
 }
 

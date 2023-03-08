@@ -20,13 +20,12 @@
                     <input type="email" placeholder="Correo Electronico" name="email">
                     <% if (locals.errors && errors.email) { %>
                         <div style="color: red;"> <%= errors.email.msg %></div>
-                       <!-- <label style="color: red;"><%= errors.email.msg %></label> -->
                     <% } %> 
                 </div>
                 <div class="input-detalles">
                     <label for="password">Password</label>
                     <input type="password" name="password" placeholder="Password">
-                    <% if (locals.errors && errors.password) { %>
+                    <% if (locals.errors && errors.contraseña) { %>
                         <div style="color: red;"> <%= errors.contraseña.msg %></div>
                     <% } %> 
                 </div>
