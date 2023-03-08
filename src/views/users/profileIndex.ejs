@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("./partials/head.ejs")%>
+    <%- include("../partials/head.ejs")%>
 
     <link rel="stylesheet" href="/css/stylesIndex.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -11,78 +11,53 @@
 
 <body>
 
-    <%- include("./partials/header.ejs")%>
+    <%- include("../partials/header.ejs")%>
 
-    <section class="intro">
-        <h2>PRÓXIMA ENTREGA</h2>
-        <h1>17/05/2023</h1>
-        <a class="button-order"><h4>PEDIR AHORA</h4></a>
-    </section>
-
-    <section class="carrusel">
-        <div class="carrusel-1">
-            <h2>COMPROMISO SUSTENTABLE</h2>
-            <P>Guardá tu caja cuando recibas nuestro pedido 
-                para  reutilizarla y así reducir los residuos
-                generados.</P>
-        </div>
-        <div class="carrusel-2">
-            <h2>MISION</h2>
-            <P>Fomentar el consumo de frutas y verduras
-                orgánicas, libre de fertilizantes, cuidando los
-                recursos naturales y residuos generados, 
-                desde la comodidad del hogar de nuestros
-                clientes. </P>
-        </div>
-        <div class="carrusel-3">
-            <h2>COMO COMPRAR</h2>
-            <p>Seleccioná los productos y/o combos y añadilos
-                a tu carrito. Elegí la fecha de entrega, aboná 
-                tu pedido con el método pago que prefieras... 
-                y listo! </p>
-        </div>
-    </section>
-
-    <section class ="sectionIndex">     
-                          
-        <div class="delivery-2"> 
-                <div class="container2">
-                        <div class="img-repartidor">               
-                        <img class="repartidor" src="../img/repartidor con caja de verduras con logo en caja 2.png" alt="">
-                        </div>
-                        <div class="delivery-3pasos">   
-                            <p class="delivery-titulo">NUESTRO REPARTO</p> 
-                            <div class="delivery-camioneta">
-                                <img class="img-camioneta" src="../img/Camioneta ploteada.jpg" alt="">
-                            </div>               
-                            <div class="start-order-2">
-                            <button class="start-order-2"><h4>COMENZAR PEDIDO</h4></button>
-                            </div>
-                        </div>
-
-                </div>
-        </div>
-        
-    </section>
-
-    <section class="manzana">
-            <div class="repetir-pedido">
-                    <h5>¿Ya pediste y querés repetir el pedido?</h5>
-                    <a class="login-index"><h4>INICIÁ SESIÓN</h4></a>
-                </div>
-            <div class="envio"><h4>CALCULAR ENVÍO</h4>
-                    <form class="form-codigo">
-                        <label for="codigo-postal"></label>
-                        <input class="space-cp" type="CP" name="codigo-postal" placeholder="Tu código postal">
-                    <button type="submit" class="button-calcular-2">CALCULAR</button>
-                    </form>
-                    <a><h6>No se mi código postal</h6></a>
-            </div>
-    </section>     
-    
+    <h2>Mi perfil</h2>
+    <form action="/editUser" method="POST" class="formulario-registro" enctype="multipart/form-data">
+        <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
+        <label> Nombre</label>
+            <input type="text" name="Nombre" placeholder="Lionel" class="nombre" value= <%= usuario.Nombre %> > 
+            <% if(locals.errors && errors.Nombre){  %> 
+                <label style="color:red"><%= errors.Nombre.msg %> </label>
+                <% } %> 
+                
+     <label>Apellido </label>
+        <input type="text" name="Apellido" placeholder="Messi" class="nombre" value= <%= usuario.Apellido %> >
+            <% if(locals.errors && errors.Apellido){  %> 
+                <label style="color:red"><%= errors.Apellido.msg %> </label>
+            <% } %> 
+            
+     <label>E-mail</label>
+         <input type="email" name="email" placeholder="LionelMessi10@gmail.com" value= <%= usuario.email %>>
+             <% if(locals.errors && errors.email){  %> 
+            <label style="color:red"><%= errors.email.msg %> </label>
+            <% } %> 
+             
+     <label>Codigo Postal</label>
+         <input type="text" name="codigoPostal" placeholder="Buenos Aires" value= <%= usuario.codigoPostal %>>
+         <% if(locals.errors && errors.codigoPostal){  %> 
+            <label style="color:red"><%= errors.codigoPostal.msg %> </label>
+            <% } %> 
+     <label>Localidad</label>
+        <input type="text" name="Localidad" placeholder="Bahia Blanca" value= <%= usuario.Localidad %>>
+        <% if(locals.errors && errors.Localidad){  %> 
+            <label style="color:red"><%= errors.Localidad.msg %> </label>
+            <% } %> 
+     <label>Numero de telefono</label>
+         <input type="tel" name="numeroDeTelefono" placeholder="+54 11 9930599" value= <%= usuario.numeroDeTelefono %>>
+            <% if(locals.errors && errors.numeroDeTelefono){  %> 
+             <label style="color:red"><%= errors.numeroDeTelefono.msg  %> </label>
+            <% } %> 
+         <label>Foto de perfil</label>
+         <input type="file" name="imgPerfil">
+     <button type="submit" class="button">Guardar</button>
+     <br>
+     <button class="button"><a href="/logout" style="text-decoration: none;">Log out</a></button>
+    </form>
 
     <footer>
-        <%- include("./partials/footer")%>
+        <%- include("../partials/footer")%>
     </footer>
 </body>
 </html>

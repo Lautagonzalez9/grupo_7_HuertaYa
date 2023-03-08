@@ -58,9 +58,10 @@ const usuariosController={
 ,
 
     login:function(req,res){
-        res.render('login')
+        res.render('./users/login.ejs')
     },
     validateLogin:function(req,res){
+<<<<<<< HEAD
       //prueba
        // return res.send(req.body)
         let userToLogin = User.findByField("email", req.body.email);
@@ -73,36 +74,74 @@ const usuariosController={
               
             } 
             return res.render('users/login',{
+=======
+
+        
+        let userToLogin = User.findByField("email", req.body.email);
+        
+         if(userToLogin){
+
+           if(bcryptjs.compareSync(req.body.password, userToLogin.contrasenia)){
+                   
+                    //guardado de cookies de usuario
+                    if(req.body.recordarme == "on"){
+                        res.cookie("recordarUsuario", userToLogin, {maxAge: 3600000})
+                    };
+                                        
+                    //guardado de la session
+                    req.session.usuario = userToLogin;
+
+                    //nos aseguramos de guardar las session antes de continuar
+                    //req.session.save();
+                    res.redirect('/');
+                    
+                
+              
+            } else {
+             return res.render('./users/login.ejs',{
+>>>>>>> 7e7a37cf3756679d82b3329d55fd3160334b419c
              errors: {
-                   contraseña: {
+                   contrasenia: {
                     msg: 'La contraseña es incorrecta'
                     }
-              }
+              },
+              old: req.body.email
            });
-         }
+        }
+         } else {
          
+<<<<<<< HEAD
        return res.render('users/login',{
+=======
+        return res.render('./users/login.ejs',{
+>>>>>>> 7e7a37cf3756679d82b3329d55fd3160334b419c
           errors: {
                 email: {
                  msg: 'El mail no se encuentra registrado'
               }
-           }
+           },
+           old: req.body.email
        });
+                }
        
 
-        let usuarioIngresado = req.body.email;
-        let passwordIngresada = req.body.password;
+        
+        
 
-        //guardado de cookies de usuario
-        if(req.body.recordarme == "on"){
-            res.cookie("recordarUsuario", req.body, {maxAge: 3600000})
-            }
-        res.redirect('/')
     },
     profile :(req,res)=>{
+<<<<<<< HEAD
         console.log('ESTAS EN PROFILE')
         console.log(req.session)
         return res.render('/')
+=======
+        return res.render('./users/profileIndex')
+    },
+    logout: (req,res)=>{
+        req.session.destroy();
+        res.cookie('recordarUsuario', '', {maxAge: 0});
+        res.redirect('/');
+>>>>>>> 7e7a37cf3756679d82b3329d55fd3160334b419c
     }
 }
 

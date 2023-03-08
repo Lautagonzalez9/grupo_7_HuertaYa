@@ -59,6 +59,9 @@ rel="stylesheet" />
                                 <p class="presentacion">Presentacion: <%= product.presentation %></p>
                                 <p class="stock">En stock</p>
                                 <p class="descripcion"><%= product.description %></p>
+                                <% if(usuario){ %>
+                                <p><button><a style="text-decoration: none; color: white;" href="/admin/edit/<%=product.id %>">Editar</a></button></p>
+                                <% } %>
                             </div>
                         </div>
                     </div>

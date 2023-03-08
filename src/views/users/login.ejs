@@ -17,7 +17,7 @@
                 </div>
                 <div class="input-detalles">
                     <label for="email">Usuario</label>
-                    <input type="email" placeholder="Correo Electronico" name="email">
+                    <input type="email" placeholder="Correo Electronico" name="email" value= <%= locals.old ? old : '' %>>
                     <% if (locals.errors && errors.email) { %>
                         <div style="color: red;"> <%= errors.email.msg %></div>
                     <% } %> 
@@ -25,8 +25,13 @@
                 <div class="input-detalles">
                     <label for="password">Password</label>
                     <input type="password" name="password" placeholder="Password">
+<<<<<<< HEAD
                     <% if (locals.errors && errors.contraseña) { %>
                         <div style="color: red;"> <%= errors.contraseña.msg %></div>
+=======
+                    <% if (locals.errors && errors.contrasenia) { %>
+                        <div style="color: red;"> <%= errors.contrasenia.msg %></div>
+>>>>>>> 7e7a37cf3756679d82b3329d55fd3160334b419c
                     <% } %> 
                 </div>
                 <div class="recordarme">
