@@ -45,11 +45,7 @@ router.get('/login', userRedirectMiddleware, mainController.login);
 router.post('/login', usuariosController.validateLogin);
 
 //profile
-<<<<<<< HEAD
-router.get('/profile',usuariosController.profile)
-=======
 router.get('/profile', guestRedirectMiddleware, usuariosController.profile)
->>>>>>> 7e7a37cf3756679d82b3329d55fd3160334b419c
 
 //productos
 router.get('/producto/:id', productController.detalleDeProducto);

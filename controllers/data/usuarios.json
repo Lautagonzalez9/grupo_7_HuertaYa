@@ -103,15 +103,6 @@
   },
   {
     "id": 11,
-<<<<<<< HEAD
-    "Nombre": "manuel",
-    "Apellido": "chirino",
-    "email": "manuelchg.92@gmail.com",
-    "contraseña": "$2a$10$psIFbpor34f6zs2T01FL0OraXtbOxsePT07wvOC9xg2/iKgfHYTYq",
-    "codigoPostal": "2010",
-    "Localidad": "buenos",
-    "numeroDeTelefono": "91154889613",
-=======
     "Nombre": "Julian",
     "Apellido": "Penna",
     "email": "julian__p@hotmail.com",
@@ -119,7 +110,6 @@
     "codigoPostal": "666",
     "Localidad": "El quinto subsuelo del infiernon",
     "numeroDeTelefono": "+549666",
->>>>>>> 7e7a37cf3756679d82b3329d55fd3160334b419c
     "imagen": "default-image.png"
   }
 ]
