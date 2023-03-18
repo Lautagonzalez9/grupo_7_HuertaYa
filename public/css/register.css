@@ -18,20 +18,7 @@ body {
     padding: 10px;
     
 }
-.buscador-header{
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
-    margin: auto;
-    border: solid;
-    border-color:#635e58 ;
-    background-size: 24px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 7px; ;
-    background-size: 30px;
-    padding: 10px 10px 10px 30px;
-}
+
 .logo-nav{
     width: 50%;
     display: flex;
@@ -168,7 +155,7 @@ body {
         flex-wrap: nowrap;
         margin: 0 auto;
         justify-content: center;
-        padding-left: 20px;
+        /* padding-left: 20px; */
     }
     .buscador-header{
         width: 100%;

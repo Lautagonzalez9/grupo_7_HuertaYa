@@ -61,5 +61,14 @@
     "category": "Frutas",
     "price": 250,
     "image": "default-image.jpg"
+  },
+  {
+    "id": 10,
+    "name": "BANAN",
+    "description": "1314",
+    "category": "verduras",
+    "presentation": "134",
+    "price": 1414,
+    "image": "imagen-1678493053504-366895157.png"
   }
 ]

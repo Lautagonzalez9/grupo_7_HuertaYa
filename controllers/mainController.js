@@ -11,7 +11,7 @@ const mainController = {
     },
     search: (req, res) => {
 		const search = req.query.keywords;
-		const product = [];
+		const product = []; 
         
         productos.forEach(producto => {
             if(producto.name.toLowerCase().indexOf(search.toLowerCase()) >= 0){

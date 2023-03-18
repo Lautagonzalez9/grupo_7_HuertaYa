@@ -8,65 +8,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.header-nav {
-    background-color: rgb(255, 193, 105);
-    padding: 10px;
-}
 
-.buscador-header {
-    width: 50%;
-    border-radius: 10px;
-    display: flex;
-    margin: auto;
-    border: solid;
-    border-color: #635e58;
-    background-size: 24px;
-    margin-bottom: 10px;
-    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 7px;
-    ;
-    background-size: 30px;
-    padding: 10px 10px 10px 30px;
-}
-
-.logo-nav {
-    width: 50%;
-    display: flex;
-    margin: 0 auto;
-}
-
-.main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.main-nav ul li {
-    margin: 10px;
-}
-
-.main-nav {
-    display: none;
-}
-
-.hamburguer-button {
-    background-color: #4c0303;
-    color: white;
-    display: block;
-    max-width: 60px;
-    padding: 15px 0;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 28px;
-    margin: auto;
-}
 
 @media (min-width:468px){
     main{
@@ -85,46 +27,7 @@ body {
 
 /* checkpoint tablets */
 @media (min-width: 768px) {
-    .hamburguer-button {
-        display: none;
-    }
-
-    .contenedor-search {
-        width: 50%;
-        display: flex;
-        margin: 0 auto;
-        justify-content: center;
-    }
-
-    .buscador-header {
-        width: 50%;
-        margin: auto 0;
-    }
-
-    .logo-nav {
-        width: 10%;
-        display: flex;
-        margin: auto auto;
-
-    }
-
-    .main-nav {
-        display: flex;
-        justify-content: space-between;
-        
-    }
-
-
-    .main-nav ul {
-        display: flex;
-        align-items: center;
-        list-style: none;
-       
-    }
-
-    .main-nav li {
-        max-width: 0 5px;
-    }
+    
     .contenedor-formulario {
         display: flex;
         justify-content: center;

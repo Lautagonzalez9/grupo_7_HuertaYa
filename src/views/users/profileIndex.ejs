@@ -6,15 +6,26 @@
     <link rel="stylesheet" href="/css/stylesIndex.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     rel="stylesheet" />
+    <link rel="stylesheet" href="/css/perfil.css">
     <title>Home_Huerta_Ya</title>
 </head>
 
 <body>
 
     <%- include("../partials/header.ejs")%>
+    <div class="box-perfil"> 
+    <h2 class="mi-Perfil">Mi perfil</h2>
 
-    <h2>Mi perfil</h2>
-    <form action="/editUser" method="POST" class="formulario-registro" enctype="multipart/form-data">
+       <p class="mensaje"> Hola, <%= usuario.Nombre %> <%= usuario.Apellido %>!</p> 
+       <img src="/img/<%= usuario.imagen %>" style="width: 300px;" class="img-perfil">
+    </div>
+
+    
+    
+
+    
+    
+    <!-- <form action="/editUser" method="POST" class="formulario-registro" enctype="multipart/form-data">
         <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
         <label> Nombre</label>
             <input type="text" name="Nombre" placeholder="Lionel" class="nombre" value= <%= usuario.Nombre %> > 
@@ -54,7 +65,7 @@
      <button type="submit" class="button">Guardar</button>
      <br>
      <button class="button"><a href="/logout" style="text-decoration: none;">Log out</a></button>
-    </form>
+    </form> -->
 
     <footer>
         <%- include("../partials/footer")%>

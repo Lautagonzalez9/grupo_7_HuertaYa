@@ -14,7 +14,7 @@ module.exports = {
         body('categoria').notEmpty().withMessage('seleccione una categoria'),
         body('unidad').notEmpty().withMessage('Escribe una unidad'),
         body('precio').notEmpty().withMessage('indica el precio').bail().isNumeric().withMessage('escriba un numero'),
-        body('imagen').custom((value,{req})=>{
+        body('imagen').custom((value,{req})=>{  
                 if(!req.file){
                     throw new Error ('Sube una imagen')
                 }

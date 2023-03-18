@@ -1,0 +1,18 @@
+.mi-Perfil{
+    font-size: 30px;
+    margin: 0;
+    color: rgb(15, 15, 15);
+}
+.mensaje{
+    font-size: 25px;
+    color: rgb(15, 15, 15);
+    padding-left: 2px ;
+}
+.box-perfil{
+    padding:70px 20px ;
+    background-color: rgba(255, 235, 205, 0.803);
+   
+}
+.img-perfil{
+    border-radius:10px ;
+}

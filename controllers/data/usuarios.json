@@ -111,5 +111,27 @@
     "Localidad": "El quinto subsuelo del infiernon",
     "numeroDeTelefono": "+549666",
     "imagen": "default-image.png"
+  },
+  {
+    "id": 12,
+    "Nombre": "Marco",
+    "Apellido": "Savarino",
+    "email": "aaaa@gmail.com",
+    "contrasenia": "$2a$10$7Vc/yHvLA1s60tThdmT7puGsfUhV6Wph9ov2F5vRiJjaz29ychgdK",
+    "codigoPostal": "2222",
+    "Localidad": "santa fe",
+    "numeroDeTelefono": "313131415",
+    "imagen": "default-image.jpg"
+  },
+  {
+    "id": 13,
+    "Nombre": "Marco ",
+    "Apellido": "Savarino",
+    "email": "aaaa@gmail.com",
+    "contrasenia": "$2a$10$Y9dlrEE.K9nWBMujkImdkOzqXKR/WrNMFjHZsWNZFdyMYzfFg9gYm",
+    "codigoPostal": "1234",
+    "Localidad": "santa fe",
+    "numeroDeTelefono": "1431451515",
+    "imagen": "imgPerfil-1678493011434-645329920.jpg"
   }
 ]

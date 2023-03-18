@@ -3,11 +3,15 @@
     
     <div class="contenedor-bar"> 
         
-        <img src="/img/Marca Huerta Ya_marca.png" alt="logo" class="logo-nav">
+            <img src="/img/Marca Huerta Ya_marca.png" alt="logo" class="logo-nav">
+        
     <div class="contenedor-search"> 
 				<form action="/search" method="GET" class="search-form">
-					<input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="buscador-header">
-					<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                        
+                        <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="buscador-header">
+                        
+                        <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                    
 				</form>
 	</div> 
     
@@ -30,7 +34,6 @@
 
             <% } else { %>
             <li><a href="/login"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>
-            <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i>Mi Carrito</a></li>
             <li><a href="/register">Crea tu Cuenta</a></li> 
             <% } %>
         </ul>         

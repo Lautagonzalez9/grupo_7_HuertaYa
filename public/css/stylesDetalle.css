@@ -11,19 +11,11 @@ body {
     background-color: rgb(255, 193, 105);
     padding: 10px;
 }
-.buscador-header{
-    width: 50%;
-    border-radius: 10px;
+.search-form{
     display: flex;
-    margin: auto;
-    border: solid;
-    border-color:#635e58 ;
-    background-size: 24px;
-    margin-bottom: 10px;
-    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 7px; ;
-    background-size: 30px;
-    padding: 10px 10px 10px 30px;
+    
 }
+
 .logo-nav{
     width: 50%;
     display: flex;
@@ -315,7 +307,7 @@ button,optgroup {
     width: 35%;
     border: none;
     border-radius: 5px;
-    display: block;
+    /* display: block; */
     margin: auto;
     color: white;
     background-color: #489032;
