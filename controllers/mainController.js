@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const db = require('../src/database/models/Prueba');
+const db = require('../src/database/models');
 
 const productsFilePath = path.join(__dirname, "./data/productsData.json");
 const productos = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -37,8 +37,10 @@ const mainController = {
         res.render('./products/detalle-del-producto')
     },
     pruebamysql: function(req,res){
-       
-        res.json(db)
+       db.presentation.findAll()
+        .then(prueba =>{
+            res.send(prueba)
+        })
     }
 }
 

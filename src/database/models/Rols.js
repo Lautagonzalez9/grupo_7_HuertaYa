@@ -1,13 +1,14 @@
 module.exports = function(sequelize,dataTypes){
     let alias = "rol"
     let cols = {
-        id: {
-            type: dataTypes.BIGINT(11),
+        idrol: {
+            type: dataTypes.BIGINT(11).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         name: {
-            type: dataTypes.STRING(10)
+            type: dataTypes.STRING(10),
+            
         }
     }
     let config = {
