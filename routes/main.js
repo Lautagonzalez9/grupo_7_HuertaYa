@@ -25,7 +25,8 @@ const storage = multer.diskStorage({
 
 
 
-
+//prueba
+router.get('/prueba', mainController.pruebamysql)
 
 
 //inicio
