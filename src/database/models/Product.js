@@ -7,7 +7,7 @@ module.exports = function(sequelize,dataTypes){
             autoIncrement: true
         },
         name: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(255),
         },
         id_presentation: {
             type: dataTypes.INT(11)
