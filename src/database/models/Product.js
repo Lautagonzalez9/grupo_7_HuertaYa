@@ -10,25 +10,25 @@ module.exports = function(sequelize,dataTypes){
             type: dataTypes.STRING(255),
         },
         id_presentation: {
-            type: dataTypes.INT(11)
+            type: dataTypes.BIGINT(11)
         },
         description: {
-            type: dataTypes.LONGTEXT()
+            type: dataTypes.TEXT()
         },
         id_category: {
-            type: dataTypes.INT(11)
+            type: dataTypes.BIGINT(11)
         },
         price: {
-            type: dataTypes.INT(11)
+            type: dataTypes.BIGINT(11)
         },
         stock: {
-            type: dataTypes.INT(11)
+            type: dataTypes.BIGINT(11)
         },
         discount: {
-            type: dataTypes.INT(11)
+            type: dataTypes.BIGINT(11)
         },
         id_image: {
-            type: dataTypes.INT(11)
+            type: dataTypes.BIGINT(11)
         }
     }
     let config = {
