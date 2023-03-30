@@ -2,15 +2,13 @@
     box-sizing: border-box;
 }
 
-.main-box{
-    padding-bottom: 50%;
-}
+
 /* caja del producto */
 .contenedor-articulos{
     margin: 1%;
     display: flex;
     width: 100%;
-    border-radius: 2%;
+    border-radius: 5%;
     background-color: #ffc169f0;
     justify-content: center;
 }
@@ -19,7 +17,7 @@
 	height: 150px;
 	object-fit: cover;
     resize: both;
-    border-radius: 2% 0 0 2%;
+    border-radius: 5% 0 0 5%;
 }
 .producto{
     margin: 0 3%;
@@ -73,4 +71,26 @@ form{
     color: #ffff;
     text-decoration: none;
     font-size: 18px;
+}
+
+
+@media (min-width: 768px){
+    .main-box{
+        padding-bottom: 50vh;
+    }
+    .contenedor-articulos{
+        width: 75%;
+        margin: 10px auto;
+    }
+    .boton-finalizar{
+        width: 20%;
+    }
+    .boton-Scomprando{
+        width: 20%;
+    }
+    footer{
+        position:absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }

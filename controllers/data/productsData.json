@@ -70,5 +70,14 @@
     "presentation": "134",
     "price": 1414,
     "image": "imagen-1678493053504-366895157.png"
+  },
+  {
+    "id": 11,
+    "name": "BANANA",
+    "description": "123",
+    "category": "frutas",
+    "presentation": "DADADA",
+    "price": 123,
+    "image": "imagen-1679789235910-395443574.PNG"
   }
 ]

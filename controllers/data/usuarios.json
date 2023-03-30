@@ -133,5 +133,16 @@
     "Localidad": "santa fe",
     "numeroDeTelefono": "1431451515",
     "imagen": "imgPerfil-1678493011434-645329920.jpg"
+  },
+  {
+    "id": 14,
+    "Nombre": "Marckingg",
+    "Apellido": "aa",
+    "email": "ateneo2003@gmail.com",
+    "contrasenia": "$2a$10$x3YQKu6Wx.oUxthiD0WG/uPzN0H8r6CiH4Erq.Tr/jrp47tSvtXV.",
+    "codigoPostal": "S3000CHO",
+    "Localidad": "Santa",
+    "numeroDeTelefono": "121221",
+    "imagen": "default-image.png"
   }
 ]
