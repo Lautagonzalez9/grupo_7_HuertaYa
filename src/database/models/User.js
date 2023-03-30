@@ -2,29 +2,31 @@ module.exports= function(sequelize,dataTypes){
     let alias="user";
     let cols={
         iduser:{
-            type:dataTypes.INT(11),
-            prymaryKey:true,
+            type:dataTypes.BIGINT(11),
+            primaryKey:true,
+            autoIncrement:true
+            
         },
         first_name:{
-            type:dataTypes.VARCHAR(45)
+            type:dataTypes.STRING(255)
         },
         last_name:{
-            type:dataTypes.VARCHAR(45)
+            type:dataTypes.STRING(255)
         },
         email:{
-            type:dataTypes.VARCHAR(45)
+            type:dataTypes.STRING(255)
         },
         password:{
-            type:dataTypes.VARCHAR(45)
+            type:dataTypes.STRING(45)
         },
         postal_code:{
-            type:dataTypes.INT(11)
+            type:dataTypes.BIGINT(11)
         },
         id_location:{
             type:dataTypes.TINYINT(4)
         },
         number_phone:{
-            type:dataTypes.VARCHAR(20)
+            type:dataTypes.STRING(20)
         },
         id_image:{
             type:dataTypes.TINYINT(4)
