@@ -38,10 +38,12 @@
             <label style="color:red"><%= errors.codigoPostal.msg %> </label>
             <% } %> 
      <label>Localidad</label>
-        <input type="text" name="Localidad" placeholder="Bahia Blanca" value= <%= locals.old && old.Localidad ? old.Localidad : '' %>>
-        <% if(locals.errors && errors.Localidad){  %> 
-            <label style="color:red"><%= errors.Localidad.msg %> </label>
-            <% } %> 
+        <select name="Localidad">
+            
+            <% municipios.forEach(municipio => { %>
+                <option value="<%= municipio.nombre %>"><%= municipio.nombre %></option>
+            <% }) %>
+        </select>
      <label>Numero de telefono</label>
          <input type="tel" name="numeroDeTelefono" placeholder="+54 11 9930599" value= <%= locals.old && old.numeroDeTelefono ? old.numeroDeTelefono : '' %>>
             <% if(locals.errors && errors.numeroDeTelefono){  %> 
