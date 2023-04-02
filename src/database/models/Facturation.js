@@ -29,5 +29,25 @@ module.exports = function(sequelize,dataTypes){
         timestamps: false
     };
     let facturation = sequelize.define(alias,cols,config);
+
+    facturation.associate = function(models) {
+        facturation.belongsTo(models.user, {
+            as: "user",
+            foreignkey: "id_user"
+        })
+        
+        facturation.belongsTo(models.metodos_de_pago, {
+            as: "metodos_de_pago",
+            foreignkey: "id_metodoPago"
+        })
+
+        facturation.belongsTo(models.costo_de_envio, {
+            as: "costo_de_envio",
+            foreignkey: "id_costosEnvios"
+        })
+    }
+
+    
+
     return facturation;
 };
