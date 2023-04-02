@@ -1,5 +1,5 @@
 module.exports = function(sequelize,dataTypes){
-    let alias = "presentation"
+    let alias = "presentations"
     let cols = {
         idpresentation: {
             type: dataTypes.BIGINT(11).UNSIGNED,
@@ -14,6 +14,14 @@ module.exports = function(sequelize,dataTypes){
     let config = {
         timestamps: false
     }
-    let presentation = sequelize.define(alias,cols,config);
-    return presentation
+    let Presentation = sequelize.define(alias,cols,config);
+
+    Presentation.associate = function(models){
+        Presentation.hasMany(models.products,{
+            as:"products",
+            foreignKey: "idProducto"
+        })
+    }
+
+    return Presentation
 }

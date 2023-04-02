@@ -1,5 +1,5 @@
 module.exports = function(sequelize,dataTypes){
-    let alias = "product"
+    let alias = "products"
     let cols = {
         idProducto: {
             type: dataTypes.BIGINT(11).UNSIGNED,
@@ -34,8 +34,23 @@ module.exports = function(sequelize,dataTypes){
     let config = {
         timestamps: false
     }
-    const product = sequelize.define(alias,cols,config);
-    return product;
-
+    const Product = sequelize.define(alias,cols,config);
     
+
+    Product.associate = function(models){
+        Product.belongsTo(models.categories,{
+            as:"categories",
+            foreignKey: "idcategory"
+        }),
+        Product.hasMany(models.images,{
+            as:"images",
+            foreignKey: "idimage"
+        }),
+        Product.belongsTo(models.presentations,{
+            as:"presentations",
+            foreignKey:"idpresentation"
+        })
+    }
+
+    return Product;
 }
