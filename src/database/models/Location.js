@@ -1,3 +1,5 @@
+const User = require("./User");
+
 module.exports = function(sequelize,dataTypes){
     let alias = "location"
     let cols = {
@@ -15,5 +17,13 @@ module.exports = function(sequelize,dataTypes){
         timestamps: false
     }
     let location = sequelize.define(alias,cols,config);
+    
+    Location.associate = function(models){
+        Location.belonsTo(models.users,{
+            as:"users",
+            foreingKey:"iduser"
+        })
+    }
+    
     return location
 }

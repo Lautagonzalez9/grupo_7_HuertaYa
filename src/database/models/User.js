@@ -40,5 +40,22 @@ module.exports= function(sequelize,dataTypes){
         timestamps:false
     }
     const User=sequelize.define(alias,cols,config);
+
+    User.associate=function(models){
+        User.hasMany(models.locations,{
+            as:"locations",
+            foreingKey:"idlocation"
+        }),
+        User.belonsTo(models.rols,{
+            as:"rols",
+            foreingKey:"idrol"
+        })
+        User.hasMany(models.images,{
+           as:"images",
+           foreingKey:"idimage"
+        })
+    }
+    
     return User;
+
 }
