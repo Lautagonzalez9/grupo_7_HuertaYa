@@ -18,9 +18,9 @@ module.exports = function(sequelize,dataTypes){
     }
     let location = sequelize.define(alias,cols,config);
     
-    Location.associate = function(models){
-        Location.belonsTo(models.users,{
-            as:"users",
+    location.associate = function(models){
+        location.belongsTo(models.user,{
+            as:"user",
             foreingKey:"iduser"
         })
     }

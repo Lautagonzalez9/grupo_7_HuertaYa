@@ -42,12 +42,12 @@ module.exports= function(sequelize,dataTypes){
     const User=sequelize.define(alias,cols,config);
 
     User.associate=function(models){
-        User.hasMany(models.locations,{
-            as:"locations",
+        User.hasMany(models.location,{
+            as:"location",
             foreingKey:"idlocation"
         }),
-        User.belonsTo(models.rols,{
-            as:"rols",
+        User.belongsTo(models.rol,{
+            as:"rol",
             foreingKey:"idrol"
         })
         User.hasMany(models.images,{

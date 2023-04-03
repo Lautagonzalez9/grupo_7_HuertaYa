@@ -21,8 +21,8 @@ module.exports = function(sequelize,dataTypes){
             as:"products",
             foreignKey: "idProducto"
         }),
-        Image.belongsTo(models.users,{
-            as:"users",
+        Image.belongsTo(models.user,{
+            as:"user",
             foreignKey:"iduser"
         })
     }
