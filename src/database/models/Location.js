@@ -4,7 +4,7 @@ module.exports = function(sequelize,dataTypes){
     let alias = "location"
     let cols = {
         idLocation: {
-            type: dataTypes.BIGINT(11).UNSIGNED,
+            type: dataTypes.BIGINT(6).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },

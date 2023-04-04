@@ -1,60 +1,55 @@
 // Controladores utilizados para el manejo de rutas del login , register .
 const fs = require('fs');
 const path = require('path');
-
+const db = require('../src/database/models');
 const usuariosPathFile =  path.join(__dirname, './data/usuarios.json');
 const usuariosDB = JSON.parse(fs.readFileSync(usuariosPathFile, 'utf-8'));
 const User = require('../models/User')
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require('express-validator');
-const { Console } = require('console');
+const { Console, log } = require('console');
 
 
-
-
+function guardarImagen(req,res){
+  return  db.images.create({
+        url: req.file.filename
+    })
+}
 
 const usuariosController={
     register:function(req,res){
         res.render('registerForm')
     },
+    
     registrado: function(req,res){
-        let dataUser = usuariosDB;
-        
-        // console.log(req.body.contrasenia)
-
-        const usuarioForm ={
-            id: dataUser.length > 0 ? dataUser[dataUser.length -1].id + 1 : 1,
-            ...req.body,
-            contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
-            imagen: req.file?.filename ? req.file.filename : "default-image.png"
-        }
-
-        // console.log(usuarioForm)
-        let pushingUser;
-        let errors = validationResult(req);
-        if(errors.isEmpty()){ 
-        if (typeof dataUser === 'object') {
-            pushingUser = dataUser;
+        if (req.file) {
+            guardarImagen(req)
+              .then(function (imagen) {
+                
+                db.user.create({
+                  first_name: req.body.Nombre,
+                  last_name: req.body.Apellido,
+                  email: req.body.email,
+                  password: bcryptjs.hashSync(req.body.password, 10),
+                  postal_code: req.body.codigoPostal,
+                  id_location: req.body.Localidad,
+                  number_phone: req.body.numeroDeTelefono,
+                  id_image: imagen.idimage,
+                  
+                })
+                .then(function() {
+                  res.redirect('/login');
+                })
+                .catch(function(error) {
+                  console.log(error);
+                  res.status(500).send({ message: 'Error interno del servidor' });
+                });
+              })
+              
           } else {
-            pushingUser = JSON.parse(dataUser);
+            // código de error si no se envió un archivo
           }
-        pushingUser.push(usuarioForm);
-
-        usuarioJson = JSON.stringify(pushingUser, null, 2);
-
-        fs.writeFileSync(path.join(__dirname, './data/usuarios.json'), usuarioJson);
-
-        res.redirect('/login')
-        }else{
-            res.render( 'users/registerform', { errors : errors.mapped(), old: req.body})   
-        }
-
-        
-
     }
-
-
-
 ,
 
     login:function(req,res){

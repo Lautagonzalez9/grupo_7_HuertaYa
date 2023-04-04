@@ -15,9 +15,9 @@ module.exports = {
         body('unidad').notEmpty().withMessage('Escribe una unidad'),
         body('precio').notEmpty().withMessage('indica el precio').bail().isNumeric().withMessage('escriba un numero'),
         body('imagen').custom((value,{req})=>{  
-                if(!req.file){
-                    throw new Error ('Sube una imagen')
-                }
+                // if(!req.file){
+                //     throw new Error ('Sube una imagen')
+                // }
                 if (!req.file.mimetype.startsWith('image/')) {
                     throw new Error('Solo se permiten imágenes');
                   }

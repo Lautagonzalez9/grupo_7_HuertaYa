@@ -27,7 +27,7 @@
             <% } %> 
             
      <label>Contraseña</label>
-         <input type="password" name="contrasenia" placeholder="Ingrese su contraseña" >
+         <input type="password" name="password" placeholder="Ingrese su contraseña" >
             <% if(locals.errors && errors.contrasenia){  %> 
             <label style="color:red"><%= errors.contrasenia.msg %> </label>
             <% } %> 
@@ -41,7 +41,7 @@
         <select name="Localidad">
             
             <% municipios.forEach(municipio => { %>
-                <option value="<%= municipio.nombre %>"><%= municipio.nombre %></option>
+                <option value="<%= municipio.id %>"><%= municipio.nombre %></option>
             <% }) %>
         </select>
      <label>Numero de telefono</label>

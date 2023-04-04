@@ -28,7 +28,7 @@ const mainController = {
         
     },
     register: function(req,res){
-        fetch('https://apis.datos.gob.ar/georef/api/municipios?provincia=06&campos=id,nombre&max=135')
+        fetch('https://apis.datos.gob.ar/georef/api/municipios?provincia=06&campos=id,nombre&max=30')
             .then(response => response.json())
                 .then(mun => {
                    let municipios = mun.municipios 

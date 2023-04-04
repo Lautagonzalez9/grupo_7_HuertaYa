@@ -23,7 +23,7 @@ module.exports= function(sequelize,dataTypes){
             type:dataTypes.BIGINT(11)
         },
         id_location:{
-            type:dataTypes.TINYINT(4)
+            type:dataTypes.BIGINT(6)
         },
         number_phone:{
             type:dataTypes.STRING(20)
