@@ -17,8 +17,8 @@ module.exports = function(sequelize,dataTypes){
     let metodos_de_pago = sequelize.define(alias,cols,config);
 
     metodos_de_pago.associate = function(models){
-        metodos_de_pago.belongsTo(models.facturation,{
-           as:"facturarion",
+        metodos_de_pago.hasMany(models.facturation,{
+           as:"facturation",
            foreingKey:"idmetodoPago"
         })
     }

@@ -16,6 +16,18 @@ module.exports = function(sequelize,dataTypes){
     let config = {
         timestamps: false
     }
-    const envio = sequelize.define(alias,cols,config);
-    return envio;
+    const costo_de_envio = sequelize.define(alias,cols,config);
+    
+    costo_de_envio.associate = function (models){
+        costo_de_envio.belongsTo(models.location,{
+          as:"location",
+          foreingKey:"idlocation"
+        }),
+        costo_de_envio.hasMany(models.facturation,{
+            as:"facturation",
+            foreingKey:"idcostoEnvios"
+        })
+
+    }
+    return costo_de_envio;
 }
