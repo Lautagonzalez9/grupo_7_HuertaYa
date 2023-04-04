@@ -22,7 +22,14 @@ module.exports = function(sequelize,dataTypes){
         location.belongsTo(models.user,{
             as:"user",
             foreingKey:"iduser"
+        }),
+        location.hasMany(models.costo_de_envio,{
+            as:"costo_de_envio",
+            foreingKey:"idLocation",
+            
         })
+        
+          
     }
     
     return location
