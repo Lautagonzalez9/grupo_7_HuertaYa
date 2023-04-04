@@ -15,5 +15,14 @@ module.exports = function(sequelize,dataTypes){
         timestamps: false
     };
     let metodos_de_pago = sequelize.define(alias,cols,config);
+
+    metodos_de_pago.associate = function(models){
+        metodos_de_pago.belongsTo(models.facturation,{
+           as:"facturarion",
+           foreingKey:"idmetodoPago"
+        })
+    }
+
+
     return metodos_de_pago;
 };
