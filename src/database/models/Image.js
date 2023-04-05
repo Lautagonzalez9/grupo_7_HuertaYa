@@ -16,16 +16,14 @@ module.exports = function(sequelize,dataTypes){
     }
     let Image = sequelize.define(alias,cols,config);
 
-    Image.associate = function(models){
-        Image.belongsTo(models.products,{
-            as:"products",
-            foreignKey: "idProducto"
-        }),
-        Image.belongsTo(models.user,{
-            as:"user",
-            foreignKey:"iduser"
-        })
-    }
+    // Image.associate = function(models){
+    //     Image.belongsTo(models.products,{
+    //         as:"products"
+    //     }),
+    //     Image.belongsTo(models.user,{
+    //         as:"user"
+    //     })
+    // }
 
     return Image
 }

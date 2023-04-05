@@ -1,22 +1,38 @@
 const fs = require("fs");
 const path = require("path");
+const db = require('../src/database/models');
 
 const productsFilePath = path.join(__dirname, "./data/productsData.json");
-const productos = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
 
 const productController = {
     
-    detalleDeProducto: function(req,res){
-
+    detalleDeProducto: async function(req,res){
+        const productos = await db.products.findAll({
+            include: [
+                {association: "images"},
+                {association: "categories"},
+                {association: "presentations"}
+            ]});
         const id = req.params.id;
-		const product = productos.find(product => product.id == id);
-		
+		const product = await db.products.findByPk(id, {
+            include:[
+                {association: "images"},
+                {association: "categories"},
+                {association: "presentations"}
+            ]});
+
         return res.render('./products/detalle-del-producto', {product, productos});
    },
-   listaDeProductos: function (req,res){
+   listaDeProductos: async function (req,res){
+        const productos = await db.products.findAll({
+            include: [
+                {association: "images"}
+            ]
+        })
 
         return res.render('./products/listadoProductos',{productos});
-
+              
    }
 }
 
