@@ -25,7 +25,6 @@ const usuariosController={
         if (req.file) {
             guardarImagen(req)
               .then(function (imagen) {
-                
                 db.user.create({
                   first_name: req.body.Nombre,
                   last_name: req.body.Apellido,
@@ -46,8 +45,20 @@ const usuariosController={
                 });
               })
               
-          } else {
-            // código de error si no se envió un archivo
+          }else {
+            db.user.create({
+              first_name: req.body.Nombre,
+              last_name: req.body.Apellido,
+              email: req.body.email,
+              password: bcryptjs.hashSync(req.body.password, 10),
+              postal_code: req.body.codigoPostal,
+              id_location: req.body.Localidad,
+              number_phone: req.body.numeroDeTelefono,
+              id_image: 1,
+            })
+            .then(function() {
+              res.redirect('/login');
+            })
           }
     }
 ,
