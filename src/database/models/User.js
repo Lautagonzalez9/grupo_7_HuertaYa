@@ -44,15 +44,15 @@ module.exports= function(sequelize,dataTypes){
     User.associate=function(models){
         User.hasMany(models.location,{
             as:"location",
-            foreingKey:"idlocation"
+            foreingKey:"id_location"
         }),
         User.belongsTo(models.rol,{
             as:"rol",
-            foreingKey:"idrol"
+            foreingKey:"id_rol"
         })
-        User.hasMany(models.images,{
+        User.belongsTo(models.images,{
            as:"images",
-           foreingKey:"idimage"
+           foreingKey:"id_image"
         })
     }
     
