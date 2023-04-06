@@ -60,8 +60,10 @@ const usuariosController={
               res.redirect('/login');
             })
           }
-    }
-,
+
+    },
+   
+
 
     login:function(req,res){
         res.render('./users/login.ejs')
