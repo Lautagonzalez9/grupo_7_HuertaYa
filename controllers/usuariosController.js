@@ -25,6 +25,7 @@ const usuariosController={
         if (req.file) {
             guardarImagen(req)
               .then(function (imagen) {
+                
                 db.user.create({
                   first_name: req.body.Nombre,
                   last_name: req.body.Apellido,
