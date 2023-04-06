@@ -49,8 +49,10 @@ const usuariosController={
           } else {
             // código de error si no se envió un archivo
           }
-    }
-,
+
+    },
+   
+
 
     login:function(req,res){
         res.render('./users/login.ejs')
