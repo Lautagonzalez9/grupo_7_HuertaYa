@@ -1,46 +1,44 @@
 
 const fs = require('fs');
 const path = require('path');
+const db = require('../src/database/models')
 const productsFilePath = path.join(__dirname, './data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const { validationResult } = require('express-validator')
 
+function guardarImagen(req,res){
+    return  db.images.create({
+          url: req.file.filename
+      })
+  }
 
 const adminController = {
-    create: function(req,res){
-        res.render('products/adminCreate')
+    create: async function(req,res){
+        let categories = await db.categories.findAll();
+        let presentations = await db.presentations.findAll();
+        res.render('products/adminCreate',{categories,presentations})
     },
-    creado: function(req,res){
-        
-        let data = fs.readFileSync(path.join(__dirname, './data/productsData.json'), {encoding : 'utf-8'});
-        const product ={
-            id: products.length > 0 ? products[products.length -1].id + 1 : 1,
+    creado: async function(req,res){
+        try {
+        var idImage = 1
+        if(req.file){
+            guardarImagen(req)
+            .then((imagen)=>{
+                var idImage = imagen.idimage;
+            })
+        } 
+        db.products.create({
             name: req.body.Name,
             description: req.body.descripcion,
-            category: req.body.categoria,
-            presentation: req.body.unidad,
+            id_category: req.body.category,
+            id_presentation: req.body.presentation,
             price: Number(req.body.precio),
-            image: req.file?.filename ? req.file.filename : "default-image.png"
-        };
-        
-        let prod;
-        let errors = validationResult(req)
-        if(errors.isEmpty()){ 
-        if(data == ''){
-            prod = [];
-        }else{
-            prod = JSON.parse(data)
-        };
-        prod.push(product);
-
-        prodJson = JSON.stringify(prod, null, 2);
-
-        fs.writeFileSync(path.join(__dirname, './data/productsData.json'), prodJson);
-
-        res.redirect('/');
-    }else{
-        res.render('products/adminCreate',{ errors : errors.mapped(), old: req.body})
-    }
+            id_image: idImage
+        })
+        .then(res.redirect('/'))
+    } catch(error) {
+            console.log(error)
+        }
        },
     
        dataProducts: function(){
