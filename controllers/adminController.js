@@ -20,22 +20,30 @@ const adminController = {
     },
     creado: async function(req,res){
         try {
-        var idImage = 1
         if(req.file){
             guardarImagen(req)
             .then((imagen)=>{
-                var idImage = imagen.idimage;
+                let idImage = imagen.idimage;
+                db.products.create({
+                    name: req.body.Name,
+                    description: req.body.descripcion,
+                    id_category: req.body.category,
+                    id_presentation: req.body.presentation,
+                    price: Number(req.body.precio),
+                    id_image: idImage
+                })
             })
-        } 
-        db.products.create({
-            name: req.body.Name,
-            description: req.body.descripcion,
-            id_category: req.body.category,
-            id_presentation: req.body.presentation,
-            price: Number(req.body.precio),
-            id_image: idImage
-        })
-        .then(res.redirect('/'))
+        } else {
+            db.products.create({
+                name: req.body.Name,
+                description: req.body.descripcion,
+                id_category: req.body.category,
+                id_presentation: req.body.presentation,
+                price: Number(req.body.precio),
+                id_image: 1
+            })
+        }
+        return res.redirect('/')
     } catch(error) {
             console.log(error)
         }
@@ -55,26 +63,67 @@ const adminController = {
            return idFound
        },
        
-       edit: function(req,res){
+       edit: async function(req,res){
         const id = req.params.id;
-		const productos = products.find(product => product.id == id);
-		
-        res.render('products/editarProducto', {productos})
+        let categories = await db.categories.findAll();
+        let presentations = await db.presentations.findAll();
+
+		const productos = await db.products.findByPk(id,{
+            include:[
+                {association: "categories"},
+                {association: "presentations"},
+                {association: "images"}
+            ]
+        });
+        res.render('products/editarProducto', {productos,categories,presentations})
         },
    
-       edited: function(req,res){
-           return res.render("Producto editado");
-       },
+       edited: async function(req,res){
+        const id = req.params.id;
+        try {
+            console.log(req.file)
+            if(req.file){
+                guardarImagen(req)
+                .then((imagen)=>{
+                    let idImage = imagen.idimage;
+                    db.products.update({
+                        name: req.body.Name,
+                        description: req.body.description,
+                        id_category: req.body.category,
+                        id_presentation: req.body.presentation,
+                        price: Number(req.body.precio),
+                        id_image: idImage
+                    },
+                    {
+                        where: {idProducto: id}
+                    })
+                })
+            } else {
+                 db.products.update({
+                    name: req.body.Name,
+                    description: req.body.description,
+                    id_category: req.body.category,
+                    id_presentation: req.body.presentation,
+                    price: Number(req.body.precio)
+                },
+                {
+                    where: {idProducto: id}
+                })
+            }
+            return res.redirect('/productos')
+        } catch(error) {
+                console.log(error)
+            }
+           },
    
        delete: function(req,res){
             let id = req.params.id
-            let product = products;
-
-            product = product.filter(oneProduct => oneProduct.id != id);
             
-           fs.writeFileSync(path.join(__dirname, './data/productsData.json'), JSON.stringify(product, null, 2));
-           
-           return res.redirect("/productos");
+            db.products.destroy({
+                where: {idProducto: id}
+            })
+
+            return res.redirect("/productos");
        }
 }
 
