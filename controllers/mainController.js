@@ -3,10 +3,6 @@ const fs = require('fs');
 const db = require('../src/database/models');
 const fetch = require('node-fetch');
 const { response } = require('express');
-
-const productsFilePath = path.join(__dirname, "./data/productsData.json");
-const productos = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
 const mainController = {
     index : function(req,res){
         res.render('index')
@@ -14,14 +10,13 @@ const mainController = {
     },
     search: (req, res) => {
 		const search = req.query.keywords;
-		const product = []; 
-        
-        productos.forEach(producto => {
-            if(producto.name.toLowerCase().indexOf(search.toLowerCase()) >= 0){
-            product.push(producto)
+		db.products.findAll({
+            include: ['images'],
+            where: {
+                name:{[db.Sequelize.Op.like] : search }
             }
-        })
-		return res.render("./products/searchResult", { productos: product })
+        }).then(producto =>{res.json(producto);})
+		
 	},
     carrito: function(req,res){
         res.render('./products/carrito')

@@ -8,53 +8,40 @@
     <main class="cont-form">
     <form action="/register" method="POST" class="formulario-registro" enctype="multipart/form-data">
         <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
-        <label> Nombre</label>
-            <input type="text" name="Nombre" placeholder="Lionel" class="nombre" value= <%= locals.old && old.Nombre ? old.Nombre : '' %> > 
-            <% if(locals.errors && errors.Nombre){  %> 
-                <label style="color:red"><%= errors.Nombre.msg %> </label>
-                <% } %> 
+        <label>Nombre</label>
+            <input type="text" name="Nombre" placeholder="Lionel" class="nombre" id="nombre"> 
+           
                 
      <label>Apellido </label>
-        <input type="text" name="Apellido" placeholder="Messi" class="nombre" value= <%= locals.old && old.Apellido ? old.Apellido : '' %> >
-            <% if(locals.errors && errors.Apellido){  %> 
-                <label style="color:red"><%= errors.Apellido.msg %> </label>
-            <% } %> 
+        <input type="text" name="Apellido" placeholder="Messi" class="nombre" id="apellido">
+            
             
      <label>E-mail</label>
-         <input type="email" name="email" placeholder="LionelMessi10@gmail.com" value= <%= locals.old && old.email ? old.email : '' %>>
-             <% if(locals.errors && errors.email){  %> 
-            <label style="color:red"><%= errors.email.msg %> </label>
-            <% } %> 
+         <input type="email" name="email" placeholder="LionelMessi10@gmail.com" id="email">
+          
             
      <label>Contraseña</label>
-         <input type="password" name="password" placeholder="Ingrese su contraseña" >
-            <% if(locals.errors && errors.contrasenia){  %> 
-            <label style="color:red"><%= errors.contrasenia.msg %> </label>
-            <% } %> 
+         <input type="password" name="password" placeholder="Ingrese su contraseña" id="password">
+           
              
      <label>Codigo Postal</label>
-         <input type="text" name="codigoPostal" placeholder="Buenos Aires" value= <%= locals.old && old.codigoPostal ? old.codigoPostal : '' %>>
-         <% if(locals.errors && errors.codigoPostal){  %> 
-            <label style="color:red"><%= errors.codigoPostal.msg %> </label>
-            <% } %> 
+         <input type="text" name="codigoPostal" placeholder="Buenos Aires" id="codPostal">
+         
      <label>Localidad</label>
         <select name="Localidad">
-            
             <% municipios.forEach(municipio => { %>
                 <option value="<%= municipio.id %>"><%= municipio.nombre %></option>
             <% }) %>
         </select>
+
      <label>Numero de telefono</label>
-         <input type="tel" name="numeroDeTelefono" placeholder="+54 11 9930599" value= <%= locals.old && old.numeroDeTelefono ? old.numeroDeTelefono : '' %>>
-            <% if(locals.errors && errors.numeroDeTelefono){  %> 
-             <label style="color:red"><%= errors.numeroDeTelefono.msg  %> </label>
-            <% } %> 
+         <input type="tel" name="numeroDeTelefono" placeholder="+54 11 9930599" id="numberPhone">
+
          <label>Foto de perfil</label>
          <input type="file" name="imgPerfil">
-     <button type="submit" class="button">Enviar</button>
-    
+     <button type="submit" class="button" id="submitBoton">Enviar</button>
     </form>
-   
+   <script src="/js/register-front.js"></script>
 </main>
 <%- include('../partials/footer') %>
 </body> 

@@ -18,19 +18,20 @@
         <input name="descripcion" id="comentario" placeholder="Ingrese la descripción del producto" value= <%= locals.old && old.descripcion ? old.descripcion : '' %> >
         
      <label>Categoría</label>
-         <select name="categoria" placeholder="Seleccione una categoria" >
-            <option value="frutas">Frutas</option>
-            <option value="verduras">Verduras</option>
-            <option value="verduras-cortadas">Verduras cortadas</option>
-            <option value="bolsones">Bolsones</option>
-            <option value="organico">Productos orgánicos</option>
+         <select name="category" placeholder="Seleccione una categoria" >
+            <option value="" selected disabled>Seleccione una opción</option>
+            <% for(let categoria of categories){ %>
+                <option value="<%= categoria.idcategory %>"><%= categoria.name %></option>
+            <% } %>
          </select>
          
      <label>Presentación</label>
-         <input type="text" name="unidad" placeholder="Ingrese el tipo de presentación del producto, ej: kg, bolsa, atado..." value= <%= locals.old && old.unidad ? old.unidad : '' %>>
-         <% if(locals.errors && errors.unidad){  %> 
-            <label style="color:red"><%= errors.unidad.msg %> </label>
-            <% } %> 
+     <select name="presentation" placeholder="Seleccione una presentación" >
+        <option value="" selected disabled>Seleccione una opción</option>
+        <% for(let presentacion of presentations){ %>
+            <option value="<%= presentacion.idpresentation %>"><%= presentacion.name %></option>
+        <% } %>
+     </select>
      <label>Precio unitario</label>
         <input type="text" name="precio" placeholder="Ingrese el precio unitario del producto" value= <%= locals.old && old.precio ? old.precio : '' %>>
         <% if(locals.errors && errors.precio){  %> 
