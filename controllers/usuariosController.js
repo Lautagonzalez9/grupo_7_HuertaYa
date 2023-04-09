@@ -72,11 +72,12 @@ const usuariosController={
        },
        
     
-    //edit: async function(req,res){
-      //let pedidoUsuario = db.User.findByPk(req.params.id)
-      //
-//
-  //  },
+    edit: async function(req,res){
+      db.User.findByPk(req.params.id)
+      .then(function(users){
+        return res.JSON(users, users.id)})
+
+  },
 
     login:function(req,res){
         res.render('./users/login.ejs')
