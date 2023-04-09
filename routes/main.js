@@ -41,7 +41,11 @@ router.get('/register', userRedirectMiddleware, mainController.register);
 router.post('/register', upload.single('imgPerfil'), authMid.registerAuth,usuariosController.registrado)
 
 // detalle de usuarios
-router.get('/detail',usuariosController.detail)
+router.get('/list',usuariosController.list) 
+
+//Edición de usuarios
+//router.get('/list/:id', usuariosController.edit) 
+//router.post('/detail/:id', usuariosController.update)
 
 //login
 router.get('/login', userRedirectMiddleware, mainController.login);

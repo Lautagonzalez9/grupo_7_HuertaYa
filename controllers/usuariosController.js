@@ -64,12 +64,19 @@ const usuariosController={
           
 
     },
-    detail:function(req,res){
+    list:function(req,res){
        db.user.findAll()
-       .then(function(users){
-            return res.JSON(users)
+        .then(function(users){
+           return res.JSON(users)
        })
-    },
+       },
+       
+    
+    //edit: async function(req,res){
+      //let pedidoUsuario = db.User.findByPk(req.params.id)
+      //
+//
+  //  },
 
     login:function(req,res){
         res.render('./users/login.ejs')
