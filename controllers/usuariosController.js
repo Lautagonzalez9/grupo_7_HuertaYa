@@ -64,6 +64,12 @@ const usuariosController={
           
 
     },
+    detail:function(req,res){
+       db.user.findAll()
+       .then(function(users){
+            return res.JSON(users)
+       })
+    },
 
     login:function(req,res){
         res.render('./users/login.ejs')

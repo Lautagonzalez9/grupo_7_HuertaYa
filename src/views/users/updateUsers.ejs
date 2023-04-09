@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%- include('../partials/head') %>
+    <title>Document</title>
+ </head> 
+<body>
+    <%- include('../partials/header') %>
+    <main class="cont-form">
+    <form action="/register" method="POST" class="formulario-registro" enctype="multipart/form-data">
+        <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
+        <label>Nombre</label>
+            <input type="text" name="Nombre" placeholder="Lionel" class="nombre" id="nombre"> 
+           
+                
+     <label>Apellido </label>
+        <input type="text" name="Apellido" placeholder="Messi" class="nombre" id="apellido">
+            
+            
+     <label>E-mail</label>
+         <input type="email" name="email" placeholder="LionelMessi10@gmail.com" id="email">
+          
+            
+     <label>Contraseña</label>
+         <input type="password" name="password" placeholder="Ingrese su contraseña" id="password">
+           
+             
+     <label>Codigo Postal</label>
+         <input type="text" name="codigoPostal" placeholder="Buenos Aires" id="codPostal">
+         
+     <label>Localidad</label>
+        <select name="Localidad">
+            <% municipios.forEach(municipio => { %>
+                <option value="<%= municipio.id %>"><%= municipio.nombre %></option>
+            <% }) %>
+        </select>
+
+     <label>Numero de telefono</label>
+         <input type="tel" name="numeroDeTelefono" placeholder="+54 11 9930599" id="numberPhone">
+
+         <label>Foto de perfil</label>
+         <input type="file" name="imgPerfil">
+     <button type="submit" class="button" id="submitBoton">Actualizar Datos</button>
+    </form>
+   <script src="/js/register-front.js"></script>
+</main>
+<%- include('../partials/footer') %>
+</body> 
+</html>

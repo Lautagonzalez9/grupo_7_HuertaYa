@@ -40,6 +40,8 @@ router.get('/carrito', mainController.carrito);
 router.get('/register', userRedirectMiddleware, mainController.register);
 router.post('/register', upload.single('imgPerfil'), authMid.registerAuth,usuariosController.registrado)
 
+// detalle de usuarios
+router.get('/detail',usuariosController.detail)
 
 //login
 router.get('/login', userRedirectMiddleware, mainController.login);
