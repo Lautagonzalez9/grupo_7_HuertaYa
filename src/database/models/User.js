@@ -48,7 +48,7 @@ module.exports= function(sequelize,dataTypes){
         }),
         User.belongsTo(models.rol,{
             as:"rol",
-            foreingKey:"id_rol"
+            foreingKey:"idrol"
         })
         User.belongsTo(models.images,{
            as:"images",
