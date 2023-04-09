@@ -73,9 +73,9 @@ const usuariosController={
        
     
     edit: async function(req,res){
-      db.User.findByPk(req.params.id)
+      db.user.findByPk(req.params.id)
       .then(function(users){
-        return res.JSON(users, users.id)})
+        return res.json(users, users.id)})
 
   },
 

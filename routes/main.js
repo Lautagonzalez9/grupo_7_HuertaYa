@@ -44,7 +44,7 @@ router.post('/register', upload.single('imgPerfil'), authMid.registerAuth,usuari
 router.get('/list',usuariosController.list) 
 
 //Edición de usuarios
-//router.get('/list/:id', usuariosController.edit) 
+router.get('/list/:id', usuariosController.edit) 
 //router.post('/detail/:id', usuariosController.update)
 
 //login
