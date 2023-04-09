@@ -2,28 +2,65 @@
 <html lang="en">
     <%- include('../partials/head') %>
     <title>listado de usuarios</title>
+    
 </head>
 <body>
     <%- include('../partials/header') %>
     <main>
          <h1>LISTADO DE USUARIOS</h1>
-            <ul>
-                <% for(let i =0; i < users.length; i++) { %>
-                    <li>
+
+         <% for(let i =0; i < users.length; i++) { %>
+        <div class="containerlist">
+            <div>
+                <ul><h3>Nombre de Usuario</h3>                
+                        <li>
+                        <% for(let i =0; i < users.length; i++) { %>
                         <a href=""> <%= users[i].first_name %></a>
+                        <% } %>
+                        </li>
+                </ul>
+            </div>
+            <div>
+                <ul><h3>Apellido de Usuario</h3>                
+                    <li>
+                       <% for(let i =0; i < users.length; i++) { %>
+                       <%= users[i].last_name %>
+                       <% } %>
                     </li>
-            </ul>
-            <% } %>  
-         <ul>
-            <% for(let i =0; i < users.length; i++) { %>
-                <li>
-                    <a href=""> <%= users[i].first_name %></a>
-                </li>
-                <li>
-                    <a href=""> <%= users[i].last_name %></a>
-                </li>
+                </ul>
+            </div>
+            <div>
+                <ul><h3>Email</h3>                
+                    <li>
+                       <%= users[i].Email %>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul><h3>Password</h3>                
+                    <li>
+                       <%= users[i].Password %>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul><h3>Localidad</h3>                
+                    <li>
+                       <%= users[i].Localidad %>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul><h3>Número de teléfono</h3>                
+                    <li>
+                       <%= users[i].Localidad %>
+                    </li>
+                </ul>
+            </div>
+        
                 <% } %>
-         </ul>
+         
+        </div>
 
     </main>
 </body>
