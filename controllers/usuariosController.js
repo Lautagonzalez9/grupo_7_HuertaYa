@@ -67,7 +67,7 @@ const usuariosController={
     list:function(req,res){
        db.user.findAll()
         .then(function(users){
-           return res.json(users)
+           return res.render('./users/listUsers',{users:users})
        })
        },
        
