@@ -15,7 +15,7 @@ const mainController = {
             where: {
                 name:{[db.Sequelize.Op.like] : search }
             }
-        }).then(producto =>{res.json(producto);})
+        }).then(producto =>{res.render('./products/searchResult',{producto});})
 		
 	},
     carrito: function(req,res){
