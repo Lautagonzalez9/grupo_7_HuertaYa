@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+    <title>listado de usuarios</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+         <h1>LISTADO DE USUARIOS</h1>
+            <ul>
+                <% for(let i =0; i < users.length; i++) { %>
+                    <li>
+                        <a href=""> <%= users[i].first_name %></a>
+                    </li>
+            </ul>
+            <% } %>  
+         <ul>
+            <% for(let i =0; i < users.length; i++) { %>
+                <li>
+                    <a href=""> <%= users[i].first_name %></a>
+                </li>
+                <li>
+                    <a href=""> <%= users[i].last_name %></a>
+                </li>
+                <% } %>
+         </ul>
+
+    </main>
+</body>
+<%- include('../partials/footer') %>
+</html>
