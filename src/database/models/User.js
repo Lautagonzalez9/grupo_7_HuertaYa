@@ -48,11 +48,18 @@ module.exports= function(sequelize,dataTypes){
         }),
         User.belongsTo(models.rol,{
             as:"rol",
-            foreingKey:"idrol"
+            foreignKey:{
+                field:"id_rol",
+                name:"id_rol"
+            }
         })
         User.belongsTo(models.images,{
            as:"images",
-           foreingKey:"id_image"
+           foreignKey: {
+            name: 'id_image',
+            allowNull: true 
+          }
+      
         })
     }
     
