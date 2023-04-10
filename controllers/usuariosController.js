@@ -78,7 +78,7 @@ const usuariosController={
     edit: async function(req,res){
       db.user.findByPk(req.params.id)
       .then(function(users){
-        return res.json(users, users.id)})
+        return res.render('./users/updateUsers', {users})})
 
     },
     update: function(req,res) {
@@ -94,7 +94,7 @@ const usuariosController={
       },{
         where: {id: req.params.id}
       }).then(function() {
-        res.redicrect('./users/login.ejs' + "Los cambios se guardaron con éxito")
+        res.redicrect('./users/login.ejs')
       }).catch(function(error) {
         console.log(error);
         res.status(500).send({ message: 'Error interno del servidor' });
