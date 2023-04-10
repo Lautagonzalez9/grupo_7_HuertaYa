@@ -77,7 +77,26 @@ const usuariosController={
       .then(function(users){
         return res.json(users, users.id)})
 
-  },
+    },
+    update: function(req,res) {
+      db.user.update({
+        first_name: req.body.Nombre,
+        last_name: req.body.Apellido,
+        email: req.body.email,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        postal_code: req.body.codigoPostal,
+        id_location: req.body.Localidad,
+        number_phone: req.body.numeroDeTelefono,
+        id_image: imagen.idimage,
+      },{
+        where: {id: req.params.id}
+      }).then(function() {
+        res.redicrect('./users/login.ejs' + "Los cambios se guardaron con éxito")
+      }).catch(function(error) {
+        console.log(error);
+        res.status(500).send({ message: 'Error interno del servidor' });
+      });
+    },
 
     login:function(req,res){
         res.render('./users/login.ejs')

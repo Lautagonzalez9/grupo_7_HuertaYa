@@ -6,7 +6,7 @@
 <body>
     <%- include('../partials/header') %>
     <main class="cont-form">
-    <form action="/register" method="POST" class="formulario-registro" enctype="multipart/form-data">
+    <form action="/detail/:id" method="POST" class="formulario-registro" enctype="multipart/form-data">
         <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
         <label>Nombre</label>
             <input type="text" name="Nombre" placeholder="Lionel" class="nombre" id="nombre"> 
