@@ -9,13 +9,13 @@
 
 <main class="cont-form">
 
-    <form action="/admin/edit/<%= productos.idProducto %>"  method="POST" class="formulario-registro">
+    <form action="/admin/edit/<%= productos.idProducto %>?_method=PUT"  method="POST" class="formulario-registro" enctype="multipart/form-data">
 
       <h3>Estas editando: <i><%= productos.name %></i></h3>
 
 
      <label>Nombre del producto</label>
-        <input type="text" name="Nombre-del-producto" placeholder="Nombre del producto" class="nombre" value="<%= productos.name %> ">
+        <input type="text" name="name" placeholder="Nombre del producto" class="nombre" value="<%= productos.name %> ">
      
      <label for="comentario">Descripción</label>
         <textarea name="description" id="comentario"><%= productos.description %></textarea>
