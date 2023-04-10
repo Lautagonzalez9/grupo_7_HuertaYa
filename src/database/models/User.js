@@ -59,7 +59,6 @@ module.exports= function(sequelize,dataTypes){
             name: 'id_image',
             allowNull: true 
           }
-      
         })
     }
     

@@ -25,13 +25,13 @@ rel="stylesheet" />
             <div class="productos-relacionados">
                 <% productos.forEach(producto => { %>
                 <article>
-                    <a href="/producto/<%= producto.idProducto %>"><img class="imagen-producto-relacionado" src="/img/<%= producto.images %>" alt="Imagen del producto"></a>
+                    <a href="/producto/<%= producto.idProducto %>"><img class="imagen-producto-relacionado" src="/img/<%= producto.images.url %>" alt="Imagen del producto"></a>
                     <i class="fa-regular fa-heart"></i>
                     <p><%= producto.name %></p>
                     <p>$<%= producto.price %></p>
                     <% if(usuario){ %>
                         <p><button><a style="text-decoration: none; color: white;" href="/admin/edit/<%=producto.idProducto %>">Editar</a></button></p>
-                        <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                        <form action="/admin/delete/<%= producto.idProducto %>?_method=DELETE" method="POST">
                         <button type="submit" class="action-button delete">Eliminar</button>
                         </form>
                     <% } %>
