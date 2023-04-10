@@ -13,7 +13,7 @@ const mainController = {
 		db.products.findAll({
             include: ['images'],
             where: {
-                name:{[db.Sequelize.Op.like] : search }
+                name:{[db.Sequelize.Op.like] : "%"+search+"%" }
             }
         }).then(producto =>{res.render('./products/searchResult',{producto});})
 		
