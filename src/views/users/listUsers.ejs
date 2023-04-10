@@ -3,6 +3,34 @@
 <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/stylesList.css">
     <title>listado de usuarios</title>
+    
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+         <h1>LISTADO DE USUARIOS</h1>
+         <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Codigo Postal</th>
+                    <th>Numero de telefono</th>
+                </tr>
+                <tbody>
+                    <% users.forEach(function(users) { %>
+                        <tr>
+                            <td><a href=""><%=users.first_name %></a>  </td>
+                            <td> <%=users.last_name %> </td>
+                            <td> <%=users.email%> </td>
+                            <td> <%=users.id_location%> </td>
+                            <td><%=users.number_phone%> </td>
+                        </tr>
+                   <% }) %>
+                </tbody>
+            </thead>
+         </table>
 
     </head>
 

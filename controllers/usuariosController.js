@@ -8,6 +8,7 @@ const User = require('../models/User')
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require('express-validator');
 const { Console, log } = require('console');
+const { response } = require('express');
 
 
 function guardarImagen(req,res){
@@ -21,8 +22,10 @@ const usuariosController={
         res.render('registerForm')
     },
     
-    registrado: function(req,res){
-        if (req.file) {
+    registrado: async function(req,res){
+      let municipios = await fetch('https://apis.datos.gob.ar/georef/api/municipios?provincia=06&campos=id,nombre&max=30').then(response=> response.json())
+      
+      if (req.file) {
             guardarImagen(req)
               .then(function (imagen) {
                 
@@ -75,7 +78,7 @@ const usuariosController={
     edit: async function(req,res){
       db.user.findByPk(req.params.id)
       .then(function(users){
-        return res.json(users, users.id)})
+        return res.render('./users/updateUsers', {users})})
 
     },
     update: function(req,res) {
@@ -91,7 +94,7 @@ const usuariosController={
       },{
         where: {id: req.params.id}
       }).then(function() {
-        res.redicrect('./users/login.ejs' + "Los cambios se guardaron con éxito")
+        res.redicrect('./users/login.ejs')
       }).catch(function(error) {
         console.log(error);
         res.status(500).send({ message: 'Error interno del servidor' });

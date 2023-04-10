@@ -144,6 +144,10 @@ body {
     margin-top: 20px;
     border-radius: 8px;
 }
+
+#delete-edicion{
+    margin: 5px auto;
+}
 /* checkpoint tablets */
 @media (min-width: 768px){
     .hamburguer-button{

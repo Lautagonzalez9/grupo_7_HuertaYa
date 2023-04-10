@@ -81,7 +81,7 @@ const adminController = {
        edited: async function(req,res){
         const id = req.params.id;
         try {
-            console.log(req.file)
+            
             if(req.file){
                 guardarImagen(req)
                 .then((imagen)=>{
