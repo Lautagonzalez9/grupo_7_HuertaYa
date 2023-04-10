@@ -45,7 +45,7 @@ router.get('/list',usuariosController.list)
 
 //Edición de usuarios
 router.get('/list/:id', usuariosController.edit) 
-//router.post('/detail/:id', usuariosController.update)
+router.post('/detail/:id', usuariosController.update)
 
 //login
 router.get('/login', userRedirectMiddleware, mainController.login);
