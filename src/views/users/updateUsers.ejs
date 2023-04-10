@@ -9,23 +9,23 @@
     <form action="/detail/:id" method="POST" class="formulario-registro" enctype="multipart/form-data">
         <a href="/login" class="ya-tenes-cuenta"><p>¿Ya tenes cuenta?</p></a>
         <label>Nombre</label>
-            <input type="text" name="Nombre" placeholder="Lionel" class="nombre" id="nombre"> 
+            <input type="text" name="Nombre" placeholder="Lionel" class="nombre" id="nombre" value="<%= users.first_name"> 
            
                 
      <label>Apellido </label>
-        <input type="text" name="Apellido" placeholder="Messi" class="nombre" id="apellido">
+        <input type="text" name="Apellido" placeholder="Messi" class="nombre" id="apellido" value="<%= users.last_name" >
             
             
      <label>E-mail</label>
-         <input type="email" name="email" placeholder="LionelMessi10@gmail.com" id="email">
+         <input type="email" name="email" placeholder="LionelMessi10@gmail.com" id="email" value="<%= users.email" >
           
             
      <label>Contraseña</label>
-         <input type="password" name="password" placeholder="Ingrese su contraseña" id="password">
+         <input type="password" name="password" placeholder="Ingrese su contraseña" id="password" >
            
              
      <label>Codigo Postal</label>
-         <input type="text" name="codigoPostal" placeholder="Buenos Aires" id="codPostal">
+         <input type="text" name="codigoPostal" placeholder="Buenos Aires" id="codPostal" value="<%= users.postal_code">
          
      <label>Localidad</label>
         <select name="Localidad">
@@ -35,7 +35,7 @@
         </select>
 
      <label>Numero de telefono</label>
-         <input type="tel" name="numeroDeTelefono" placeholder="+54 11 9930599" id="numberPhone">
+         <input type="tel" name="numeroDeTelefono" placeholder="+54 11 9930599" id="numberPhone" value="<%= users.number_fone">
 
          <label>Foto de perfil</label>
          <input type="file" name="imgPerfil">
