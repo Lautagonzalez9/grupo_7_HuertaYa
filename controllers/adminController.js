@@ -87,7 +87,7 @@ const adminController = {
                 .then((imagen)=>{
                     let idImage = imagen.idimage;
                     db.products.update({
-                        name: req.body.Name,
+                        name: req.body.name,
                         description: req.body.description,
                         id_category: req.body.category,
                         id_presentation: req.body.presentation,
@@ -97,10 +97,11 @@ const adminController = {
                     {
                         where: {idProducto: id}
                     })
+                    .then(res.redirect('/productos'))
                 })
             } else {
                  db.products.update({
-                    name: req.body.Name,
+                    name: req.body.name,
                     description: req.body.description,
                     id_category: req.body.category,
                     id_presentation: req.body.presentation,
@@ -109,8 +110,8 @@ const adminController = {
                 {
                     where: {idProducto: id}
                 })
+                .then(res.redirect('/productos'))
             }
-            return res.redirect('/productos')
         } catch(error) {
                 console.log(error)
             }
