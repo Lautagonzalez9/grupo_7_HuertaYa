@@ -37,6 +37,8 @@
         <% if(locals.errors && errors.precio){  %> 
          <label style="color:red"><%= errors.precio.msg %> </label>
          <% } %> 
+    <label>Descuento</label>
+    <input type="text" name="discount" placeholder="Ingrese el descuento, de 0 a 1" value="<%= productos.discount%> ">    
      <label>Imágen del producto</label>
         <input type="file" name="imagen" accept=".jpg, .png" multiple> 
         <% if(locals.errors && errors.imagen){  %> 
