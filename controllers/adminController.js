@@ -30,7 +30,8 @@ const adminController = {
                     id_category: req.body.category,
                     id_presentation: req.body.presentation,
                     price: Number(req.body.precio),
-                    id_image: idImage
+                    id_image: idImage,
+                    discount: req.body.discount
                 })
             })
         } else {
@@ -40,7 +41,8 @@ const adminController = {
                 id_category: req.body.category,
                 id_presentation: req.body.presentation,
                 price: Number(req.body.precio),
-                id_image: 1
+                id_image: 1,
+                discount: req.body.discount
             })
         }
         return res.redirect('/')
@@ -92,7 +94,8 @@ const adminController = {
                         id_category: req.body.category,
                         id_presentation: req.body.presentation,
                         price: Number(req.body.precio),
-                        id_image: idImage
+                        id_image: idImage,
+                        discount: req.body.discount
                     },
                     {
                         where: {idProducto: id}
@@ -105,7 +108,8 @@ const adminController = {
                     description: req.body.description,
                     id_category: req.body.category,
                     id_presentation: req.body.presentation,
-                    price: Number(req.body.precio)
+                    price: Number(req.body.precio),
+                    discount: req.body.discount
                 },
                 {
                     where: {idProducto: id}
