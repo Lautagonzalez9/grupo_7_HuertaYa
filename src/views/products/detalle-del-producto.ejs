@@ -60,7 +60,7 @@
                                 <% if(product.discount){ %>
                                     <p><%= product.discount %>% OFF</p>
                                     <span id="tachado">$<%= product.price %></span>
-                                    <span id="oferta">  $<%= Math.floor(product.price * (product.discount/100)) %></span>
+                                    <span id="oferta">  $<%= Math.floor(product.price * (1-(product.discount/100))) %></span>
                                     <% } else { %>
                                     <p>$<%= product.price %></p>
                                     <% } %>
@@ -115,7 +115,7 @@
                     <% if(producto.discount){ %>
                         <p><%= producto.discount %>% OFF</p>
                         <span id="tachado">$<%= producto.price %></span>
-                        <span id="oferta">  $<%= Math.floor(producto.price * (producto.discount/100)) %></span>
+                        <span id="oferta">  $<%= Math.floor(producto.price * (1-(producto.discount/100))) %></span>
                         <% } else { %>
                         <p>$<%= producto.price %></p>
                         <% } %>
@@ -140,7 +140,7 @@
                     <% if(producto.discount){ %>
                         <p><%= producto.discount %>% OFF</p>
                         <span id="tachado">$<%= producto.price %></span>
-                        <span id="oferta">  $<%= Math.floor(producto.price * (producto.discount/100)) %></span>
+                        <span id="oferta">  $<%= Math.floor(producto.price * (1-(producto.discount/100))) %></span>
                         <% } else { %>
                         <p>$<%= producto.price %></p>
                         <% } %>

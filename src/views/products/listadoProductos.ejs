@@ -31,7 +31,7 @@ rel="stylesheet" />
                     <% if(producto.discount){ %>
                     <p><%= producto.discount %>% OFF</p>
                     <span id="tachado">$<%= producto.price %></span>
-                    <span id="oferta"> $<%= Math.floor(producto.price * (producto.discount/100)) %></span>
+                    <span id="oferta"> $<%= Math.floor(producto.price * (1-(producto.discount/100))) %></span>
                     <% } else { %>
                     <p>$<%= producto.price %></p>
                     <% } %>
