@@ -76,22 +76,28 @@ const usuariosController={
        
     
     edit: async function(req,res){
+      let municipios = await fetch('https://apis.datos.gob.ar/georef/api/municipios?provincia=06&campos=id,nombre&max=30').then(response => response.json())
       db.user.findByPk(req.params.id)
       .then(function(users){
-        return res.render('./users/updateUsers', {users})})
+       //return res.json(users)})
+        return res.render('./users/updateUsers', {users, municipios: municipios.municipios})})
 
     },
     update: function(req,res) {
+      if (req.file) {
+        guardarImagen(req)
+          .then(function (imagen) {
+
       db.user.update({
         first_name: req.body.Nombre,
         last_name: req.body.Apellido,
         email: req.body.email,
-        password: bcryptjs.hashSync(req.body.password, 10),
+        //password: bcryptjs.hashSync(req.body.password, 10),
         postal_code: req.body.codigoPostal,
         id_location: req.body.Localidad,
         number_phone: req.body.numeroDeTelefono,
         id_image: imagen.idimage,
-      },{
+      })},{
         where: {id: req.params.id}
       }).then(function() {
         res.redicrect('./users/login.ejs')
@@ -99,7 +105,7 @@ const usuariosController={
         console.log(error);
         res.status(500).send({ message: 'Error interno del servidor' });
       });
-    },
+    }},
 
     login:function(req,res){
         res.render('./users/login.ejs')
