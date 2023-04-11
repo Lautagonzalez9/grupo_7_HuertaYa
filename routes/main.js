@@ -58,6 +58,9 @@ router.get('/profile', guestRedirectMiddleware, usuariosController.profile)
 router.get('/producto/:id', productController.detalleDeProducto);
 router.get('/productos', productController.listaDeProductos);
 
+//categorias
+router.get('/productos/:categoria', productController.listadoPorCategoria);
+
 //Log out
 router.get('/logout', guestRedirectMiddleware, usuariosController.logout);
 
