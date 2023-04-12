@@ -9,6 +9,7 @@ const bcryptjs = require("bcryptjs");
 const { validationResult } = require('express-validator');
 const { Console, log } = require('console');
 const { response } = require('express');
+const fetch = require('node-fetch');
 
 
 function guardarImagen(req,res){
@@ -84,29 +85,48 @@ const usuariosController={
 
     },
     update: function(req,res) {
+      console.log(req.body)
       if (req.file) {
         guardarImagen(req)
           .then(function (imagen) {
-
-      db.user.update({
-        first_name: req.body.Nombre,
-        last_name: req.body.Apellido,
-        email: req.body.email,
-        //password: bcryptjs.hashSync(req.body.password, 10),
-        postal_code: req.body.codigoPostal,
-        id_location: req.body.Localidad,
-        number_phone: req.body.numeroDeTelefono,
-        id_image: imagen.idimage,
-      })},{
-        where: {id: req.params.id}
-      }).then(function() {
-        res.redicrect('./users/login.ejs')
-      }).catch(function(error) {
-        console.log(error);
-        res.status(500).send({ message: 'Error interno del servidor' });
-      });
-    }},
-
+            db.user.update({
+              first_name: req.body.Nombre,
+              last_name: req.body.Apellido,
+              email: req.body.email,
+              postal_code: req.body.codigoPostal,
+              id_location: req.body.Localidad,
+              number_phone: req.body.numeroDeTelefono,
+              id_image: imagen.idimage,
+            }, {
+              where: {id: req.params.id}
+             }).then(function() {
+              
+              res.redirect('./users/login');
+            }).catch(function(error) {
+              console.log(error);
+              res.status(500).send({ message: 'Error interno del servidor' });
+            });
+          });
+      } else {
+        db.user.update({
+          first_name: req.body.Nombre,
+          last_name: req.body.Apellido,
+          email: req.body.email,
+          postal_code: req.body.codigoPostal,
+          id_location: req.body.Localidad,
+          number_phone: req.body.numeroDeTelefono,
+        }, {
+          where: { id: req.params.id }
+        }).then(function() {
+          console.log('Usuario Actualizado Correctamente')
+          res.redirect('/profile');
+        }).catch(function(error) {
+          console.log(error);
+          res.status(500).send({ message: 'Error interno del servidor' });
+        });
+      }
+    },
+    
     login:function(req,res){
         res.render('./users/login.ejs')
     },
