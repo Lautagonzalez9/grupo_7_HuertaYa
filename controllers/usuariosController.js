@@ -98,7 +98,7 @@ const usuariosController={
               number_phone: req.body.numeroDeTelefono,
               id_image: imagen.idimage,
             }, {
-              where: {id: req.params.id}
+              where: {iduser: req.params.id}
              }).then(function() {
               
               res.redirect('./users/login');
@@ -116,9 +116,10 @@ const usuariosController={
           id_location: req.body.Localidad,
           number_phone: req.body.numeroDeTelefono,
         }, {
-          where: { id: req.params.id }
+          where: { iduser: req.params.id }
         }).then(function() {
           console.log('Usuario Actualizado Correctamente')
+          console.log(req.body)
           res.redirect('/profile');
         }).catch(function(error) {
           console.log(error);
