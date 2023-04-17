@@ -23,16 +23,20 @@ window.onload = function(){
         }
         if(campoPrecio.value == ""){
             errores.push("Debes ingresar un precio")
-        } else if(isNaN(campoPrecio.value)){
+        } else if(isNaN(Number(campoPrecio.value))){
             errores.push("Debe ingresar un numero valido en el precio")
+        } else if(campoPrecio.value.trim() != campoPrecio.value){
+            errores.push("No deben haber espacios en blanco en el campo precio")
         }
 
         if(campoDescuento.value == ""){
             errores.push("Debes ingresar un descuento")
-        } else if(campoDescuento.value < 0 || campoDescuento.value > 100){
+        } else if(Number(campoDescuento.value) < 0 || Number(campoDescuento.value) > 100){
             errores.push("El valor del descuento debe estar entre 0 y 100")
-        } else if(isNaN(campoDescuento.value)){
+        } else if(isNaN(Number(campoDescuento.value))){
             errores.push("Debe ingresar un numero valido en el descuento")
+        } else if(campoDescuento.value.trim() != campoDescuento.value){
+            errores.push("No deben haber espacios en blanco en el campo descuento")
         }
 
         //print errores
@@ -40,6 +44,8 @@ window.onload = function(){
 
         if(errores.length > 0){
             event.preventDefault();
+
+            ulErrores.innerHTML = ""
 
             for(let error of errores){
                 ulErrores.innerHTML += "<li>" + error + "</li>"
