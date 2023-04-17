@@ -11,17 +11,18 @@ module.exports = {
     ],
     productCreate: [
         body('Name').notEmpty().withMessage('Escribe el nombre del producto'),
-        body('categoria').notEmpty().withMessage('seleccione una categoria'),
-        body('unidad').notEmpty().withMessage('Escribe una unidad'),
-        body('precio').notEmpty().withMessage('indica el precio').bail().isNumeric().withMessage('escriba un numero'),
-        body('imagen').custom((value,{req})=>{  
-                if(!req.file){
-                    throw new Error ('Sube una imagen')
-                }
-                if (!req.file.mimetype.startsWith('image/')) {
-                    throw new Error('Solo se permiten imágenes');
-                  }
-            return true
-        }),
+        body('category').notEmpty().withMessage('seleccione una categoria'),
+        body('presentation').notEmpty().withMessage('Elija un tipo de presentación'),
+        body('precio').notEmpty().withMessage('indica el precio').bail().isNumeric().withMessage('El precio debe ser un número'),
+        body('discount').notEmpty().withMessage('Indique el descuento').bail().isInt({ min:0, max: 100}).withMessage('El descuento debe ser un número del 0 al 100'),
+        // body('imagen').custom((value,{req})=>{  
+        //         if(!req.file){
+        //             throw new Error ('Sube una imagen')
+        //         }
+        //         if (!req.file.mimetype.startsWith('image/')) {
+        //             throw new Error('Solo se permiten imágenes');
+        //           }
+        //     return true
+        // }),
     ]
 }

@@ -26,7 +26,7 @@ router.post('/create', upload.single('imagen'), authMid.productCreate ,adminCont
 
 
 router.get('/edit/:id', guestRedirectMiddleware, adminController.edit);
-router.put('/edit/:id', upload.single('imagen'), adminController.edited);
+router.put('/edit/:id', upload.single('imagen'), authMid.productCreate, adminController.edited);
 
 // borrar un producto
 router.delete('/delete/:id', guestRedirectMiddleware, adminController.delete); //No estoy seguro de que este middleware vaya aca
