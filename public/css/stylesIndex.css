@@ -56,8 +56,24 @@ body {
     margin-bottom: 20%;
 }
 
+/*carousel*/
 
+.carrusel-1
+.carrusel-2
+.carrusel-3{
+    min-width: 320px;
+}
 
+.carrusel {
+    background-color: rgb(0,0,0);
+    position: relative;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+}
+
+/*
 .carrusel-1 {
     background-image: url("../img/carrusel_1.jpg");
     background-size: 100%;
@@ -106,6 +122,7 @@ body {
 .carrusel {
     background-color: rgb(0,0,0);
 }
+*/
 
 /*Section delivery */
 
