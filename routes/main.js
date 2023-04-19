@@ -45,11 +45,11 @@ router.get('/list',usuariosController.list)
 
 //Edición de usuarios
 router.get('/list/:id', usuariosController.edit) 
-router.post('/detail/:id', usuariosController.update)
+router.post('/detail/:id',upload.single('imgPerfil'), usuariosController.update)
 
 //login
 router.get('/login', userRedirectMiddleware, mainController.login);
-router.post('/login', usuariosController.validateLogin);
+router.post('/login',  usuariosController.validateLogin);
 
 //profile
 router.get('/profile', guestRedirectMiddleware, usuariosController.profile)
@@ -57,6 +57,9 @@ router.get('/profile', guestRedirectMiddleware, usuariosController.profile)
 //productos
 router.get('/producto/:id', productController.detalleDeProducto);
 router.get('/productos', productController.listaDeProductos);
+
+//categorias
+router.get('/productos/:categoria', productController.listadoPorCategoria);
 
 //Log out
 router.get('/logout', guestRedirectMiddleware, usuariosController.logout);

@@ -19,33 +19,39 @@ const adminController = {
         res.render('products/adminCreate',{categories,presentations})
     },
     creado: async function(req,res){
-        try {
-        if(req.file){
-            guardarImagen(req)
-            .then((imagen)=>{
-                let idImage = imagen.idimage;
+        if(validationResult(req).isEmpty()){    
+            try {
+            if(req.file){
+                guardarImagen(req)
+                .then((imagen)=>{
+                    let idImage = imagen.idimage;
+                    db.products.create({
+                        name: req.body.Name,
+                        description: req.body.descripcion,
+                        id_category: req.body.category,
+                        id_presentation: req.body.presentation,
+                        price: Number(req.body.precio),
+                        id_image: idImage,
+                        discount: Number(req.body.discount)
+                    })
+                })
+            } else {
                 db.products.create({
                     name: req.body.Name,
                     description: req.body.descripcion,
                     id_category: req.body.category,
                     id_presentation: req.body.presentation,
                     price: Number(req.body.precio),
-                    id_image: idImage
+                    id_image: 1,
+                    discount: Number(req.body.discount)
                 })
-            })
+            }
+            return res.redirect('/')
+        } catch(error) {
+                console.log(error)
+            }
         } else {
-            db.products.create({
-                name: req.body.Name,
-                description: req.body.descripcion,
-                id_category: req.body.category,
-                id_presentation: req.body.presentation,
-                price: Number(req.body.precio),
-                id_image: 1
-            })
-        }
-        return res.redirect('/')
-    } catch(error) {
-            console.log(error)
+            res.send('se ha producido un error')
         }
        },
     
@@ -80,6 +86,7 @@ const adminController = {
    
        edited: async function(req,res){
         const id = req.params.id;
+        if(validationResult(req).isEmpty()){ 
         try {
             
             if(req.file){
@@ -87,33 +94,40 @@ const adminController = {
                 .then((imagen)=>{
                     let idImage = imagen.idimage;
                     db.products.update({
-                        name: req.body.Name,
+                        name: req.body.name,
                         description: req.body.description,
                         id_category: req.body.category,
                         id_presentation: req.body.presentation,
                         price: Number(req.body.precio),
-                        id_image: idImage
+                        id_image: idImage,
+                        discount: Number(req.body.discount)
                     },
                     {
                         where: {idProducto: id}
                     })
+                    .then(res.redirect('/productos'))
                 })
             } else {
                  db.products.update({
-                    name: req.body.Name,
+                    name: req.body.name,
                     description: req.body.description,
                     id_category: req.body.category,
                     id_presentation: req.body.presentation,
-                    price: Number(req.body.precio)
+                    price: Number(req.body.precio),
+                    discount: Number(req.body.discount)
                 },
                 {
                     where: {idProducto: id}
                 })
+                .then(res.redirect('/productos'))
             }
-            return res.redirect('/productos')
         } catch(error) {
                 console.log(error)
             }
+        } else {
+            console.log(validationResult(req))
+            res.send('se ha producido un error')
+        }
            },
    
        delete: function(req,res){

@@ -15,7 +15,14 @@ body {
     display: flex;
     
 }
-
+#tachado{
+    text-decoration: line-through;
+    color: red;
+}
+#oferta{
+    color: green;
+    font-weight: bold;
+}
 .logo-nav{
     width: 50%;
     display: flex;

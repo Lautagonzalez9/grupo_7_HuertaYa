@@ -33,6 +33,20 @@ const productController = {
 
         return res.render('./products/listadoProductos',{productos});
               
+   },
+   listadoPorCategoria: async function (req,res){
+        const categoryId = req.params.categoria
+        const productos = await db.products.findAll({
+            where: {
+                id_category: categoryId
+            },
+            include: [
+                {association: "images"},
+                {association: "categories"},
+                {association: "presentations"}
+            ]
+        })
+        return res.render('./products/listadoProductos',{productos})
    }
 }
 

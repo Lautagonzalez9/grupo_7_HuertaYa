@@ -53,3 +53,109 @@ Fecha tentativa próxima reunión: 7/02.
 Link Trello: https://trello.com/b/w2OIZtu6/sprint-4-json-y-metodos
 
 Fin del meet ---
+
+08/02/2023
+Se reparten tareas del sprint 5. Se suben al Trello: https://trello.com/b/UNjXqA6Z/sprint-5-middlewares-y-auth
+Participantes: Manuel, Julián, Vanesa, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+17/02/2023
+Se completó la redireccion a home en caso de exito y muestre los datos de usuario 
+Se completó la Redireccion al login en caso de error 
+Se completó la verificacion de la info enviada 
+Se completó que el login incluya los campos email y password 
+Participantes: Manuel, Julián, Vanesa, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+22/02/2023
+Se completó el Middleware que busque la cookie y loguee al usuario en caso de que exista y los datos sean correctos 
+Esta hecho y funcionando el guardado de la cookie. Faltaria probar el middleware que autologuea al usuario, pero para esto es necesario el middleware que procesa el login.
+Se completó Guardar info del usuario con cookies 
+Se completó el Checkbox recordar usuario 
+Se completaron las rutas accesibles solo con login que redireccionan al login
+Se completaron las rutas accesibles sin login que redirigen al perfil
+Participantes: Manuel, Julián, Vanesa, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+06/03/2023 
+Se completó el Guardado de datos en JSON 
+Se realizó el encriptado de constraseña (bcrypt) 
+Se realizó la subida de imagen (multer).
+Se repasan tareas pendientes, todas finalizadas del sprint 5.
+Participantes: Manuel, Julián, Vanesa, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+sprint 6
+08/03/2023
+Se reparten tareas del sprint 6. Se suben al Trello: https://trello.com/b/iiMN1Ptd/sprint-6
+Se confeccionó el diagrama de base de datos.
+Participantes: Manuel, Julián, Vanesa, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+15/03/2023
+Creación de la base de datos. Falta detallar tipo de datos y relaciones entre tablas.
+Se crea la carpeta de sequelize.
+Participantes: Manuel, Julián, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+20/03/2023
+Se detallan tipos de datos y relaciones entre tablas. 
+Se comienza a generar modelos y sus relaciones.
+Participantes: Manuel, Julián, Vanesa, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+31/03/2023
+Se terminan con el CRUD  de productos y el CRUD  de usuarios.
+Se retoca el footer y el carrito.
+Participantes: Manuel, Julián, Vanesa, Marco.
+Se presentaron problemas al momento del guardado de datos, se solucionó en clase con los profesores.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+spint 7
+05/04/2023
+Se reparten tareas del sprint 7. Se suben al Trello: https://trello.com/b/lT8QfM3H/sprint-7.
+Participantes: Manuel, Julián, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+12/04/2023
+Se completaron las validaciones del front-end y back-end
+Se genera carousel de imágenes en el home y se modifica section de delivery.
+Participantes: Manuel, Julián, Vanesa, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---
+
+17/04/2023
+Queda pendiente realizar la validación del front-end en el login.
+Participantes: Manuel, Julián, Vanesa, Marco.
+No se presentaron inconvenientes hasta el momento.
+Fecha tentativa próxima reunión: 6/03.
+
+Fin del meet ---

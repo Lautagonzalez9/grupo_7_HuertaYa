@@ -9,6 +9,7 @@ const bcryptjs = require("bcryptjs");
 const { validationResult } = require('express-validator');
 const { Console, log } = require('console');
 const { response } = require('express');
+const fetch = require('node-fetch');
 
 
 function guardarImagen(req,res){
@@ -80,31 +81,57 @@ const usuariosController={
        
     
     edit: async function(req,res){
+      let municipios = await fetch('https://apis.datos.gob.ar/georef/api/municipios?provincia=06&campos=id,nombre&max=30').then(response => response.json())
       db.user.findByPk(req.params.id)
       .then(function(users){
-        return res.json(users, users.id)})
+       //return res.json(users)})
+        return res.render('./users/updateUsers', {users, municipios: municipios.municipios})})
 
     },
     update: function(req,res) {
-      db.user.update({
-        first_name: req.body.Nombre,
-        last_name: req.body.Apellido,
-        email: req.body.email,
-        password: bcryptjs.hashSync(req.body.password, 10),
-        postal_code: req.body.codigoPostal,
-        id_location: req.body.Localidad,
-        number_phone: req.body.numeroDeTelefono,
-        id_image: imagen.idimage,
-      },{
-        where: {id: req.params.id}
-      }).then(function() {
-        res.redicrect('./users/login.ejs' + "Los cambios se guardaron con éxito")
-      }).catch(function(error) {
-        console.log(error);
-        res.status(500).send({ message: 'Error interno del servidor' });
-      });
+      console.log(req.body)
+      if (req.file) {
+        guardarImagen(req)
+          .then(function (imagen) {
+            db.user.update({
+              first_name: req.body.Nombre,
+              last_name: req.body.Apellido,
+              email: req.body.email,
+              postal_code: req.body.codigoPostal,
+              id_location: req.body.Localidad,
+              number_phone: req.body.numeroDeTelefono,
+              id_image: imagen.idimage,
+            }, {
+              where: {iduser: req.params.id}
+             }).then(function() {
+              
+              res.redirect('./users/login');
+            }).catch(function(error) {
+              console.log(error);
+              res.status(500).send({ message: 'Error interno del servidor' });
+            });
+          });
+      } else {
+        db.user.update({
+          first_name: req.body.Nombre,
+          last_name: req.body.Apellido,
+          email: req.body.email,
+          postal_code: req.body.codigoPostal,
+          id_location: req.body.Localidad,
+          number_phone: req.body.numeroDeTelefono,
+        }, {
+          where: { iduser: req.params.id }
+        }).then(function() {
+          console.log('Usuario Actualizado Correctamente')
+          console.log(req.body)
+          res.redirect('/profile');
+        }).catch(function(error) {
+          console.log(error);
+          res.status(500).send({ message: 'Error interno del servidor' });
+        });
+      }
     },
-
+    
     login:function(req,res){
         res.render('./users/login.ejs')
     },
@@ -115,7 +142,7 @@ const usuariosController={
           }
         }).then(users =>{if(users.length > 0){
           const user = users[0];
-          console.log(user.password);
+          console.log(user.password);  
           if(bcryptjs.compare(req.body.password, user.password)){
                   
                    //guardado de cookies de usuario
@@ -128,9 +155,7 @@ const usuariosController={
 
                    //nos aseguramos de guardar las session antes de continuar
                    //req.session.save();
-                   res.redirect('/');
-                   
-               
+                   res.redirect('/');    
              
            } else {
              res.render('./users/login.ejs',{

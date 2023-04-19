@@ -9,18 +9,22 @@
 
 <main class="cont-form">
 
+   <div class="errores">
+      <ul></ul>
+   </div>
+
     <form action="/admin/edit/<%= productos.idProducto %>?_method=PUT"  method="POST" class="formulario-registro" enctype="multipart/form-data">
 
       <h3>Estas editando: <i><%= productos.name %></i></h3>
 
 
      <label>Nombre del producto</label>
-        <input type="text" name="name" placeholder="Nombre del producto" class="nombre" value="<%= productos.name %> ">
+        <input type="text" name="Name" placeholder="Nombre del producto" class="nombre" value="<%= productos.name %> ">
      
      <label for="comentario">Descripción</label>
         <textarea name="description" id="comentario"><%= productos.description %></textarea>
      <label>Categoría</label>
-         <select name="category" placeholder="Seleccione una categoria">
+         <select name="category" class="categoria" placeholder="Seleccione una categoria">
             <option value="" disabled>Seleccione una opción</option>
             <% for(let categoria of categories){ %>
                 <option <%= categoria.idcategory == productos.id_category ? "selected" : "" %>  value="<%= categoria.idcategory %>"><%= categoria.name %></option>
@@ -28,7 +32,7 @@
          </select>
      
          <label>Presentación</label>
-         <select name="presentation" placeholder="Seleccione una presentación" >
+         <select name="presentation" class="presentacion" placeholder="Seleccione una presentación" >
             <option value="" disabled>Seleccione una opción</option>
             <% for(let presentacion of presentations){ %>
                 <option <%= presentacion.idpresentation == productos.id_presentation ? "selected" : "" %> value="<%= presentacion.idpresentation %>"><%= presentacion.name %></option>
@@ -36,7 +40,10 @@
          </select>
 
      <label>Precio unitario</label>
-        <input type="text" name="precio" placeholder="Ingrese el precio unitario del producto" value="<%= productos.price%> ">
+        <input type="text" name="precio" class="precio" placeholder="Ingrese el precio unitario del producto" value="<%= productos.price%>">
+
+     <label>Descuento</label>
+        <input type="text" name="discount" class="descuento" placeholder="Ingrese el descuento, de 0 a 100" value="<%= productos.discount%> ">
      
      <label>Imagen del producto</label>
         <input type="file" name="imagen" accept=".jpg, .png" multiple>   
@@ -51,5 +58,6 @@
 </main>
 
 <%- include('../partials/footer') %>
+<script src="/js/product-front-validation.js"></script>
 </body> 
 </html>

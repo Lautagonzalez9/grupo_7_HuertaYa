@@ -112,6 +112,13 @@ main{
     background-size: cover;
     background-position: 45% 75%;
 }
+.errores {
+    color: red;
+    margin: 20px auto;
+    max-width: 100%;
+   /* background: #f8f8f8a7;*/
+    padding: 10px 0px; 
+}
 /*footer*/
 
 footer {
