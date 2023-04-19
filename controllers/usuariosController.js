@@ -135,52 +135,46 @@ const usuariosController={
     login:function(req,res){
         res.render('./users/login.ejs')
     },
-    validateLogin: function(req,res){
-        db.user.findAll({
-          where:{
-            email: req.body.email
-          }
-        }).then(users =>{if(users.length > 0){
+    validateLogin: function(req, res) {
+      db.user.findAll({
+        where: {
+          email: req.body.email
+        }
+      }).then(users => {
+        if(users.length > 0) {
           const user = users[0];
-          console.log(user.password);  
-          if(bcryptjs.compare(req.body.password, user.password)){
-                  
-                   //guardado de cookies de usuario
-                   if(req.body.recordarme == "on"){
-                       res.cookie("recordarUsuario", user, {maxAge: 3600000})
-                   };
-                                       
-                   //guardado de la session
-                   req.session.usuario = user;
-
-                   //nos aseguramos de guardar las session antes de continuar
-                   //req.session.save();
-                   res.redirect('/');    
-             
-           } else {
-             res.render('./users/login.ejs',{
-            errors: {
-                  contrasenia: {
-                   msg: 'La contraseña es incorrecta'
-                   }
-             },
-             old: req.body.email
-          });
-       }
+          bcryptjs.compare(req.body.password, user.password)
+            .then((passwordsMatch) => {
+              if(passwordsMatch) {
+                if(req.body.recordarme == "on") {
+                  res.cookie("recordarUsuario", user, {maxAge: 3600000});
+                }
+                req.session.usuario = user;
+                res.redirect('/');
+              } else {
+                res.render('./users/login.ejs', {
+                  errors: {
+                    contrasenia: {
+                      msg: 'La contraseña es incorrecta'
+                    }
+                  },
+                  old: req.body.email
+                });
+              }
+            });
         } else {
-        
-        res.render('./users/login.ejs',{
-         errors: {
-               email: {
+          res.render('./users/login.ejs', {
+            errors: {
+              email: {
                 msg: 'El mail no se encuentra registrado'
-             }
-          },
-          old: req.body.email
+              }
+            },
+            old: req.body.email
+          });
+        }
       });
-               }
-      })
-  
-    },
+    }
+    ,
     profile :(req,res)=>{
         return res.render('./users/profileIndex')
     },
