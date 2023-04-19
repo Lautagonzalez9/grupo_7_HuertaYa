@@ -7,6 +7,9 @@
       <%- include('../partials/header')%>
     <main>
         <div class="contenedor-formulario contenedor">
+            <div class="erroresLogin">
+                <ul style="color:red ;"></ul>
+            </div>
             <div class="imagen-formulario">
 
             </div>
@@ -17,14 +20,14 @@
                 </div>
                 <div class="input-detalles">
                     <label for="email">Usuario</label>
-                    <input type="email" placeholder="Correo Electronico" name="email" value= <%= locals.old ? old : '' %>>
+                    <input type="email" placeholder="Correo Electronico" name="email" class="correo" value= <%= locals.old ? old : '' %>>
                     <% if (locals.errors && errors.email) { %>
                         <div style="color: red;"> <%= errors.email.msg %></div>
                     <% } %> 
                 </div>
                 <div class="input-detalles">
                     <label for="password">Password</label>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" class="contraseña" placeholder="Password">
                     <% if (locals.errors && errors.contrasenia) { %>
                         <div style="color: red;"> <%= errors.contrasenia.msg %></div>
                     <% } %> 
@@ -45,6 +48,7 @@
             </form>
         </div>
     </main>
+    <script src="/js/login-validation.js" ></script>
     <footer>
         <%- include("../partials/footer")%>
     </footer>

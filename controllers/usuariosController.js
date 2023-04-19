@@ -138,7 +138,7 @@ const usuariosController={
           }
         }).then(users =>{if(users.length > 0){
           const user = users[0];
-          console.log(user.password);
+          console.log(user.password);  
           if(bcryptjs.compare(req.body.password, user.password)){
                   
                    //guardado de cookies de usuario
@@ -151,9 +151,7 @@ const usuariosController={
 
                    //nos aseguramos de guardar las session antes de continuar
                    //req.session.save();
-                   res.redirect('/');
-                   
-               
+                   res.redirect('/');    
              
            } else {
              res.render('./users/login.ejs',{
