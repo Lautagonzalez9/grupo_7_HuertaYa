@@ -58,7 +58,7 @@ Fin del meet ---
 Se reparten tareas del sprint 5. Se suben al Trello: https://trello.com/b/UNjXqA6Z/sprint-5-middlewares-y-auth
 Participantes: Manuel, Julián, Vanesa, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 15/02.
 
 Fin del meet ---
 
@@ -69,7 +69,7 @@ Se completó la verificacion de la info enviada
 Se completó que el login incluya los campos email y password 
 Participantes: Manuel, Julián, Vanesa, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 20/02.
 
 Fin del meet ---
 
@@ -82,7 +82,7 @@ Se completaron las rutas accesibles solo con login que redireccionan al login
 Se completaron las rutas accesibles sin login que redirigen al perfil
 Participantes: Manuel, Julián, Vanesa, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 22/02.
 
 Fin del meet ---
 
@@ -93,7 +93,7 @@ Se realizó la subida de imagen (multer).
 Se repasan tareas pendientes, todas finalizadas del sprint 5.
 Participantes: Manuel, Julián, Vanesa, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 8/03.
 
 Fin del meet ---
 
@@ -103,7 +103,7 @@ Se reparten tareas del sprint 6. Se suben al Trello: https://trello.com/b/iiMN1P
 Se confeccionó el diagrama de base de datos.
 Participantes: Manuel, Julián, Vanesa, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 17/03.
 
 Fin del meet ---
 
@@ -112,7 +112,7 @@ Creación de la base de datos. Falta detallar tipo de datos y relaciones entre t
 Se crea la carpeta de sequelize.
 Participantes: Manuel, Julián, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 20/03.
 
 Fin del meet ---
 
@@ -121,7 +121,7 @@ Se detallan tipos de datos y relaciones entre tablas.
 Se comienza a generar modelos y sus relaciones.
 Participantes: Manuel, Julián, Vanesa, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 23/03.
 
 Fin del meet ---
 
@@ -130,7 +130,7 @@ Se terminan con el CRUD  de productos y el CRUD  de usuarios.
 Se retoca el footer y el carrito.
 Participantes: Manuel, Julián, Vanesa, Marco.
 Se presentaron problemas al momento del guardado de datos, se solucionó en clase con los profesores.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 2/04.
 
 Fin del meet ---
 
@@ -139,7 +139,7 @@ spint 7
 Se reparten tareas del sprint 7. Se suben al Trello: https://trello.com/b/lT8QfM3H/sprint-7.
 Participantes: Manuel, Julián, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 12/04.
 
 Fin del meet ---
 
@@ -148,7 +148,7 @@ Se completaron las validaciones del front-end y back-end
 Se genera carousel de imágenes en el home y se modifica section de delivery.
 Participantes: Manuel, Julián, Vanesa, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 18/04.
 
 Fin del meet ---
 
@@ -156,6 +156,14 @@ Fin del meet ---
 Queda pendiente realizar la validación del front-end en el login.
 Participantes: Manuel, Julián, Vanesa, Marco.
 No se presentaron inconvenientes hasta el momento.
-Fecha tentativa próxima reunión: 6/03.
+Fecha tentativa próxima reunión: 23/04.
 
 Fin del meet ---
+
+Sprint 8
+23/04/2023
+Se reparten tareas del sprint 8. Se suben al Trello: https://trello.com/b/DJKJE3Hb/sprint-8.
+Para el 3/05/2023 deberá estar terminada la primera etapa, generación de APIs para proceder con la segunda etapa y el paginado.
+
+Fin del meet ---
+
