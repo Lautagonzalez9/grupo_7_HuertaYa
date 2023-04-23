@@ -22,6 +22,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100vw;
+    height: 70%;
     min-width: 320px;
     margin: auto;
     color: white;
@@ -53,25 +54,32 @@ body {
     width: 40%;
     border-radius: 5px;
     margin: auto;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
 }
 
 /*carousel*/
 
+
+
 .carrusel-1
 .carrusel-2
-.carrusel-3{
+.carrusel-3 img{
     min-width: 320px;
+    
+    
 }
 
 .carrusel {
     background-color: rgb(0,0,0);
-    position: relative;
+    
 }
 
 .carousel-inner img {
-    object-fit: cover;
+    height: 70%;
+    object-fit:cover;
+    clip-path: inset(100 px 0px 0 px 0 px);
 }
+
 
 /*
 .carrusel-1 {
