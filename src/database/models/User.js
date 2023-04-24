@@ -17,7 +17,7 @@ module.exports= function(sequelize,dataTypes){
             type:dataTypes.STRING(255)
         },
         password:{
-            type:dataTypes.STRING(45)
+            type:dataTypes.STRING(80)
         },
         postal_code:{
             type:dataTypes.BIGINT(11)

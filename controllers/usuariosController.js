@@ -24,7 +24,7 @@ const usuariosController={
     },
     
     registrado: async function(req,res){
-      
+      console.log(bcryptjs.hashSync(req.body.password, 10));
       let errors = validationResult(req)
       if(errors.isEmpty()){ 
       if (req.file) {
@@ -44,6 +44,7 @@ const usuariosController={
                 })
                 .then(function() {
                   res.redirect('/login');
+                  
                 })
                 .catch(function(error) {
                   console.log(error);
@@ -141,10 +142,13 @@ const usuariosController={
           email: req.body.email
         }
       }).then(users => {
+        
+       console.log(users[0].dataValues);
         if(users.length > 0) {
           const user = users[0];
-          bcryptjs.compare(req.body.password, user.password)
+          bcryptjs.compare(req.body.password, user.dataValues.password)
             .then((passwordsMatch) => {
+              console.log(passwordsMatch);
               if(passwordsMatch) {
                 if(req.body.recordarme == "on") {
                   res.cookie("recordarUsuario", user, {maxAge: 3600000});

@@ -1,41 +1,57 @@
 
-<header class="header-nav">
-    
-    <div class="contenedor-bar"> 
-        
-            <img src="/img/Marca Huerta Ya_marca.png" alt="logo" class="logo-nav">
-        
-    <div class="contenedor-search"> 
-				<form action="/search" method="GET" class="search-form">
-                        
-                        <input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="buscador-header">
-                        
-                        <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
-                    
-				</form>
-	</div> 
-    
-    <a href="#" class="hamburguer-button">
-        <i class="fa-solid fa-bars"></i>
-    </a>
-</div>  
-    <navbar class="main-nav">
-        <ul class="left-nav">
-            <li><a href="/Nosotros">Nosotros</a></li>
-            <li><a href="/productos">Productos</a></li>
-            <li><a href="#">Combos</a></li>
+<header class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <!-- Agregar el logo en la barra de navegación -->
+      <a class="navbar-brand" href="/">
+        <img src="/img/Marca Huerta Ya_marca.png" alt="Logo" width="100" height="80" class="d-inline-block align-text-top">
+      </a>
+      <!-- Agregar el botón de hamburguesa para dispositivos móviles -->
+      <button class="navbar-toggler btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Agregar los enlaces de la barra de navegación -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/Nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Combos</a>
+          </li>
         </ul>
-        <ul class="right-nav"> 
-            <% if(usuario){ %>
-                <li>Bienvenido, <%= usuario.first_name %></li>
-                <li><a href="/profile">Mi Perfil</a></li>
-                <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i>Mi Carrito</a></li>
-                <li><a href="/logout">Log out</a></li>
-
-            <% } else { %>
-            <li><a href="/login"><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>
-            <li><a href="/register">Crea tu Cuenta</a></li> 
-            <% } %>
-        </ul>         
-    </navbar>
-</header>
+        <!-- Agregar el formulario de búsqueda -->
+        <form class="d-flex" action="/search" method="GET">
+          <input name="keywords" class="form-control me-2 " type="search" placeholder="Buscar productos, marcas y más" aria-label="Search" style="width: 300px;">
+          <button class="btn" type="submit">Buscar</button>
+        </form>
+        <!-- Agregar los enlaces de la derecha de la barra de navegación -->
+        <ul class="navbar-nav ms-auto">
+          <% if(usuario){ %>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile">Mi Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/carrito">
+                <i class="fa-solid fa-cart-shopping"></i>Mi Carrito
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Log out</a>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">
+                <i class="fa-solid fa-right-to-bracket"></i>Login
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register">Crea tu Cuenta</a>
+            </li> 
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </header>
