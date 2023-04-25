@@ -8,32 +8,35 @@
 <body>
     <%- include('../partials/header') %>
     <main class="main-box">
-        <div class="contenedor-articulos">
-            <img src="/img/alcaucil.jpg" alt="">
-            <p class="producto">Producto</p>
-            <p class="price">$200</p>
-            <form action="#">
-<!-- en este select le metemos un forEach llamando al stock que hay seteado en la db -->
-                <select name="" id="" class="cantidad">
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                    <option value="">5</option>
-                    <option value="">6</option>
-                </select>                                              
-            </form>
-            <a href="#" class="delete"><i class="fa-solid fa-trash"></i></a>
-        </div>
-    <section class="section-botones"> 
-            <div class="boton-Scomprando"> 
-            <a href="/productos"><i class="fa-solid fa-store"></i>Seguir comprando</a>
-        </div>
-        <div class="boton-finalizar"> 
-            <a href="#"><i class="fa-solid fa-credit-card"></i>Finalizar Compra</a>
-        </div>
+      <div class="conteiner"> 
+      <div class="contenedor-articulos">
+          <img src="/img/alcaucil.jpg" alt="">
+          <p class="producto">Producto</p>
+          <p class="price">$200</p>
+          <form action="#">
+
+              <select name="" id="" class="cantidad">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                  <option value="">6</option>
+              </select>                                              
+          </form>
+          <a href="#" class="delete"><i class="fa-solid fa-trash"></i></a>
+      </div>
+    </div>
+  <section class="section-botones"> 
+          <div class="boton-Scomprando"> 
+          <a href="/productos"><i class="fa-solid fa-store"></i>Seguir comprando</a>
+      </div>
+      <div class="boton-finalizar"> 
+          <a href="#"><i class="fa-solid fa-credit-card"></i>Finalizar Compra</a>
+      </div>
 </section>
-    <main>
+  <main>
+    <script src="/js/carrito.js"></script>
     <%- include('../partials/footer') %> 
 </body>
 </html>

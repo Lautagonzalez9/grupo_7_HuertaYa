@@ -53,16 +53,16 @@
                                 <button><i class="fa-solid fa-chevron-right"></i></button>
                             </div>
                             <div>
-                                <button>Agregar al carrito</button>
+                                <button class="agregar-carrito">Agregar al carrito</button>
                             </div>
                         </div>
                             <div class="detalles-del-producto">
                                 <% if(product.discount){ %>
                                     <p><%= product.discount %>% OFF</p>
                                     <span id="tachado">$<%= product.price %></span>
-                                    <span id="oferta">  $<%= Math.floor(product.price * (1-(product.discount/100))) %></span>
+                                    <span id="oferta precio">  $<%= Math.floor(product.price * (1-(product.discount/100))) %></span>
                                     <% } else { %>
-                                    <p>$<%= product.price %></p>
+                                    <p class="precio">$<%= product.price %></p>
                                     <% } %>
                                 <p class="presentacion">Presentacion: <%= product.presentations.name %></p>
                                 <p class="stock">Stock: <%= product.stock %></p>
@@ -154,4 +154,6 @@
         </section>
     </main>
     <%- include("../partials/footer")%>
+
+    <script src="/js/agregarCarrito.js"></script>
 </body>
