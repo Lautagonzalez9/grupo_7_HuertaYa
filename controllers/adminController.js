@@ -2,8 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../src/database/models')
-const productsFilePath = path.join(__dirname, './data/productsData.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const { validationResult } = require('express-validator')
 
 function guardarImagen(req,res){

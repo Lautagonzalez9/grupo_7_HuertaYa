@@ -36,12 +36,6 @@ const mainController = {
     },
     detalleDeProducto: function(req,res){
         res.render('./products/detalle-del-producto')
-    },
-    pruebamysql: function(req,res){
-       db.costo_de_envio.findAll()
-        .then(prueba =>{
-            res.send(prueba)
-        })
     }
 }
 

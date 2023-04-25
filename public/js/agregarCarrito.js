@@ -1,7 +1,7 @@
 
 let botonesAgregarCarrito = document.querySelectorAll('.agregar-carrito');
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 
 function agregarAlCarrito(evento) {

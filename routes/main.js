@@ -25,14 +25,15 @@ const storage = multer.diskStorage({
 
 
 
-//prueba
-router.get('/prueba', mainController.pruebamysql)
+
+
 
 
 //inicio
 router.get('/', mainController.index);
 //search
 router.get('/search', mainController.search);
+
 //carro
 router.get('/carrito', mainController.carrito);
 
@@ -57,6 +58,7 @@ router.get('/profile', guestRedirectMiddleware, usuariosController.profile)
 //productos
 router.get('/producto/:id', productController.detalleDeProducto);
 router.get('/productos', productController.listaDeProductos);
+
 
 //categorias
 router.get('/productos/:categoria', productController.listadoPorCategoria);

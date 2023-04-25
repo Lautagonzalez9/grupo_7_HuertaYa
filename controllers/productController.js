@@ -1,8 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 const db = require('../src/database/models');
+const { log } = require("console");
 
-const productsFilePath = path.join(__dirname, "./data/productsData.json");
+
 
 
 const productController = {
@@ -48,6 +49,6 @@ const productController = {
         })
         return res.render('./products/listadoProductos',{productos})
    }
-}
 
+}
 module.exports = productController;
