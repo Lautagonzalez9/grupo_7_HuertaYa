@@ -5,3 +5,5 @@ const controllerUserApi = require('../../controllers/api/controllerUserApi');
 
 //Listado de usuarios
 router.get('/', controllerUserApi.list);
+
+module.exports = router;
