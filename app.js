@@ -8,6 +8,7 @@ const rutaAdmin = require('./routes/admin')
 const apiProductRoute = require('./routes/api/products')
 const methodOverride =  require('method-override');
 const session = require('express-session');
+const apiUserRoute = require('./routes/api/users')
 
 
 //Cookies y session
@@ -44,8 +45,8 @@ app.listen (port, ()=>{console.log(`Server iniciado en el puerto ${port}`)});
 app.set("view engine","ejs");
 
 //Rutas 
-// app.use('/api/users')
 app.use('/api/products', apiProductRoute)
+app.use('/api/users', apiUserRoute);
 app.use('/', rutaMain);
 app.use('/admin', rutaAdmin);
 
