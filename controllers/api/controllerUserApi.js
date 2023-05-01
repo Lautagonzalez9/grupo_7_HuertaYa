@@ -19,7 +19,26 @@ const usersApiController ={
             }
             res.json(respuesta)
         })
-    }
+    },
+    detail: function(req, res) {
+        let idUser=req.params.id; 
+        db.user.findByPk(idUser,{
+            include:[
+                {association: "images"},
+            ]
+        })
+          .then(usuario => {
+            let respuesta = {
+              meta: {
+                status: 200,
+                url: '/api/users/id'
+              },
+              data: usuario
+            } 
+            res.json(respuesta);
+          })
+           }
+    
 }
 
 module.exports = usersApiController;

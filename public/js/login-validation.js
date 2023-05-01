@@ -38,7 +38,7 @@ window.onload=function(){
                          msg: 'La contraseña es incorrecta'
                          }
          }})
-          }}
+         }}
          let ulErroresLogin=document.querySelector("div .erroresLogin ul");
 
          if(erroresLogin.length >0){
