@@ -33,7 +33,7 @@ function SideBar(props){
         <li className="nav-item">
             <Link className="nav-link collapsed" to="/last-movie">
                 <i className="fas fa-fw fa-folder"></i>
-                <span>Last Movie</span>
+                <span>Último producto</span>
             </Link>
         </li>
 
@@ -41,14 +41,14 @@ function SideBar(props){
         <li className="nav-item">
             <Link className="nav-link" to="/generos">
                 <i className="fas fa-fw fa-chart-area"></i>
-                <span>Generos</span></Link>
+                <span>Categorías</span></Link>
         </li>
 
         {/* <!-- Nav Item - Tables --> */}
         <li className="nav-item">
             <Link className="nav-link" to="/listado">
                 <i className="fas fa-fw fa-table"></i>
-                <span>Listado Peliculas</span></Link>
+                <span>Listado de productos</span></Link>
         </li>
 
         {/* <!-- Divider --> */}
