@@ -140,7 +140,7 @@ const usuariosController={
         }
       }).then(users => {
         
-       console.log(users[0].dataValues);
+      // console.log(users[0].dataValues);
         if(users.length > 0) {
           const user = users[0];
           bcryptjs.compare(req.body.password, user.dataValues.password)
