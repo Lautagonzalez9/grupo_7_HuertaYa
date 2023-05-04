@@ -25,27 +25,66 @@ module.exports = {
         })
     },
     listProducts: function(req,res){
-           
+        //const countByCategory = {}
+
+        //Creo que para que funcione tengo que hacer que sea asincronica la funcion de crear las categorias
+            // db.categories.findAll()
+            // .then(categories => {
+            // categories.forEach(category => {
+
+            //     let categoria = category.name
+
+            //         db.products.findAll({
+            //         where: {
+            //             id_category: category.idcategory
+            //         }
+            //     })
+            //     .then(products => {
+            //         products.length
+            //     })
+            //     .then(numeroProds => {
+            //         countByCategory[categoria] = numeroProds
+            //     })
+            //     })})
+        //aca termina la funcion de crear las categorias        
+
+        //solución  --- guardar en variables cada paso, guardar objeto con categorias, guardar categorias, guardar productos. Dsps iterar y usar un filter con el name.
         const countByCategory = {}
 
-            db.categories.findAll()
-            .then(categories => {
-            categories.forEach(category => {
+        //let categorias = db.categorias.findAll()
 
-                let categoria = category.name
+        let propiedadesCategorias = db.categories.findAll()
+        .then(categories => {
+        categories.forEach(category => {
 
-                    db.products.findAll({
-                    where: {
-                        id_category: category.idcategory
-                    }
-                })
-                .then(products => {
-                    products.length
-                })
-                .then(numeroProds => {
-                    countByCategory[categoria] = numeroProds
-                })
-            })
+            countByCategory[category.name] = 0
+
+            })})
+
+        let Productos =  db.products.findAll({
+            include:[
+                {association: "images"},
+                {association: "categories"},
+                {association: "presentations"}
+            ]
+        })
+
+        async function prodsPorCategoria(){
+
+            await Productos
+            await propiedadesCategorias
+
+            countByCategory.forEach(category => {
+                
+                countByCategory[category] = productos.filter(producto => producto.categories.name == category).length
+
+        })
+        }    
+        
+
+// fin solución
+
+
                 
                 db.products.findAll({
                     include:[
@@ -75,16 +114,14 @@ module.exports = {
                             },
                             data: {
                                 count: products.length,
-                                countByCategory: countByCategory,
+                                countByCategory: prodsPorCategoria(),
                                 products: productos
                             }
                         } 
                         
                     }
                     res.json(respuesta)
-                
-            })
-    
-        })
+                }
+                )
         }
-}
+     }
