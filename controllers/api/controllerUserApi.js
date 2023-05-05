@@ -28,6 +28,8 @@ const usersApiController ={
             ]
         })
           .then(usuario => {
+            delete usuario.dataValues.password
+            delete usuario.dataValues.id_rol
             let respuesta = {
               meta: {
                 status: 200,
