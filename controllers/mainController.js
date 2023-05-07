@@ -3,6 +3,7 @@ const fs = require('fs');
 const db = require('../src/database/models');
 const fetch = require('node-fetch');
 const { response } = require('express');
+
 const mainController = {
     index : function(req,res){
         res.render('index')
@@ -36,6 +37,11 @@ const mainController = {
     },
     detalleDeProducto: function(req,res){
         res.render('./products/detalle-del-producto')
+    },
+    images: function(req,res){
+        let img = req.params.img
+        const imagePath = path.join(__dirname, '../public/img/', img);
+        res.sendFile(imagePath);
     }
 }
 

@@ -27,7 +27,8 @@ const storage = multer.diskStorage({
 
 
 
-
+//alojamiento de img
+router.get('/:img' , mainController.images)
 
 //inicio
 router.get('/', mainController.index);
