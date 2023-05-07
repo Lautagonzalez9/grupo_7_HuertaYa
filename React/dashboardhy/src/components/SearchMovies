@@ -1,0 +1,88 @@
+import React from 'react';
+import {useState,useEffect,useRef} from 'react'
+
+function getAPI(ruta){
+
+	const URL_BASE = "localhost:3500/api/"
+
+	//componentDidMount - Eso genera el array vacío
+	useEffect(() => {
+		//Creo una función dentro del callback para poder hacerla asincronica
+		async function getData(){
+
+				const response = await fetch(URL_BASE + ruta);
+				const data = await response.json();
+                
+                if(data){
+                    return data
+                }
+		}
+    }
+	, [keyword]) //Como en el array puse URL_API..., es como un componentDidUpdate. useEffect monitorea y vuelve a renderizar si hay cambios en URL_API..., mediante setMovies
+
+	const inputSearch = useRef(); //Acá guardo el valor del input con ref inputSearch
+
+	//Cuando apreto el boton buscar, busca la ref de inputSearch y actualiza la keyword
+	const getInputData = (e) => {
+		e.preventDefault()	//Esto evita que se refresque la pagina
+		setKeyword(inputSearch.current.value)	//Al actualizarse la keyword, se dispara componentDidUpdate en mi useEffect con function search() mas arriba
+	}											//con inputSearch.current.value extraigo el valor ingresado en el input
+
+	return(
+		<div className="container-fluid">
+			{
+				apiKey !== '' ?
+				<>
+					<div className="row my-4">
+						<div className="col-12 col-md-6">
+							{/* Buscador */}
+							<form method="GET" onSubmit={getInputData}> {/*Al tocar el boton se ejecuta la funcion getInputData*/}
+								<div className="form-group">
+									<label htmlFor="">Buscar por título:</label>
+									<input type="text" className="form-control" ref={inputSearch}/> {/*Acá pongo la ref para poder extraer el valor del input con useRef */}
+								</div>
+								<button className="btn btn-info">Search</button>
+							</form>
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-12">
+							<h2>Películas para la palabra: {keyword}</h2>
+						</div>
+						{/* Listado de películas */}
+						{loading && <h1>Cargando...</h1>}
+						{
+							Array.isArray(movies) && movies.map((movie, i) => {
+								return (
+									<div className="col-sm-6 col-md-3 my-4" key={i}>
+										<div className="card shadow mb-4">
+											<div className="card-header py-3">
+												<h5 className="m-0 font-weight-bold text-gray-800">{movie.Title}</h5>
+											</div>
+											<div className="card-body">
+												<div className="text-center">
+													<img 
+														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
+														src={movie.Poster}
+														alt={movie.Title} 
+														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
+													/>
+												</div>
+												<p>{movie.Year}</p>
+											</div>
+										</div>
+									</div>
+								)
+							})
+						}
+					</div>
+					{ Array.isArray(movies) && movies.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
+				</>
+				:
+				<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿PUSISTE TU APIKEY?</div>
+			}
+		</div>
+	)
+}
+
+export default SearchMovies;
