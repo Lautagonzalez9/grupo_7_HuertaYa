@@ -11,6 +11,13 @@ const session = require('express-session');
 const apiUserRoute = require('./routes/api/users')
 const apiImageRoute = require('./routes/api/images')
 
+//CORS
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+  });
 
 //Cookies y session
 const cookieParser = require('cookie-parser');

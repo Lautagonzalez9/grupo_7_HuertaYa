@@ -10,26 +10,29 @@ function ContentRowTop(){
     const [usuarios, setUsuarios] = useState([]);
     const [categorias, setcategorias] = useState([]);
 
-    const URL_BASE = "localhost:3500/api/"
+    const URL_BASE = "/api/"
     async function getData(ruta){
 
         const response = await fetch(URL_BASE + ruta);
         const data = await response.json();
     
-        if(data){
-            return data
-        }
+        console.log(response)
+        console.log(data)
+        return data   
     }
 
     useEffect(()=> {
-        console.log(getData("products"))
+       getData("products")
+       .then(data => {
+        console.log(data)
+        setProductos(data)})
+        .catch(e => console.log(e))
     },[])
-
 
     let arrayCards = [
         {
             titulo: "Total de productos",
-            cifra: 21,
+            cifra: productos,
             color: "primary",
             icono:"fa-film"
         },

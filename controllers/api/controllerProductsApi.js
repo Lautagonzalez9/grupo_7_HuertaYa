@@ -51,6 +51,8 @@ module.exports = {
     },
     listProducts: function(req,res){
 
+        try{
+
         let Categorias = db.categories.findAll().then(data=>{return data})
 
 
@@ -118,7 +120,11 @@ module.exports = {
                     } 
                     
                 }
-                res.json(respuesta)
+                return res.json(respuesta)
             }) 
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Internal server error' });
         }
+        } 
      }
