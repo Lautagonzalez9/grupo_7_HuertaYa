@@ -16,16 +16,14 @@ function ContentRowTop(){
         const response = await fetch(URL_BASE + ruta);
         const data = await response.json();
     
-        console.log(response)
-        console.log(data)
         return data   
     }
 
     useEffect(()=> {
-       getData("products")
-       .then(data => {
-        console.log(data)
-        setProductos(data)})
+      getData("products")
+        .then(data => {
+            setProductos(data.meta.data.count)
+         })
         .catch(e => console.log(e))
     },[])
 
