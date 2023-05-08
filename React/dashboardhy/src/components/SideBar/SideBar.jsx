@@ -31,7 +31,7 @@ function SideBar(props){
 
         {/* <!-- Nav Item - Pages --> */}
         <li className="nav-item">
-            <Link className="nav-link collapsed" to="/last-movie">
+            <Link className="nav-link collapsed" to="/last-product">
                 <i className="fas fa-fw fa-folder"></i>
                 <span>Último producto</span>
             </Link>
@@ -39,14 +39,14 @@ function SideBar(props){
 
         {/* <!-- Nav Item - Charts --> */}
         <li className="nav-item">
-            <Link className="nav-link" to="/generos">
+            <Link className="nav-link" to="/categories">
                 <i className="fas fa-fw fa-chart-area"></i>
                 <span>Categorías</span></Link>
         </li>
 
         {/* <!-- Nav Item - Tables --> */}
         <li className="nav-item">
-            <Link className="nav-link" to="/listado">
+            <Link className="nav-link" to="/list">
                 <i className="fas fa-fw fa-table"></i>
                 <span>Listado de productos</span></Link>
         </li>

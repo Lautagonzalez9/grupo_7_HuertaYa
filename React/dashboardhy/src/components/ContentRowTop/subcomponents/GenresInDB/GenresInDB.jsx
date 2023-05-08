@@ -13,7 +13,7 @@ class GenresInDB extends Component {
 
     componentDidMount() {
 
-        fetch('http://localhost:3001/api/genres')
+        fetch('http://localhost:3500/api/products')
             .then(respuesta => {
                 return respuesta.json()
             })
