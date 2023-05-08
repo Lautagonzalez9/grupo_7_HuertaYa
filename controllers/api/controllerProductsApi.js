@@ -20,7 +20,7 @@ module.exports = {
                     status: {
                         status: 200,
                         url: 'http://localhost:3500/api/products/' + id
-                    },
+                    }},
                     data: {
                         idProducto: product.idProducto,
                         name: product.name,
@@ -43,8 +43,6 @@ module.exports = {
                             name: product.presentations.name
                         }
                     },
-                    
-                } 
             };
         res.json(respuesta)
         })
@@ -110,15 +108,13 @@ module.exports = {
                         status: {
                             status: 200,
                             url: '/api/products'
-                        },
+                        }},
                         data: {
                             count: response[0].length,
                             countByCategory: response[1],
                             products: response[0],
                             categories: response[2].length
-                        }
-                    } 
-                    
+                        }  
                 }
                 return res.json(respuesta)
             }) 

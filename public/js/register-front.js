@@ -56,7 +56,7 @@ formulario.addEventListener('submit', (event) => {
     numeroDeTelefonoInput.focus();
     return false;
   } else if (!/^\+(?:[0-9] ?){6,14}[0-9]$/.test(numeroDeTelefonoInput.value)) {
-    alert('Por favor, ingrese un número de teléfono válido');
+    alert('Por favor, ingrese un número de teléfono válido. El número debe empezar con el símbolo "+"');
     numeroDeTelefonoInput.focus();
     return false;
   }
