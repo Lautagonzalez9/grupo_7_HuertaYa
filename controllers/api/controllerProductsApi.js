@@ -14,7 +14,7 @@ module.exports = {
                 {association: "presentations"}
             ]
         }).then(product => {
-            let imagenUrl = 'http://localhost:3500/' + product.images.url;
+            let imagenUrl = 'http://localhost:3500/images/' + product.images.url;
             let respuesta = {
                 meta:{
                     status: {

@@ -9,6 +9,7 @@ const apiProductRoute = require('./routes/api/products')
 const methodOverride =  require('method-override');
 const session = require('express-session');
 const apiUserRoute = require('./routes/api/users')
+const apiImageRoute = require('./routes/api/images')
 
 
 //Cookies y session
@@ -49,5 +50,6 @@ app.use('/api/products', apiProductRoute)
 app.use('/api/users', apiUserRoute);
 app.use('/', rutaMain);
 app.use('/admin', rutaAdmin);
+app.use('/images/', apiImageRoute)
 
 
