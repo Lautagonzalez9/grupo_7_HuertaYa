@@ -8,7 +8,7 @@ function ContentRowTop(){
 
     const [productos, setProductos] = useState([]);
     const [usuarios, setUsuarios] = useState([]);
-    const [categorias, setcategorias] = useState([]);
+    const [categorias, setCategorias] = useState([]);
 
     const URL_BASE = "/api/"
     async function getData(ruta){
@@ -22,7 +22,21 @@ function ContentRowTop(){
     useEffect(()=> {
       getData("products")
         .then(data => {
-            setProductos(data.meta.data.count)
+            setProductos(data.data)
+         })
+        .catch(e => console.log(e))
+    },[])
+    useEffect(()=> {
+      getData("users")
+        .then(data => {
+            setUsuarios(data.data)
+         })
+        .catch(e => console.log(e))
+    },[])
+    useEffect(()=> {
+      getData("products")
+        .then(data => {
+            setCategorias(data.data.categories)
          })
         .catch(e => console.log(e))
     },[])
@@ -30,19 +44,19 @@ function ContentRowTop(){
     let arrayCards = [
         {
             titulo: "Total de productos",
-            cifra: productos,
+            cifra: productos.count,
             color: "primary",
             icono:"fa-film"
         },
         {
             titulo: "Total de usuarios",
-            cifra: 79,
+            cifra: usuarios.length,
             color: "success",
             icono:"fa-award"
         },
         {
             titulo: "Total de categorias",
-            cifra: 49,
+            cifra: categorias,
             color: "warning",
             icono:"fa-user"
         }
