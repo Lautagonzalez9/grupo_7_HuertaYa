@@ -48,7 +48,8 @@ const productController = {
             ]
         })
         return res.render('./products/listadoProductos',{productos})
-   }
+   },
+ 
 
 }
 module.exports = productController;

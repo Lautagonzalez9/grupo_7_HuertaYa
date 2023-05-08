@@ -2,6 +2,7 @@ const db = require('../../src/database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const { images } = require('../mainController');
+const { response } = require('express');
 
 module.exports = {
     detailProduct: function(req,res){
@@ -120,5 +121,6 @@ module.exports = {
                 }
                 res.json(respuesta)
             }) 
-        }
+        },
+      
      }

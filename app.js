@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors')
 const port = process.env.PORT || 3500;
 const path = require('path');
 const publicPath = path.join(__dirname, '/public');
@@ -10,6 +11,7 @@ const methodOverride =  require('method-override');
 const session = require('express-session');
 const apiUserRoute = require('./routes/api/users')
 const apiImageRoute = require('./routes/api/images')
+const apiCategory = require('./routes/api/category')
 
 
 //Cookies y session
@@ -39,6 +41,7 @@ app.use(autoLoginMiddleware);
 app.set("views",path.join(__dirname,"./src/views"))
 //uso estatico
 app.use(express.static(publicPath));
+app.use(cors())
 //levantar servidor
 app.listen (port, ()=>{console.log(`Server iniciado en el puerto ${port}`)});
 
@@ -48,8 +51,11 @@ app.set("view engine","ejs");
 //Rutas 
 app.use('/api/products', apiProductRoute)
 app.use('/api/users', apiUserRoute);
+app.use('/api/category', apiCategory)
 app.use('/', rutaMain);
 app.use('/admin', rutaAdmin);
 app.use('/images/', apiImageRoute)
+
+
 
 

@@ -1,27 +1,9 @@
 import React from "react";
 import SuperCard from "../../components/SuperCard/SuperCard";
 import GenreCard from "../../components/GenreCard/GenreCard";
-
-class Genres extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            genresList: [],
-            color: ""
-        }
-    }
-
-    componentDidMount() {
-
-        fetch('http://localhost:3000/api/products')
-            .then(respuesta => {
-                return respuesta.json()
-            })
-            .then(genres => {
-                this.setState({ genresList: genres.data })
-            })
-            .catch(error => console.log(error))
-    }
+import { useState, useEffect, useRef } from "react";
+function Genres(){
+  const URL_BASE_API = 'http://localhost:3500/api/products'
 
     render() {
         return (

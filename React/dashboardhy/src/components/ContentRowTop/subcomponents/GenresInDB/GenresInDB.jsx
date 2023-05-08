@@ -1,45 +1,42 @@
 import React, { Component } from "react";
 import GenreCard from "../../../GenreCard/GenreCard";
+import {useState,useEffect} from "react";
 
-class GenresInDB extends Component {
+function GenresInDB () {
+ const [category , setCategory] = useState([])
+ const URL_BASE = 'http://localhost:3500/api/category/'
+ useEffect(() =>{
+    console.log('se monto');
+        fetch(URL_BASE)
+         .then(response => response.json())
+            .then(data => {
+                setCategory(data.categories)
+                console.log(data.categories);
+            }).catch(error => console.log(error));
+ },[])
+ useEffect(() =>{
+    console.log('se actualizo');
 
-    constructor() {
-        super()
-        this.state = {
-            genresList: [],
-            color: ""
-        }
-    }
+ },[category])
+ useEffect(()=>{
+    return () => console.log('se desmonto');
+ },[])
+  
 
-    componentDidMount() {
-
-        fetch('http://localhost:3500/api/products')
-            .then(respuesta => {
-                return respuesta.json()
-            })
-            .then(genres => {
-                this.setState({ genresList: genres.data })
-            })
-            .catch(error => console.log(error))
-    }
-
-    cambiarColor = () => {
-        this.setState({ color: "bg-secondary" })
-    }
-
-
-    render() {
+    
         return (
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
-                        <h5 className="m-0 font-weight-bold text-gray-800" onMouseOver={ this.cambiarColor }>Genres in Data Base</h5>
+                        <h5 className="m-0 font-weight-bold text-gray-800">Categories in Data Base</h5>
                     </div>
-                    <div className={`card-body ${this.state.color}`}>
+                    <div className='card-body'>
                         <div className="row">
-                            {
-                                Array.isArray(this.state.genresList) && this.state.genresList.map((genre, i) => <GenreCard key={ genre.name + i } name={ genre.name } />)
-                            }
+             {
+                category.map((cat, i) => (
+                    <GenreCard key={cat.name + i} name={cat.name} />
+                ))
+            }
                             
                         </div>
                     </div>
@@ -47,6 +44,6 @@ class GenresInDB extends Component {
             </div>
         )
     }
-}
+
 
 export default GenresInDB;
