@@ -164,6 +164,6 @@ Sprint 8
 23/04/2023
 Se reparten tareas del sprint 8. Se suben al Trello: https://trello.com/b/DJKJE3Hb/sprint-8.
 Para el 3/05/2023 deberá estar terminada la primera etapa, generación de APIs para proceder con la segunda etapa y el paginado.
-
+Participantes: Manuel, Julián, Vanesa, Marco.
 Fin del meet ---
 
