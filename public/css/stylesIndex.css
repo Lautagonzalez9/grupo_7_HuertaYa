@@ -92,11 +92,11 @@ body {
 }
 
 .carousel-inner{
-    height: 30vh;
+    height: 80vh;
 }
 
 .carousel-caption{
-    padding-bottom: 300px;
+    padding-bottom: 500px;
 }
 
 img.d-block.w-100 {
@@ -416,6 +416,10 @@ a h6 {
     background-position: 50% -60%;
 } 
 
+.carousel-caption{
+    display: block;
+}
+
 .repartidor{
     display: none;
 }
@@ -476,6 +480,7 @@ a h6 {
     .button-order {
         margin-top: 5%;
     }
+    
 /*
     .carrusel-1 {
         background-position: center;
