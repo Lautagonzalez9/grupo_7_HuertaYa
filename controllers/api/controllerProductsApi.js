@@ -21,7 +21,7 @@ module.exports = {
                     status: {
                         status: 200,
                         url: 'http://localhost:3500/api/products/' + id
-                    },
+                    }},
                     data: {
                         idProducto: product.idProducto,
                         name: product.name,
@@ -44,13 +44,13 @@ module.exports = {
                             name: product.presentations.name
                         }
                     },
-                    
-                } 
             };
         res.json(respuesta)
         })
     },
     listProducts: function(req,res){
+
+        try{
 
         let Categorias = db.categories.findAll().then(data=>{return data})
 
@@ -109,18 +109,19 @@ module.exports = {
                         status: {
                             status: 200,
                             url: '/api/products'
-                        },
+                        }},
                         data: {
                             count: response[0].length,
                             countByCategory: response[1],
                             products: response[0],
                             categories: response[2].length
-                        }
-                    } 
-                    
+                        }  
                 }
-                res.json(respuesta)
+                return res.json(respuesta)
             }) 
-        },
-      
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Internal server error' });
+        }
+        } 
      }

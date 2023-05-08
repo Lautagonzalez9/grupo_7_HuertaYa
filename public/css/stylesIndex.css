@@ -84,13 +84,23 @@ body {
     
 }
 
+
 .carrusel {
     background-color: rgb(0,0,0);
     
+      
 }
 
-.carousel-inner img {
-    height: 50%;
+.carousel-inner{
+    height: 80vh;
+}
+
+.carousel-caption{
+    padding-bottom: 500px;
+}
+
+img.d-block.w-100 {
+    height: 40%;
     object-fit:cover;
     clip-path: inset(100 px 0px 0 px 0 px);
 }
@@ -406,6 +416,10 @@ a h6 {
     background-position: 50% -60%;
 } 
 
+.carousel-caption{
+    display: block;
+}
+
 .repartidor{
     display: none;
 }
@@ -466,6 +480,7 @@ a h6 {
     .button-order {
         margin-top: 5%;
     }
+    
 /*
     .carrusel-1 {
         background-position: center;
