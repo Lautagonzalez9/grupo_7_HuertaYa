@@ -58,7 +58,7 @@ const usersApiController ={
                 codigoPostal:usuario.postal_code,
                 numberPhone:usuario.number_phone,
                 images: {
-                  url: `http://localhost:3500/${usuario.images.url}`
+                  url: 'http://localhost:3500/images/'+usuario.images.url
               }
               }
             } 
