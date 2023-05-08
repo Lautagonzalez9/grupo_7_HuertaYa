@@ -44,12 +44,23 @@ const usersApiController ={
           .then(usuario => {
             delete usuario.dataValues.password
             delete usuario.dataValues.id_rol
+            delete usuario.dataValues.id_location
             let respuesta = {
               meta: {
                 status: 200,
                 url: '/api/users/id'
               },
-              data: usuario
+              data: {
+                idUsuario:usuario.idUser,
+                name:usuario.first_name,
+                lastName:usuario.last_name,
+                email:usuario.email,
+                codigoPostal:usuario.postal_code,
+                numberPhone:usuario.number_phone,
+                images: {
+                  url: `http://localhost:3500/${usuario.images.url}`
+              }
+              }
             } 
             res.json(respuesta);
           })

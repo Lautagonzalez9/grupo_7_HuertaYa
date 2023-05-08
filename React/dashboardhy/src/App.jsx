@@ -23,9 +23,9 @@ function App() {
 			{/* <!-- Content Wrapper --> */}
 			<Routes>
 			  <Route path="/" element={<ContentWrapper />}/>
-			  <Route path="/generos" element={<GenresInDB />}/>
-			  <Route path="/ultima-peli" element={<LastMovieInDB />}/>
-			  <Route path="/tabla" element={<MovieList />}/>
+			  <Route path="/categories" element={<GenresInDB />}/>
+			  <Route path="/last-product" element={<LastMovieInDB />}/>
+			  <Route path="/list" element={<MovieList />}/>
 			  <Route path="*" element={<NotFound />}/>
 			</Routes>  
 			{/* <!-- End of Content Wrapper --> */}

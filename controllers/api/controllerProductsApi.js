@@ -14,7 +14,7 @@ module.exports = {
                 {association: "presentations"}
             ]
         }).then(product => {
-            let imagenUrl = 'http://localhost:3500/' + product.images.url;
+            let imagenUrl = 'http://localhost:3500/images/' + product.images.url;
             let respuesta = {
                 meta:{
                     status: {
@@ -50,41 +50,9 @@ module.exports = {
         })
     },
     listProducts: function(req,res){
-        //const countByCategory = {}
 
-        //Creo que para que funcione tengo que hacer que sea asincronica la funcion de crear las categorias
-            // db.categories.findAll()
-            // .then(categories => {
-            // categories.forEach(category => {
+        let Categorias = db.categories.findAll().then(data=>{return data})
 
-            //     let categoria = category.name
-
-            //         db.products.findAll({
-            //         where: {
-            //             id_category: category.idcategory
-            //         }
-            //     })
-            //     .then(products => {
-            //         products.length
-            //     })
-            //     .then(numeroProds => {
-            //         countByCategory[categoria] = numeroProds
-            //     })
-            //     })})
-        //aca termina la funcion de crear las categorias        
-
-        //solución  --- guardar en variables cada paso, guardar objeto con categorias, guardar categorias, guardar productos. Dsps iterar y usar un filter con el name.
-        const countByCategory = {}
-
-        //let categorias = db.categorias.findAll()
-
-        let propiedadesCategorias = db.categories.findAll()
-        .then(categories => {
-        categories.forEach(category => {
-
-            countByCategory[category.name] = 0
-
-            })})
 
         let Productos =  db.products.findAll({
             include:[
@@ -92,33 +60,31 @@ module.exports = {
                 {association: "categories"},
                 {association: "presentations"}
             ]
-        })
+        }).then(data => {return data})
 
         async function prodsPorCategoria(){
+            const countByCategory = {}
 
-            await Productos
-            await propiedadesCategorias
-
-            countByCategory.forEach(category => {
-                
-                countByCategory[category] = productos.filter(producto => producto.categories.name == category).length
+            let prods = await Productos
+            let cats = await Categorias
+            
+            cats.forEach(category => {
+                //console.log(prods)
+                countByCategory[category.name] = prods.filter(producto => producto.categories.name == category.name).length
 
         })
-        }    
-        
+            return countByCategory
+        }   
 
-// fin solución
-
-
-                
-                db.products.findAll({
+         
+            let productosArray = db.products.findAll({
                     include:[
                         {association: "images"},
                         {association: "categories"},
                         {association: "presentations"}
                     ]
                 }).then(products => {
-        
+                    
                     let productos = []
                     
                     products.forEach(product => {
@@ -130,23 +96,29 @@ module.exports = {
         
                     })
                     })
-        
-                    let respuesta = {
-                        meta:{
-                            status: {
-                                status: 200,
-                                url: '/api/products'
-                            },
-                            data: {
-                                count: products.length,
-                                countByCategory: prodsPorCategoria(),
-                                products: productos
-                            }
-                        } 
-                        
-                    }
-                    res.json(respuesta)
+                    return productos;
                 }
                 )
+
+                Promise.all([productosArray, prodsPorCategoria(), Categorias])
+                .then(response => {
+
+                let respuesta = {
+                    meta:{
+                        status: {
+                            status: 200,
+                            url: '/api/products'
+                        },
+                        data: {
+                            count: response[0].length,
+                            countByCategory: response[1],
+                            products: response[0],
+                            categories: response[2].length
+                        }
+                    } 
+                    
+                }
+                res.json(respuesta)
+            }) 
         }
      }
