@@ -1,25 +1,46 @@
 import React from "react";
+import {useState,useEffect} from "react";
 import Card from "./subcomponents/Card/Card";
 import LastMovieInDB from "./subcomponents/LastMovieInDB/LastMovieInDB";
 import GenresInDB from "./subcomponents/GenresInDB/GenresInDB";
 
 function ContentRowTop(){
 
+    const [productos, setProductos] = useState([]);
+    const [usuarios, setUsuarios] = useState([]);
+    const [categorias, setcategorias] = useState([]);
+
+    const URL_BASE = "localhost:3500/api/"
+    async function getData(ruta){
+
+        const response = await fetch(URL_BASE + ruta);
+        const data = await response.json();
+    
+        if(data){
+            return data
+        }
+    }
+
+    useEffect(()=> {
+        console.log(getData("products"))
+    },[])
+
+
     let arrayCards = [
         {
-            
+            titulo: "Total de productos",
             cifra: 21,
             color: "primary",
             icono:"fa-film"
         },
         {
-            titulo: "Total awards",
+            titulo: "Total de usuarios",
             cifra: 79,
             color: "success",
             icono:"fa-award"
         },
         {
-            titulo: "Actors quantity",
+            titulo: "Total de categorias",
             cifra: 49,
             color: "warning",
             icono:"fa-user"
