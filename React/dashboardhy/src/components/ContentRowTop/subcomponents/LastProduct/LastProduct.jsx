@@ -29,17 +29,23 @@ function LastProduct() {
     })
       },[])
 
-
+    const cargaImagen = ()=> {
+        if(ultimoProducto.images){
+            return <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: "40rem" }} src={ultimoProducto.images?.url} alt={"Imagen id:" + ultimoProducto.images?.idimage} />
+        } else {
+            return <h1>Cargando...</h1>
+        }
+    }
 
     return (
         <SuperCard title="Último producto creado">
             <div className="text-center">
                 <h3>{ultimoProducto.name}</h3>
-                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: "40rem" }} src={ultimoProducto.images?.url} alt={"Imagen id:" + ultimoProducto.images?.idimage} />
+                {cargaImagen()}
             <p>{ultimoProducto.description}</p>
+            <a className="btn btn-danger" target="_blank" rel="nofollow" href={"http://localhost:3500/producto/" + ultimoProducto?.idProducto}>Ver detalle de producto</a>
             </div>
             
-            <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
             
         </SuperCard>
 
