@@ -7,7 +7,7 @@ import TopBar from "./components/TopBar/TopBar";
 import NotFound from "./views/404/NotFound";
 import LastProduct from "./components/ContentRowTop/subcomponents/LastProduct/LastProduct";
 import GenresInDB from "./components/ContentRowTop/subcomponents/GenresInDB/GenresInDB";
-import MovieList from "./views/MoviesList/MoviesList";
+import MovieList from "./views/ProductsList/ProductsList";
 
 import './App.css';
 

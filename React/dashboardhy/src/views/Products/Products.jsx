@@ -2,6 +2,7 @@ import React from "react";
 import SuperCard from "../../components/SuperCard/SuperCard";
 import GenreCard from "../../components/GenreCard/GenreCard";
 import { useState, useEffect, useRef } from "react";
+
 function Genres(){
   const URL_BASE_API = 'http://localhost:3500/api/products'
 
