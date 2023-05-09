@@ -3,7 +3,7 @@ import SuperCard from "../../../SuperCard/SuperCard";
 import {useState,useEffect} from "react";
 
 
-function LastMovieInDB() {
+function LastProduct() {
 
     const [ultimoProducto, setUltimoProducto] = useState([]);
 
@@ -35,7 +35,7 @@ function LastMovieInDB() {
         <SuperCard title="Último producto creado">
             <div className="text-center">
                 <h3>{ultimoProducto.name}</h3>
-                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: "40rem" }} src={ultimoProducto.images?.url} alt={"Imagen id:" + ultimoProducto.images.idimage} />
+                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: "40rem" }} src={ultimoProducto.images?.url} alt={"Imagen id:" + ultimoProducto.images?.idimage} />
             <p>{ultimoProducto.description}</p>
             </div>
             
@@ -47,4 +47,4 @@ function LastMovieInDB() {
     )
 }
 
-export default LastMovieInDB;
+export default LastProduct;

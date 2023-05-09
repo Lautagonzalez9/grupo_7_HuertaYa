@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopBar from "./components/TopBar/TopBar";
 import NotFound from "./views/404/NotFound";
-import LastMovieInDB from "./components/ContentRowTop/subcomponents/LastMovieInDB/LastMovieInDB";
+import LastProduct from "./components/ContentRowTop/subcomponents/LastProduct/LastProduct";
 import GenresInDB from "./components/ContentRowTop/subcomponents/GenresInDB/GenresInDB";
 import MovieList from "./views/MoviesList/MoviesList";
 
@@ -24,7 +24,7 @@ function App() {
 			<Routes>
 			  <Route path="/" element={<ContentWrapper />}/>
 			  <Route path="/categories" element={<GenresInDB />}/>
-			  <Route path="/last-product" element={<LastMovieInDB />}/>
+			  <Route path="/last-product" element={<LastProduct />}/>
 			  <Route path="/list" element={<MovieList />}/>
 			  <Route path="*" element={<NotFound />}/>
 			</Routes>  

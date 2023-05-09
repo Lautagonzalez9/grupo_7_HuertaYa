@@ -1,7 +1,7 @@
 import React from "react";
 import {useState,useEffect} from "react";
 import Card from "./subcomponents/Card/Card";
-import LastMovieInDB from "./subcomponents/LastMovieInDB/LastMovieInDB";
+import LastProduct from "./subcomponents/LastProduct/LastProduct";
 import GenresInDB from "./subcomponents/GenresInDB/GenresInDB";
 
 function ContentRowTop(){
@@ -82,7 +82,7 @@ function ContentRowTop(){
         {/* <!-- Content Row Last Movie in Data Base --> */}
         <div className="row">
             {/* <!-- Last Movie in DB --> */}
-            <LastMovieInDB />
+            <LastProduct />
             {/* <!-- End content row last movie in Data Base --> */}
 
             {/* <!-- Genres in DB --> */}
