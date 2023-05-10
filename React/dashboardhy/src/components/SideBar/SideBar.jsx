@@ -50,6 +50,13 @@ function SideBar(props){
                 <i className="fas fa-fw fa-table"></i>
                 <span>Listado de productos</span></Link>
         </li>
+         {/* <!-- Nav Item - Tables --> */}
+         <li className="nav-item">
+            <Link className="nav-link" to="/list">
+                <i className="fas fa-fw fa-table"></i>
+                <span>Listado de usuarios</span></Link>
+        </li>
+
 
         {/* <!-- Divider --> */}
         <hr className="sidebar-divider d-none d-md-block" />

@@ -26,6 +26,7 @@ function App() {
 			  <Route path="/categories" element={<GenresInDB />}/>
 			  <Route path="/last-product" element={<LastProduct />}/>
 			  <Route path="/list" element={<MovieList />}/>
+			  <Route path="/users"element={<UsersList />}/>
 			  <Route path="*" element={<NotFound />}/>
 			</Routes>  
 			{/* <!-- End of Content Wrapper --> */}
