@@ -53,7 +53,7 @@ function SideBar(props){
         </li>
          {/* <!-- Nav Item - Tables --> */}
          <li className="nav-item">
-            <Link className="nav-link" to="/list">
+            <Link className="nav-link" to="/users">
                 <i className="fas fa-fw fa-table"></i>
                 <span>Listado de usuarios</span></Link>
         </li>

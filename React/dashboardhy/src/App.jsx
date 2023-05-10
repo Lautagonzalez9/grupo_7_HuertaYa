@@ -8,6 +8,7 @@ import NotFound from "./views/404/NotFound";
 import LastProduct from "./components/ContentRowTop/subcomponents/LastProduct/LastProduct";
 import GenresInDB from "./components/ContentRowTop/subcomponents/GenresInDB/GenresInDB";
 import MovieList from "./views/ProductsList/ProductsList";
+import Usuarios from "./views/UsersList/UsersList";
 
 import './App.css';
 
@@ -26,7 +27,7 @@ function App() {
 			  <Route path="/categories" element={<GenresInDB />}/>
 			  <Route path="/last-product" element={<LastProduct />}/>
 			  <Route path="/list" element={<MovieList />}/>
-			  <Route path="/users"element={<UsersList />}/>
+			  <Route path="/users"element={<Usuarios />}/>
 			  <Route path="*" element={<NotFound />}/>
 			</Routes>  
 			{/* <!-- End of Content Wrapper --> */}

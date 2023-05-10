@@ -12,8 +12,9 @@ function Usuarios(){
   useEffect(() =>{
         fetch(URL_BASE)
          .then(response => response.json())
-            .then(data => {
-                setArrayUser(data.data.users)
+            .then(users => {
+                setArrayUser(users.data)
+                
             })
             .catch(error => console.log(error));
  },[])
