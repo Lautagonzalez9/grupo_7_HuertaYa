@@ -16,8 +16,8 @@ const usersApiController ={
                 first_name: result.first_name,
                 last_name: result.last_name,
                 email: result.email,
-                detail: "/users/" + result.iduser
-        
+                userDetail: "/users/" + result.iduser,
+                idrol: result.id_rol
               };
             });
           
@@ -59,13 +59,39 @@ const usersApiController ={
                 numberPhone:usuario.number_phone,
                 images: {
                   url: 'http://localhost:3500/images/'+usuario.images.url
-              }
+              },
+                idrol: usuario.id_rol
               }
             } 
             res.json(respuesta);
           })
-           }
-    
-}
+           },
+    giveAdmin: async function(req,res){
+      const id = req.params.id;
+      try {
+            db.user.update({
+                id_rol: 2
+            },
+            {
+                where: {iduser: id}
+            })
+            .then(res.redirect('/'))
+        } catch(error) {
+              console.log(error)
+          }},
+     
+    removeAdmin: async function(req,res){
+      const id = req.params.id;
+      try {
+            db.users.update({
+                id_rol: 1
+            },
+            {
+                where: {iduser: id}
+            })
+        } catch(error) {
+              console.log(error)
+          }}
+ }
 
 module.exports = usersApiController;
