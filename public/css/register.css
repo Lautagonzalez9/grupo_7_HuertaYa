@@ -8,6 +8,29 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #121212;
+    
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(215,141,38);
+    border-radius: 50px;
+
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(224, 161, 71);
+  }
+
+
+
+
+
+
+
+
 .main-nav ul li i {
     margin-right: 5px;
     font-size: 16px;
