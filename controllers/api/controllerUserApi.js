@@ -69,7 +69,7 @@ const usersApiController ={
     giveAdmin: async function(req,res){
       const id = req.params.id;
       try {
-            db.users.update({
+            db.user.update({
                 id_rol: 2
             },
             {
