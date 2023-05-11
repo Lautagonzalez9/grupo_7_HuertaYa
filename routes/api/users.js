@@ -7,6 +7,10 @@ const controllerUserApi = require('../../controllers/api/controllerUserApi');
 router.get('/', controllerUserApi.list);
 
 //Detalle de usuarios
-router.get('/:id', controllerUserApi.detail)
+router.get('/:id', controllerUserApi.detail);
+
+//Admins
+router.get('/admin/users/:id', controllerUserApi.giveAdmin);
+router.get('/adminrem/users/:id', controllerUserApi.removeAdmin);
 
 module.exports = router;
