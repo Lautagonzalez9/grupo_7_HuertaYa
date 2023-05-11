@@ -28,7 +28,8 @@ app.use(cookieParser('HuertaYa'));
 //Middlewares de autenticacion
 const bcryptjs = require("bcryptjs");
 const autoLoginMiddleware = require('./Middlewares/loginMiddleware');
-
+//uso de template
+app.set("view engine","ejs");
 
 app.use(methodOverride('_method')); 
 app.use(express.urlencoded({ extended: false }));
@@ -44,24 +45,31 @@ app.use(session({
 //Login middleware
 app.use(autoLoginMiddleware);
 
-//Carpeta de views
-app.set("views",path.join(__dirname,"./src/views"))
-//uso estatico
-app.use(express.static(publicPath));
-app.use(cors())
-//levantar servidor
-app.listen (port, ()=>{console.log(`Server iniciado en el puerto ${port}`)});
-
-//ejs
-app.set("view engine","ejs");
-
-//Rutas 
+//rutas
 app.use('/api/products', apiProductRoute)
 app.use('/api/users', apiUserRoute);
 app.use('/api/category', apiCategory)
 app.use('/', rutaMain);
 app.use('/admin', rutaAdmin);
 app.use('/images/', apiImageRoute)
+
+//Carpeta de views
+app.set("views",path.join(__dirname,"./src/views"))
+//uso estatico
+app.use(express.static(publicPath));
+app.use(cors())
+// error 404
+app.use((req, res, next) => {
+  res.status(404).render('error404', {
+    errorCode: 404,
+    errorMessage: 'Página no encontrada'
+  });
+});
+//levantar servidor
+app.listen (port, ()=>{console.log(`Server iniciado en el puerto ${port}`)});
+
+
+
 
 
 

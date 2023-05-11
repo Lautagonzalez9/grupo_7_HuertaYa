@@ -52,6 +52,7 @@ module.exports = {
 
         try{
 
+
         let Categorias = db.categories.findAll().then(data=>{return data})
 
 
@@ -60,7 +61,8 @@ module.exports = {
                 {association: "images"},
                 {association: "categories"},
                 {association: "presentations"}
-            ]
+            ],
+
         }).then(data => {return data})
 
         async function prodsPorCategoria(){
@@ -93,7 +95,7 @@ module.exports = {
                             id: product.idProducto,
                             name: product.name,
                             description: product.description,
-                            detail: "/producto/" + product.idProducto
+                            detail: "http://localhost:3500/producto/" + product.idProducto
         
                     })
                     })
