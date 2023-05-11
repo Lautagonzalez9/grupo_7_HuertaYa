@@ -66,7 +66,7 @@
                                 <p class="presentacion">Presentacion: <%= product.presentations.name %></p>
                                 <p class="stock">Stock: <%= product.stock %></p>
                                 <p class="descripcion"><%= product.description %></p>
-                                <% if(usuario){ %>
+                                <% if(usuario && usuario.id_rol == 2){ %>
                                 <p><button><a style="text-decoration: none; color: white;" href="/admin/edit/<%=product.idProducto %>">Editar</a></button></p>
                                 <% } %>
                             </div>
