@@ -17,12 +17,14 @@ rel="stylesheet" />
         <div class="productos-relacionados card-container "> 
           <% productos.forEach(producto => { %>
             <div class="card">
-              <img src="/img/<%= producto.images.url %>" class="card-img-top" alt="Product Image">
+              <div id="img-container">
+                <img src="/img/<%= producto.images.url %>" class="card-img-top" alt="Product Image">
+              </div>
               <div class="card-body">
                 <h5 class="card-title"><%= producto.name %></h5>
                 <% if (producto.discount > 0) { %>
                   <p class="card-text">
-                    <span class="price-discounted">$<%= producto.price - (producto.price * (producto.discount/100)) %></span>
+                    <span class="price-discounted">$<%= producto.price - Math.floor((producto.price * (producto.discount/100))) %></span>
                     <span class="price-original">$<%= producto.price %></span>
                   </p>
                 <% } else { %>
@@ -31,7 +33,7 @@ rel="stylesheet" />
                   </p>
                 <% } %>
                 <a href="/producto/<%= producto.idProducto %>" class="btn btn-primary">INFO</a>
-                <% if(usuario){ %>
+                <% if(usuario && usuario.id_rol == 2){ %>
                   <a  href="/admin/edit/<%=producto.idProducto %>" class="btn btn-primary" style="margin-bottom: 5px;">Editar</a>
                   <form action="/admin/delete/<%= producto.idProducto %>?_method=DELETE" method="POST">
                     <input type="submit" class="btn btn-danger" value="eliminar">

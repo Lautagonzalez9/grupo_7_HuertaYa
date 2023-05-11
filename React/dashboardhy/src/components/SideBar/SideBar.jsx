@@ -1,5 +1,6 @@
 import React from "react";
 import LogoDH from "../../assets/images/logo-DH.png";
+import LogoHY from "../../assets/images/Logo-Huerta-Ya-JPG_Marca.jpg";
 import { Link } from "react-router-dom";
 
 function SideBar(props){
@@ -9,7 +10,7 @@ function SideBar(props){
         {/* <!-- Sidebar - Brand --> */}
         <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
             <div className="sidebar-brand-icon">
-                <img className="w-100" src={LogoDH} alt="Digital House" />
+                <img className="w-100" src={LogoHY} alt="Huerta Ya" />
             </div>
         </a>
 
@@ -20,7 +21,7 @@ function SideBar(props){
         <li className="nav-item active">
             <Link className="nav-link" to="/">
                 <i className="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard - DH movies</span></Link>
+                <span>Dashboard - Huerta Ya</span></Link>
         </li>
 
         {/* <!-- Divider --> */}
@@ -50,6 +51,13 @@ function SideBar(props){
                 <i className="fas fa-fw fa-table"></i>
                 <span>Listado de productos</span></Link>
         </li>
+         {/* <!-- Nav Item - Tables --> */}
+         <li className="nav-item">
+            <Link className="nav-link" to="/users">
+                <i className="fas fa-fw fa-table"></i>
+                <span>Listado de usuarios</span></Link>
+        </li>
+
 
         {/* <!-- Divider --> */}
         <hr className="sidebar-divider d-none d-md-block" />
