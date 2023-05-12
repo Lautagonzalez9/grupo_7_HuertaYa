@@ -6,7 +6,7 @@ const URL_BASE = 'http://localhost:3500/api/users'
 
 function Usuarios(){
 
-    const [columns,setColumns] = useState({ iduser: "ID",first_name: "Nombre", last_name: "Apellido", email: "Correo Electronico" })
+    const [columns,setColumns] = useState({ iduser: "ID",first_name: "Nombre", last_name: "Apellido", email: "Correo Electronico", idrol: "Admin", userDetail: " " })
     const [arrayUser,setArrayUser] = useState([])
 
   useEffect(() =>{

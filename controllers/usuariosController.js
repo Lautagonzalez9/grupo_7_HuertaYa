@@ -103,7 +103,7 @@ const usuariosController={
               where: {iduser: req.params.id}
              }).then(function() {
               
-              res.redirect('./users/login');
+              res.redirect('/profile');
             }).catch(function(error) {
               console.log(error);
               res.status(500).send({ message: 'Error interno del servidor' });
@@ -176,8 +176,14 @@ const usuariosController={
       });
     }
     ,
-    profile :(req,res)=>{
-        return res.render('./users/profileIndex')
+    profile : async (req,res)=>{
+        const usuario = req.session.usuario
+        const usuarioImage = usuario ? usuario.id_image : null;
+        const imagen = await db.images.findByPk(usuarioImage)
+        console.log(usuario);
+        return res.render('./users/profileIndex', {
+          imagen: imagen
+      });
     },
     logout: (req,res)=>{
         req.session.destroy();

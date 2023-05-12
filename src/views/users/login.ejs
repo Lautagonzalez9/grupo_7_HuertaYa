@@ -27,7 +27,7 @@
                 </div>
                 <div class="input-detalles">
                     <label for="password">Password</label>
-                    <input type="password" name="password" class="contraseña" placeholder="Password" value= <%= locals.old ? old : '' %>>
+                    <input type="password" name="password" class="contraseña" placeholder="Password">
                     <% if (locals.errors && errors.contrasenia) { %>
                         <div style="color: red;"> <%= errors.contrasenia.msg %></div>
                     <% } %> 
