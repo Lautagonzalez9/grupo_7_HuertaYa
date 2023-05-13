@@ -8,7 +8,7 @@ import NotFound from "./views/404/NotFound";
 import LastProduct from "./components/ContentRowTop/subcomponents/LastProduct/LastProduct";
 import GenresInDB from "./components/ContentRowTop/subcomponents/GenresInDB/GenresInDB";
 import MovieList from "./views/ProductsList/ProductsList";
-import Usuarios from "./views/UsersList/UsersList";
+import Usuarios from "./views/UserList/UsersList";
 
 import './App.css';
 
