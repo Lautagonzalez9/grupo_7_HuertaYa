@@ -67,7 +67,7 @@ const usersApiController ={
           })
            },
     giveAdmin: async function(req,res){
-      const id = req.params.id;
+      const id = req.body.id;
       try {
             db.user.update({
                 id_rol: 2
@@ -75,15 +75,14 @@ const usersApiController ={
             {
                 where: {iduser: id}
             })
-            .then(res.redirect('/'))
         } catch(error) {
               console.log(error)
           }},
      
     removeAdmin: async function(req,res){
-      const id = req.params.id;
+      const id = req.body.id;
       try {
-            db.users.update({
+            db.user.update({
                 id_rol: 1
             },
             {

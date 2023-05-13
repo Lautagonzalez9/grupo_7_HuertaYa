@@ -20,7 +20,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
   });
-
+app.use(cors({ credentials: true }));
 //Cookies y session
 const cookieParser = require('cookie-parser');
 app.use(cookieParser('HuertaYa'));

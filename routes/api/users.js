@@ -10,7 +10,7 @@ router.get('/', controllerUserApi.list);
 router.get('/:id', controllerUserApi.detail);
 
 //Admins
-router.get('/admin/users/:id', controllerUserApi.giveAdmin);
-router.get('/adminrem/users/:id', controllerUserApi.removeAdmin);
+router.post('/giveAdmin', controllerUserApi.giveAdmin);
+router.post('/removeAdmin', controllerUserApi.removeAdmin);
 
 module.exports = router;
