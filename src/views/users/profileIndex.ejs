@@ -10,7 +10,7 @@
     <title>HOLA! <%= usuario.first_name %></title>
 </head>
 
-<body>
+<body style="min-height:100vh;">
 
     <%- include("../partials/header.ejs")%>
     <main class="container my-5">
@@ -27,9 +27,10 @@
         </div>
     </main>
 
-    <footer>
+    <footer style="position: absolute; bottom: 0; width: 100%;"> 
         <%- include("../partials/footer")%>
     </footer>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js" integrity="sha512-7BhjiZDWTVJtXsL2Bzg7fwYRRM02OrT7GmNiKmWwSnySrvRDPwsn9XkSPxkW/7V3q2A4/f7FgNAb8WPeUdqZqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

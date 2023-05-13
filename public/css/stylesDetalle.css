@@ -760,9 +760,34 @@ button,optgroup {
         width: 60vw;
         margin-top: 30px;
     }
+    
 }
 @media (max-width: 500px) {
     .descripcion{
         display: none;
     }
 }
+.producto-img {
+    height: 200px;
+    object-fit: contain;
+  }
+  .card-small {
+    width: 200px;
+    height: 300px;
+}
+.productos-relacionados .carda {
+    width: 280px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .productos-relacionados .card-bodyy {
+    flex-grow: 1;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black;
+  }

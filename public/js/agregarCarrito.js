@@ -6,10 +6,12 @@ let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 function agregarAlCarrito(evento) {
   let button = evento.target;
-  let item = button.closest('.producto');
-  let itemTitle = item.querySelector('.producto-detalle h3').textContent;
-  let itemPrice = item.querySelector('.precio').textContent;
-  let itemImage = item.querySelector('.imagen-producto').src;
+  const item = document.querySelector('.product-details');
+  const itemTitle = item.querySelector('h2').textContent;
+  const itemPrice = item.querySelector('.price').textContent;
+  const itemImage = item.querySelector('img').src;
+
+
 
   let newItem = {
     title: itemTitle,

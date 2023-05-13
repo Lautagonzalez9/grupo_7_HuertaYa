@@ -17,143 +17,102 @@
                     <li><a href="#"><%= product.name %></a></li>
                 </ul>
             </nav>
-            <h2 class="page-title">Detalle del producto</h2>
+            <h2 class="page-title" >Detalle del producto</h2>
         </div>
-    <div class="container">
-        <div class="producto-a-detallar">
-            <section>
-                <article>
-                    <div class="producto">
-                    <div class="producto-detalle">
-                    <h3><%= product.name %></h3>
-                    <div class="product-image">
-                        <img class="imagen-producto" src="/img/<%= product.images.url %>" alt="Imagen del producto">
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-chevron-left"></i>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                    <% if(product.detailedDescription){ %>
-                    <div class="descripcion-detallada">
-                            <h3>Descripcion detallada</h3>
-                            <p><%= product.detailedDescription %></p>
-                    </div>
+        <section class="product-details" style="padding-top: 15px;">
+            <div class="container" >
+              <div class="row min-vh-50" >
+                <div class="col-md-6">
+                  <img src="/img/<%= product.images.url %>" alt="Product Image" class="img-fluid border" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-md-6">
+                  <h2><%= product.name %></h2>
+                  <% if (product.discount) { %>
+                    <p class="price"style="text-decoration: line-through; color: grey">$<%= product.price %></p>
+                    <p class="price text-success">$<%= Math.floor(product.price * (1-(product.discount/100))) %></p>
+                  <% } else{  %>
+                    <p class="price">$<%= product.price %></p>
                     <% } %>
+                  
+                  <p class="description"> <%= product.description %>,Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus recusandae ratione, iure asperiores sed atque placeat eum exercitationem eaque totam illo, fugit dolorem debitis sint nisi. Harum provident expedita consequatur.</p>
+                  <div class="form-group">
+                    <label for="quantity">Cantidad:</label>
+                    <input type="number" name="quantity" id="quantity" class="form-control" value="1" min="1" max="10">
+                  </div>
+                  <button type="button" class="btn btn-primary agregar-carrito" style="margin-top:5px;">Agregar al carrito</button>
+                  <hr>
+                  <% if(usuario && usuario.id_rol == 2){ %>
+                    <a href="/admin/edit/<%=product.idProducto %>" class="btn btn-primary" style="margin-bottom: 5px;">Editar</a>
+                    <% } %>
+                  <% if(product.discount){ %>
+                    
+                    <div class="col-6">
+                      <h1 class="discount-label">AHORRA UN <%= product.discount %>%</h1>
                     </div>
-                    <div class="product-interactions">
-                        <div class="interacciones">
-                            <div class="product-share">
-                                <i class="fa-brands fa-facebook"></i>
-                                <i class="fa-brands fa-instagram"></i>
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </div>
-                            <div class="product-amount">
-                                <button><i class="fa-solid fa-chevron-left"></i></button>
-                                <a>##</a>
-                                <button><i class="fa-solid fa-chevron-right"></i></button>
-                            </div>
-                            <div>
-                                <button class="agregar-carrito">Agregar al carrito</button>
-                            </div>
-                        </div>
-                            <div class="detalles-del-producto">
-                                <% if(product.discount){ %>
-                                    <p><%= product.discount %>% OFF</p>
-                                    <span id="tachado">$<%= product.price %></span>
-                                    <span id="oferta precio">  $<%= Math.floor(product.price * (1-(product.discount/100))) %></span>
-                                    <% } else { %>
-                                    <p class="precio">$<%= product.price %></p>
-                                    <% } %>
-                                <p class="presentacion">Presentacion: <%= product.presentations.name %></p>
-                                <p class="stock">Stock: <%= product.stock %></p>
-                                <p class="descripcion"><%= product.description %></p>
-                                <% if(usuario && usuario.id_rol == 2){ %>
-                                <p><button><a style="text-decoration: none; color: white;" href="/admin/edit/<%=product.idProducto %>">Editar</a></button></p>
-                                <% } %>
-                            </div>
-                        </div>
+                  </div>
+                  <% }else { %>
+                    <div class="col-6">
+                        <p></p>
                     </div>
-                
-            </article>
-        </section>
-        </div>
-        <section class="delivery">
-            <div class="container3">
-                <div class="tres-pasos"><h3>TENEMOS DELIVERY EN 3 PASOS</h3>
-                    <div class="camioneta">
-                        <img src="" alt="paso 1">
-                        <img src="" alt="paso 2">
-                        <img src="" alt="paso 3">
-                    </div>
-                    <button class="start-order"><h4>COMENZAR PEDIDO</h4></button>
+                  <% }  %>
+                   
                 </div>
-                <div class="repetir-pedido">
-                    <h5>¿Ya pediste y querés repetir el pedido?</h5>
-                    <button class="login-index"><h4>INICIÁ SESIÓN</h4></button>
-                </div>
-                <div class="envio"><h4>CALCULAR ENVÍO</h4>
-                    <form>
-                        <label for="codigo-postal"></label>
-                        <input class="space-cp" type="CP" name="codigo-postal" placeholder="Tu código postal">
-                    <button type="submit" class="button-calcular">CALCULAR</button>
-                    </form>
-                </div>
+              </div>
             </div>
-            <div class="no-se-mi-codigo"> <a><h6>No se mi código postal</h6></a> </div>
-        </section>
-    
-    </div>
-        <section>
-            <h3>Productos relacionados</h3>
-            <div class="productos-relacionados">
+          </section>
+          <section>
+            <h3>Productos Recomendados!</h3>
+            <div id="product-carousel" class="carousel slide" data-bs-ride="carousel" style="padding-bottom: 20px;">
+              <div class="carousel-inner productos-relacionados card-container">
+                <% let active = 'active'; %>
                 <% productos.forEach(producto => { %>
-                   <% if(producto.categories.name == product.categories.name){ %>
-                <article>
-                    <img class="imagen-producto-relacionado" src="/img/<%= producto.images.url %>" alt="Imagen del producto">
-                    <i class="fa-regular fa-heart"></i>
-                    <p><%= producto.name %></p>
-                    <% if(producto.discount){ %>
-                        <p><%= producto.discount %>% OFF</p>
-                        <span id="tachado">$<%= producto.price %></span>
-                        <span id="oferta">  $<%= Math.floor(producto.price * (1-(producto.discount/100))) %></span>
+                  <div class="carousel-item <%= active %>">
+                    <div class="card carda">
+                      <div id="img-container">
+                        <img src="/img/<%= producto.images.url %>" class="card-img-top" alt="Product Image">
+                      </div>
+                      <div class="card-body card-bodyy">
+                        <h5 class="card-title"><%= producto.name %></h5>
+                        <% if (producto.discount > 0) { %>
+                          <p class="card-text">
+                            <span class="price-discounted">$<%= producto.price - Math.floor((producto.price * (producto.discount/100))) %></span>
+                            <span class="price-original">$<%= producto.price %></span>
+                          </p>
                         <% } else { %>
-                        <p>$<%= producto.price %></p>
+                          <p class="card-text">
+                            <span class="price">$<%= producto.price %></span>
+                          </p>
                         <% } %>
-                    <p><button>agregar</button></p>
-                    <p><button><a style="text-decoration: none; color: white;" href="/producto/<%= producto.idProducto %>">Más info</a></button></p>
-                </article>
-            <% } %>
-                 <% }) %>
-            </div>
-        </section>
-        <section>
-            <% if(productos.filter(producto => producto.discount > 0)){ %>
-            <h3>Ofertas</h3>
-            <div class="productos-relacionados">
-
-                <% productos.forEach(producto => { %>
-                    <% if(producto.discount > 0) { %>
-                <article>
-                    <img class="imagen-producto-ofertado" src="/img/<%= producto.images.url %>" alt="Imagen del producto">
-                    <i class="fa-regular fa-heart"></i>
-                    <p><%= producto.name %></p>
-                    <% if(producto.discount){ %>
-                        <p><%= producto.discount %>% OFF</p>
-                        <span id="tachado">$<%= producto.price %></span>
-                        <span id="oferta">  $<%= Math.floor(producto.price * (1-(producto.discount/100))) %></span>
-                        <% } else { %>
-                        <p>$<%= producto.price %></p>
+                        <a href="/producto/<%= producto.idProducto %>" class="btn btn-primary">INFO</a>
+                        <% if(usuario && usuario.id_rol == 2){ %>
+                          <a href="/admin/edit/<%=producto.idProducto %>" class="btn btn-primary" style="margin-bottom: 5px;">Editar</a>
+                          <form action="/admin/delete/<%= producto.idProducto %>?_method=DELETE" method="POST">
+                            <input type="submit" class="btn btn-danger" value="eliminar">
+                          </form>
                         <% } %>
-                    <p><button>agregar</button></p>
-                    <p><button><a style="text-decoration: none; color: white;" href="/producto/<%= producto.idProducto %>">Más info</a></button></p>
-                </article>
-            <% } %>
-            <% }) %>
+                      </div>
+                    </div>
+                  </div>
+                  <% active = ''; %>
+                <% }) %>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#product-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#product-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" ></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
             </div>
-        <% } %>
-        </section>
+            
+            </section>
     </main>
     <%- include("../partials/footer")%>
 
     <script src="/js/agregarCarrito.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    
+     
+    
 </body>
