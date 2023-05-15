@@ -22,28 +22,28 @@ module.exports = {
                         status: 200,
                         url: 'http://localhost:3500/api/products/' + id
                     }},
-                    data: {
-                        idProducto: product.idProducto,
-                        name: product.name,
-                        id_presentation: product.id_presentation,
-                        description: product.description,
-                        id_category: product.id_category,
-                        price: product.price,
-                        stock: product.stock,
-                        discount: product.discount,
-                        images: {
-                            idimage: product.images.idimage,
-                            url: imagenUrl
-                        },
-                        categories: {
-                            idcategory: product.categories.idcategory,
-                            name: product.categories.name
-                        },
-                        presentations: {
-                            idpresentation: product.presentations.idpresentation,
-                            name: product.presentations.name
-                        }
+                data: {
+                    idProducto: product.idProducto,
+                    name: product.name,
+                    id_presentation: product.id_presentation,
+                    description: product.description,
+                    id_category: product.id_category,
+                    price: product.price,
+                    stock: product.stock,
+                    discount: product.discount,
+                    images: {
+                        idimage: product.images.idimage,
+                        url: imagenUrl
                     },
+                    categories: {
+                        idcategory: product.categories.idcategory,
+                        name: product.categories.name
+                    },
+                    presentations: {
+                        idpresentation: product.presentations.idpresentation,
+                        name: product.presentations.name
+                    }
+                },
             };
         res.json(respuesta)
         })
