@@ -92,7 +92,7 @@ body {
 }
 
 .carousel-inner{
-    height: 30vh;
+    height: 40%;
 }
 
 .carousel-caption{
@@ -458,7 +458,7 @@ a h6 {
 
 
 /* checkpoint tablets */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     main {
         margin-bottom: 30px;
     }
@@ -512,6 +512,15 @@ a h6 {
         padding: 3%;
     }
 */
+
+    .carousel-inner{
+        height: 30%;
+    }
+/*
+    .carousel-caption{
+        display: block;
+        padding-bottom: 300px;
+    }*/
 
     .repartidor{
         display: block;
@@ -611,7 +620,18 @@ a h6 {
     }
 
 } 
-    
+
+
+
+@media (min-width: 1024px){
+    .carousel-inner{
+        height: 60vh;
+    }
+    .carousel-caption{
+        display: block;
+        padding-bottom: 500px;
+    }
+}
 
 /* checkpoint computadoras */
 @media (min-width: 1400px) {
