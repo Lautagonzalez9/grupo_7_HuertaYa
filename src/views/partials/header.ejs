@@ -1,16 +1,16 @@
 
 <header class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <!-- Agregar el logo en la barra de navegación -->
+   
       <a class="navbar-brand" href="/">
         <img src="/img/Marca Huerta Ya_marca.png" alt="Logo" width="100" height="80" class="d-inline-block align-text-top">
       </a>
-      <!-- Agregar el botón de hamburguesa para dispositivos móviles -->
+     
       <button class="navbar-toggler btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Agregar los enlaces de la barra de navegación -->
+    
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
             <a class="nav-link" href="/Nosotros">Nosotros</a>
@@ -19,14 +19,15 @@
             <a class="nav-link" href="/productos">Productos</a>
           </li>
         </ul>
-        <!-- Agregar el formulario de búsqueda -->
+        
         <form class="d-flex" action="/search" method="GET">
           <input name="keywords" class="form-control me-2 " type="search" placeholder="Buscar productos, marcas y más" aria-label="Search" style="width: 300px;">
           <button class="btn" type="submit">Buscar</button>
         </form>
-        <!-- Agregar los enlaces de la derecha de la barra de navegación -->
+       
         <ul class="navbar-nav ms-auto">
           <% if(usuario){ %>
+    
             <li class="nav-item">
               <a class="nav-link" href="/profile">Mi Perfil</a>
             </li>
