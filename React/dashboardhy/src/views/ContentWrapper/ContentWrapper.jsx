@@ -15,7 +15,7 @@ class ContentWrapper extends React.Component {
 
     async componentDidMount() {
         this.setState({
-            arrayData: [{name: "Fede", lastname: "Garcia"}, {name: "Lauti", lastname: "Nuñez"}, {name: "Hernan", lastname: "Garcia"}]
+            arrayData: [{name: "Marco", lastname: "Savarino"}, {name: "Julian", lastname: "Penna"}, {name: "Manuel", lastname: "Chirino"}, {name: "Vanesa", lastname: "Damill"}]
         })
     }
 

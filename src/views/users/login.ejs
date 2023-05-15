@@ -6,10 +6,7 @@
 <body>
       <%- include('../partials/header')%>
     <main>
-        <div class="contenedor-formulario contenedor">
-            <div class="erroresLogin">
-                <ul style="color:red ;"></ul>
-            </div> 
+        <div class="contenedor-formulario contenedor"> 
             <div class="imagen-formulario">
 
             </div>
@@ -19,6 +16,9 @@
                     <p> Inicia seccion con tu cuenta</p>
                 </div>
                 <div class="input-detalles">
+                    <div class="erroresLogin">
+                        <ul style="color:red ;"></ul>
+                    </div> 
                     <label for="email">Usuario</label>
                     <input type="email" placeholder="Correo Electronico" name="email" class="correo" value= <%= locals.old ? old : '' %>>
                     <% if (locals.errors && errors.email) { %>
