@@ -18,7 +18,9 @@ rel="stylesheet" />
           <% productos.forEach(producto => { %>
             <div class="card">
               <div id="img-container">
-                <img src="/img/<%= producto.images.url %>" class="card-img-top" alt="Product Image">
+                <a href="/producto/<%= producto.idProducto %>">
+                  <img src="/img/<%= producto.images.url %>" class="card-img-top" alt="Product Image">
+                </a>
               </div>
               <div class="card-body">
                 <h5 class="card-title"><%= producto.name %></h5>
