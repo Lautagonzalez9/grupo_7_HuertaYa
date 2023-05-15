@@ -7,6 +7,25 @@ body {
     background-color: rgb(181, 141, 86);
     font-family: 'Roboto', sans-serif;
 }
+/* .imagen-formulario {
+    position: relative;
+    
+    background-size: cover;
+    width: 100%;
+    height: 3vh;
+} */
+
+.formulario {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    max-width: 90%;
+    width: 400px; 
+    
+    margin: 0 auto;
+    margin-top: 0;
+    
+}
 
 
 
@@ -23,6 +42,14 @@ body {
         flex-direction: column;
         align-items: center;
     }*/
+    .imagen-formulario {
+        height: 20vh;
+    }
+  
+    .formulario {
+        width: 90%;
+        max-width: 400px; 
+    }
 }   
 
 /* checkpoint tablets */
@@ -41,7 +68,17 @@ body {
         background-size: cover;
         background-position: 45% 75%;
     }
-    
+    .imagen-formulario {
+        height: 80vh;
+    }
+  
+    .formulario {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px; 
+    }   
 
 }
 
@@ -59,7 +96,7 @@ body {
 input,
 label,
 a {
-    color: white;
+    color: rgb(40, 40, 40);
 }
 .texto-formulario h2{
     font-size: 50px;
@@ -68,20 +105,23 @@ a {
 .texto-formulario p{
     font-size: 22px;
     text-align: center;
+    color: rgb(58, 58, 58);
 }
 .input-detalles label{
     display: block;
     font-size: 22px;
-    font-weight: bold;
+    
     margin: 20px 0;
+    color: rgb(33, 33, 33);
 }
 .input-detalles input{
     width: 100%;
     padding: 10px 16px;
     border-radius: 5px;
-    outline: none;
+    outline: auto;
     border: none;
-    color: black;
+    color: rgba(0, 0, 0, 0.335);
+    
 }
 .input-detalles button{
     width: 30%;
@@ -163,4 +203,24 @@ footer h4 {
         width: 60vw;
         margin-top: 30px;
     }
+    
+    .imagen-formulario {
+        position: relative;
+       
+        background-size: cover;
+        width: 100%;
+        height: 80vh;
+    }
+    
+    .formulario {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.911);
+        padding: 20px;
+        border-radius: 10px ;
+    }
+    
+    
 }
