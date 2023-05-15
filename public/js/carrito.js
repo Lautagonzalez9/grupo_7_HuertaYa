@@ -6,7 +6,7 @@ let imagen = document.querySelector('.imagen')
 const main = document.querySelector(".conteiner")  
 
 if (carrito.length > 0) {
-    if (carrito.length <= 2) {
+    if (carrito.length <= 1) {
         const primerProducto = carrito[0];
         const precio = document.querySelector('.price');
         const nombreProd = document.querySelector('.producto');
