@@ -93,7 +93,7 @@ const adminController = {
                 .then((imagen)=>{
                     let idImage = imagen.idimage;
                     db.products.update({
-                        name: req.body.name,
+                        name: req.body.Name,
                         description: req.body.description,
                         id_category: req.body.category,
                         id_presentation: req.body.presentation,
