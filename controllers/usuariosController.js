@@ -24,6 +24,17 @@ const usuariosController={
       console.log(bcryptjs.hashSync(req.body.password, 10));
       let errors = validationResult(req)
       if(errors.isEmpty()){ 
+        const emailValidacion = await db.user.findOne({ where: { email: req.body.email } }) 
+        if(emailValidacion){
+          errors.errors.push({
+            param: 'email',
+            msg: 'El correo electrónico ya está registrado',
+            value: req.body.email
+          });
+          let municipios = await fetch('https://apis.datos.gob.ar/georef/api/municipios?provincia=06&campos=id,nombre&max=30').then(response => response.json());
+          res.render('./users/registerForm', { municipios: municipios.municipios, errors: errors.mapped(), old: req.body });
+        } else {
+       
       if (req.file) {
             guardarImagen(req)
               .then(function (imagen) {
@@ -63,7 +74,7 @@ const usuariosController={
             .then(function() {
               res.redirect('/login');
             })
-          }} else{
+          }} } else{
             let municipios = await fetch('https://apis.datos.gob.ar/georef/api/municipios?provincia=06&campos=id,nombre&max=30').then(response=> response.json())
             res.render('./users/registerForm', {municipios: municipios.municipios, errors: errors.mapped(), old: req.body})
           }

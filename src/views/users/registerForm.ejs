@@ -19,7 +19,9 @@
         
      <label>E-mail</label>
          <input type="email" name="email" placeholder="LionelMessi10@gmail.com" id="email">
-         
+         <% if (locals?.errors) { %>
+            <span style="color: red;"> <%= errors.email.msg %></span>
+         <% } %>
        
      <label>Contraseña</label>
          <input type="password" name="password" placeholder="Ingrese su contraseña" id="password">
