@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <%- include('../partials/head') %>
-    <title>Document</title>
+    <title>Crea tu cuenta</title>
  </head> 
 <body>
     <%- include('../partials/header') %>
@@ -31,7 +31,7 @@
          <input type="text" name="codigoPostal" placeholder="Buenos Aires" id="codPostal">
          
      <label>Localidad</label>
-        <select name="Localidad">
+        <select name="Localidad" class="muni">
             <% municipios.forEach(municipio => { %>
                 <option value="<%= municipio.id %>"><%= municipio.nombre %></option>
             <% }) %>

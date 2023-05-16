@@ -167,3 +167,7 @@ Para el 3/05/2023 deberá estar terminada la primera etapa, generación de APIs 
 Participantes: Manuel, Julián, Vanesa, Marco.
 Fin del meet ---
 
+10/05/2023
+Se finalizaron las tareas principales del sprint. Queda pendiente realizar los ajustes de estilos y configurar el carrito para la presentación final.
+Participantes: Manuel, Julián, Vanesa, Marco.
+Fin del meet ---
