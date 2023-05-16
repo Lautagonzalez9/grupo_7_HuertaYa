@@ -126,7 +126,7 @@ footer {
 .footer-logo {
     margin: 0px 0px 0px 35vw;
     width: 30vw;
-    max-width: 360px;
+    /*max-width: 360px;*/
 }
 /* modificacion para footer mobile */
 .footer-container {
