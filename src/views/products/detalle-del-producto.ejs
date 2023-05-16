@@ -65,36 +65,45 @@
             <div id="product-carousel" class="carousel slide" data-bs-ride="carousel" style="padding-bottom: 20px;">
               <div class="carousel-inner productos-relacionados card-container">
                 <% let active = 'active'; %>
-                <% productos.forEach(producto => { %>
+                <% for (let i = 0; i < productos.length; i += 3) { %>
                   <div class="carousel-item <%= active %>">
-                    <div class="card carda">
-                      <div id="img-container">
-                        <img src="/img/<%= producto.images.url %>" class="card-img-top" alt="Product Image">
-                      </div>
-                      <div class="card-body card-bodyy">
-                        <h5 class="card-title"><%= producto.name %></h5>
-                        <% if (producto.discount > 0) { %>
-                          <p class="card-text">
-                            <span class="price-discounted">$<%= producto.price - Math.floor((producto.price * (producto.discount/100))) %></span>
-                            <span class="price-original">$<%= producto.price %></span>
-                          </p>
-                        <% } else { %>
-                          <p class="card-text">
-                            <span class="price">$<%= producto.price %></span>
-                          </p>
+                    <div class="row justify-content-center">
+                      <% for (let j = i; j < i + 3; j++) { %>
+                        <% if (productos[j]) { %>
+                          <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card carda">
+                              <div id="img-container">
+                                <img src="/img/<%= productos[j].images.url %>" class="card-img-top" alt="Product Image">
+                              </div>
+                              <div class="card-body card-bodyy">
+                                <h5 class="card-title"><%= productos[j].name %></h5>
+                                <% if (productos[j].discount > 0) { %>
+                                  <p class="card-text">
+                                    <span class="price-discounted">$<%= productos[j].price - Math.floor((productos[j].price * (productos[j].discount/100))) %></span>
+                                    <span class="price-original">$<%= productos[j].price %></span>
+                                  </p>
+                                <% } else { %>
+                                  <p class="card-text">
+                                    <span class="price">$<%= productos[j].price %></span>
+                                  </p>
+                                <% } %>
+                                <a href="/producto/<%= productos[j].idProducto %>" class="btn btn-primary">INFO</a>
+                                <% if(usuario && usuario.id_rol == 2){ %>
+                                  <a href="/admin/edit/<%= productos[j].idProducto %>" class="btn btn-primary" style="margin-bottom: 5px;">Editar</a>
+                                  <form action="/admin/delete/<%= productos[j].idProducto %>?_method=DELETE" method="POST">
+                                    <input type="submit" class="btn btn-danger" value="eliminar">
+                                  </form>
+                                <% } %>
+                              </div>
+                            </div>
+                          </div>
                         <% } %>
-                        <a href="/producto/<%= producto.idProducto %>" class="btn btn-primary">INFO</a>
-                        <% if(usuario && usuario.id_rol == 2){ %>
-                          <a href="/admin/edit/<%=producto.idProducto %>" class="btn btn-primary" style="margin-bottom: 5px;">Editar</a>
-                          <form action="/admin/delete/<%= producto.idProducto %>?_method=DELETE" method="POST">
-                            <input type="submit" class="btn btn-danger" value="eliminar">
-                          </form>
-                        <% } %>
-                      </div>
+                        
+                      <% } %>
                     </div>
                   </div>
                   <% active = ''; %>
-                <% }) %>
+                <% } %>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#product-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -105,8 +114,65 @@
                 <span class="visually-hidden">Siguiente</span>
               </button>
             </div>
+          </section>
+          
+          <section>
+            <h3>Productos en oferta!!</h3>
+            <div id="product-offer-carousel" class="carousel slide" data-bs-ride="carousel" style="padding-bottom: 20px;">
+              <div class="carousel-inner productos-relacionados card-container">
+                <% if (productos.filter(producto => producto.discount > 0).length > 0) { %>
+                  <% let active = 'active'; %>
+                  <div class="carousel-item <%= active %>">
+                    <div class="row justify-content-center">
+                      <% for (let i = 0; i < productos.length; i++) { %>
+                        <% if (productos[i].discount > 0) { %>
+                          <div class="col-md-4">
+                            <div class="card carda">
+                              <div id="img-container">
+                                <img src="/img/<%= productos[i].images.url %>" class="card-img-top" alt="Product Image">
+                              </div>
+                              <div class="card-body card-bodyy">
+                                <h5 class="card-title"><%= productos[i].name %></h5>
+                                <p class="card-text">
+                                  <span class="price-discounted" style="color: green;">$<%= productos[i].price - Math.floor((productos[i].price * (productos[i].discount/100))) %></span>
+                                  <span class="price-original" style="text-decoration: line-through; color: gray;">$<%= productos[i].price %></span>
+                                </p>
+                                <a href="/producto/<%= productos[i].idProducto %>" class="btn btn-primary">INFO</a>
+                                <% if(usuario && usuario.id_rol == 2){ %>
+                                  <a href="/admin/edit/<%=productos[i].idProducto %>" class="btn btn-primary" style="margin-bottom: 5px;">Editar</a>
+                                  <form action="/admin/delete/<%= productos[i].idProducto %>?_method=DELETE" method="POST">
+                                    <input type="submit" class="btn btn-danger" value="Eliminar">
+                                  </form>
+                                <% } %>
+                              </div>
+                            </div>
+                          </div>
+                          <% if ((i + 1) % 3 === 0 && i !== productos.length - 1) { %>
+                            </div>
+                            </div>
+                            <div class="carousel-item">
+                            <div class="row justify-content-center">
+                          <% } %>
+                        <% } %>
+                      <% } %>
+                    </div>
+                  </div>
+                <% } else { %>
+                  <p>No hay productos en oferta disponibles.</p>
+                <% } %>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#product-offer-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#product-offer-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </section>
+          
             
-            </section>
     </main>
     <%- include("../partials/footer")%>
 

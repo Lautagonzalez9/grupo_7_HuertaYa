@@ -791,3 +791,8 @@ button,optgroup {
   .carousel-control-next-icon {
     background-color: black;
   }
+  @media (max-width: 767px) {
+    .productos-relacionados {
+      justify-content: flex-start;
+    }
+  }
