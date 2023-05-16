@@ -46,19 +46,19 @@ function ContentRowTop(){
             titulo: "Total de productos",
             cifra: productos.count ? productos.count : "Cargando...",
             color: "primary",
-            icono:"fa-film"
+            icono:"fa-pepper-hot"
         },
         {
             titulo: "Total de usuarios",
             cifra: usuarios.length ? usuarios.length : "Cargando...",
             color: "success",
-            icono:"fa-award"
+            icono:"fa-user"
         },
         {
             titulo: "Total de categorias",
             cifra: categorias ? categorias : "Cargando...",
             color: "warning",
-            icono:"fa-user"
+            icono:"fa-layer-group"
         }
     ]
 
