@@ -85,12 +85,6 @@ body {
 }
 
 
-.carrusel {
-    background-color: rgb(0,0,0);
-    
-      
-}
-
 .carousel-inner{
     height: 40%;
 }
@@ -98,7 +92,10 @@ body {
 .carousel-caption{
     display: block;
     padding-top: 500px;
+    
 }
+
+
 
 img.d-block.w-100 {
     height: 40%;

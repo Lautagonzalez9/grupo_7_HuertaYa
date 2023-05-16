@@ -144,6 +144,10 @@ body {
     padding-left: 10px;
 }
 
+.muni {
+    margin: 8px;
+}
+
 .formulario-registro label {
     margin-left: 3%;
     color: #312e2e;
