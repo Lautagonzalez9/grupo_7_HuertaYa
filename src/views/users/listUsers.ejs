@@ -8,77 +8,39 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-         <h1>LISTADO DE USUARIOS</h1>
-         <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Email</th>
-                    <th>Codigo Postal</th>
-                    <th>Numero de telefono</th>
-                </tr>
-                <tbody>
-                    <% users.forEach(function(users) { %>
+
+
+                <h2>LISTADO DE USUARIOS</h2>
+                <table class="table table-success table-striped">
+                    <thead>
                         <tr>
-                            <td><a href=""><%=users.first_name %></a>  </td>
-                            <td> <%=users.last_name %> </td>
-                            <td> <%=users.email%> </td>
-                            <td> <%=users.id_location%> </td>
-                            <td><%=users.number_phone%> </td>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                            <th>Codigo Postal</th>
+                            <th>Numero de telefono</th>
                         </tr>
-                   <% }) %>
-                </tbody>
-            </thead>
-         </table>
-
-    </head>
-
-    <body>
-        <%- include('../partials/header') %>
-            <main>
-                
-                <div class="contenedor-list">
-                    <div class="contenedor-date">
-                      <h1>LISTADO DE USUARIOS</h1>
-                        <table>
-                            <thead>
+                        <tbody>
+                            <% users.forEach(function(users) { %>
                                 <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Email</th>
-                                    <th>Codigo Postal</th>
-                                    <th>Numero de telefono</th>
+                                    <td><a href=""><%=users.first_name %></a>  </td>
+                                    <td> <%=users.last_name %> </td>
+                                    <td> <%=users.email%> </td>
+                                    <td> <%=users.id_location%> </td>
+                                    <td><%=users.number_phone%> </td>
                                 </tr>
-                            <tbody>
-                                <% users.forEach(function(users) { %>
-                                    <tr>
-                                        <td> <a href="<%= user[i].id%>">
-                                                <%=users.first_name %>[]
-                                             </a> </td>
-                                        <td>
-                                            <%=users.last_name %>
-                                        </td>
-                                        <td>
-                                            <%=users.email%>
-                                        </td>
-                                        <td>
-                                            <%=users.id_location%>
-                                        </td>
-                                        <td>
-                                            <%=users.number_phone%>
-                                        </td>
-                                    </tr>
-                                    <% }) %>
-                            </tbody>
-                            </thead>
-                        </table>
-                    </div>
+                        <% }) %>
+                        </tbody>
+                    </thead>
+                </table>
 
-                </div>
+            </div>
+        </div>
+    
             </main>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    </body>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        </body>
     <%- include('../partials/footer') %>
+
 
 </html>

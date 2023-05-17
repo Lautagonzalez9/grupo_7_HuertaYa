@@ -69,6 +69,18 @@
   height: 286px;
 }
 
+.table {
+  --bs-table-bg: #e7e7d1;
+  --bs-table-striped-bg: #dbd2c7;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #ced0bc; 
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #c1d6cc;
+  --bs-table-hover-color: #000;
+  color: #000;
+  border-color: #ced0bc; 
+  opacity: 0.8;
+}
 
 
 
